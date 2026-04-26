@@ -13,6 +13,18 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'i.ibb.co',
+        port: '',
+        pathname: '/**', // This allows any path under the hostname
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.postimg.cc',
+        port: '',
+        pathname: '/**', // This allows any path under the hostname
+      },
+      {
+        protocol: 'https',
         hostname: 'picsum.photos',
         port: '',
         pathname: '/**', // This allows any path under the hostname

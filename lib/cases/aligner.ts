@@ -11,8 +11,8 @@ export const alignerCases: Record<string, any[]> = {
       duration: "12 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",
-      beforeImg: "https://picsum.photos/seed/before-aligner-Overview-1/800/800",
-      afterImg: "https://picsum.photos/seed/after-aligner-Overview-1/800/800",
+      beforeImg: "https://i.postimg.cc/qM8TppKn/IMG-9919.jpg",
+      afterImg: "https://i.postimg.cc/kMz4BYzy/IMG-2729.jpg",
       progressImages: [
         { label: "Initial Record", timeframe: "Month 1", img: "https://picsum.photos/seed/prog-aligner-Overview-0-0/1200/800" },
         { label: "Month 2", timeframe: "Month 2", img: "https://picsum.photos/seed/prog-aligner-Overview-0-1/1200/800" },
@@ -34,8 +34,8 @@ export const alignerCases: Record<string, any[]> = {
       duration: "14 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",
-      beforeImg: "https://picsum.photos/seed/before-aligner-Overview-2/800/800",
-      afterImg: "https://picsum.photos/seed/after-aligner-Overview-2/800/800",
+      beforeImg: "https://i.postimg.cc/6qk1D4zW/IMG-9922.jpg",
+      afterImg: "https://i.postimg.cc/5tmdLgg1/IMG-2721-(1).jpg",
       progressImages: [
         { label: "Initial Record", timeframe: "Month 1", img: "https://picsum.photos/seed/prog-aligner-Overview-1-0/1200/800" },
         { label: "Month 2", timeframe: "Month 2", img: "https://picsum.photos/seed/prog-aligner-Overview-1-1/1200/800" },
@@ -57,8 +57,8 @@ export const alignerCases: Record<string, any[]> = {
       duration: "16 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",
-      beforeImg: "https://picsum.photos/seed/before-aligner-Overview-3/800/800",
-      afterImg: "https://picsum.photos/seed/after-aligner-Overview-3/800/800",
+      beforeImg: "https://i.postimg.cc/bJb61wp9/IMG-0704.jpg",
+      afterImg: "https://i.postimg.cc/PqDbRV91/IMG-1049.jpg",
       progressImages: [
         { label: "Initial Record", timeframe: "Month 1", img: "https://picsum.photos/seed/prog-aligner-Overview-2-0/1200/800" },
         { label: "Month 2", timeframe: "Month 2", img: "https://picsum.photos/seed/prog-aligner-Overview-2-1/1200/800" },
