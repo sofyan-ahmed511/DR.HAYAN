@@ -81,7 +81,7 @@ export default function AboutPage() {
                     <p className="text-primary font-bold text-xl">{doctorInfo.title}</p>
                   </div>
                 </div>
-                <div className="absolute -bottom-4 -left-4 md:-bottom-8 md:-left-8 bg-primary text-white p-4 md:p-6 lg:p-8 rounded-[1.5rem] md:rounded-[2rem] shadow-2xl flex flex-col items-center justify-center w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 transform rotate-[-5deg] group-hover:rotate-0 group-hover:scale-110 transition-all duration-500 border-4 border-white">
+                <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 bg-primary text-white p-4 md:p-6 lg:p-8 rounded-[1.5rem] md:rounded-[2rem] shadow-2xl flex flex-col items-center justify-center w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 transform rotate-[-5deg] group-hover:rotate-0 group-hover:scale-110 transition-all duration-500 border-4 border-white">
                   <span className="text-3xl md:text-4xl lg:text-5xl font-black mb-1 drop-shadow-md">+15</span>
                   <span className="text-xs md:text-sm font-bold text-center leading-tight">Years of<br/>Experience</span>
                 </div>

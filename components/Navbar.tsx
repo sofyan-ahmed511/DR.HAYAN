@@ -62,7 +62,7 @@ export default function Navbar() {
         <header
           className={`pointer-events-auto w-full transition-all duration-500 ${
             isNavSolid
-              ? 'bg-[#FDFBF7]/95 backdrop-blur-md shadow-sm py-4'
+              ? 'bg-white/95 backdrop-blur-md shadow-sm py-4'
               : 'bg-transparent py-6 md:py-8'
           }`}
         >
@@ -70,10 +70,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <h1 className="font-serif font-black text-2xl md:text-3xl text-[#1A1A1A] tracking-tight flex items-baseline">
-              <span className="text-xl md:text-2xl mr-1.5 font-bold">DR.</span>
-              <span className="italic">Hayan</span>
-            </h1>
+            <div className="relative w-32 h-10 md:w-40 md:h-12">
+              <Image 
+                src="https://i.postimg.cc/tJY6xZwx/imageye-imgi-7-width-892.png" 
+                alt="Dr. Hayan Logo" 
+                fill 
+                className="object-contain object-left" 
+                referrerPolicy="no-referrer"
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -96,7 +101,7 @@ export default function Navbar() {
                 {pathname === link.href && (
                   <motion.div
                     layoutId="nav-underline"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#E05D36]"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
@@ -128,7 +133,7 @@ export default function Navbar() {
                 {pathname.startsWith('/cases') && !casesDropdownOpen && (
                   <motion.div
                     layoutId="nav-underline"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#E05D36]"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
