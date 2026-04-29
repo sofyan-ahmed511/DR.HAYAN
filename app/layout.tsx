@@ -16,12 +16,12 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Dr. Hayan | Top Consultant Orthodontist & Invisible Braces',
+  title: 'Dr. Hayan | Top Orthodontic Specialty & Invisible Braces',
   description: 'Specialty Orthodontic Clinic by Dr. Hayan. Transforming smiles with extreme precision using the latest 3D digital scanning technologies and invisible clear aligners. Book your confident smile today.',
   keywords: 'orthodontics, orthodontist, clear aligners, invisalign, dental aesthetics, orthodontic clinic, jaw correction, Class I, Class II, Class III, digital dentistry, best orthodontist, braces, pediatric orthodontics',
   authors: [{ name: 'Dr. Hayan Clinic' }],
   openGraph: {
-    title: 'Dr. Hayan | Premium Consultant Orthodontist',
+    title: 'Dr. Hayan | Premium Orthodontic Specialty',
     description: 'Specialty Orthodontic Clinic by Dr. Hayan. Transforming smiles with extreme precision using the latest digital technologies.',
     url: 'https://drhayanortho.com',
     siteName: 'Dr. Hayan Orthodontics',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dr. Hayan | Premium Consultant Orthodontist',
+    title: 'Dr. Hayan | Premium Orthodontic Specialty',
     description: 'Transforming smiles with extreme precision using the latest 3D digital scanning technologies and invisible clear aligners.',
     images: ['https://i.ibb.co/nNqJYXqD/removebg-preview.png'],
   },

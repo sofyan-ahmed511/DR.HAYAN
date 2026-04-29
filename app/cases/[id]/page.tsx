@@ -213,21 +213,21 @@ function CaseDetailsModal({ selectedCase, onClose }: { selectedCase: any, onClos
         <div className="overflow-y-auto p-0 flex-grow custom-scrollbar">
           
           {/* Gallery block */}
-          <div className="relative bg-slate-950">
+          <div className="relative bg-slate-100">
             <div className="embla overflow-hidden" ref={emblaRef}>
               <div className="embla__container flex">
                 {selectedCase.progressImages?.map((img: any, idx: number) => (
                   <div key={idx} className="embla__slide flex-[0_0_100%] min-w-0 relative aspect-[16/9] md:aspect-[21/9]">
-                    <Image src={img.img} alt={img.label} fill className="object-cover opacity-85" referrerPolicy="no-referrer" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
-                    <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                    <Image src={img.img} alt={img.label} fill className="object-cover" referrerPolicy="no-referrer" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0" />
+                    <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end drop-shadow-md">
                       <div>
-                        <p className="text-white/70 font-medium text-xs mb-2 flex items-center gap-1.5">
-                          <Clock className="w-3.5 h-3.5" /> {img.timeframe}
+                        <p className="text-white font-medium text-xs mb-2 flex items-center gap-1.5 drop-shadow-md">
+                          <Clock className="w-3.5 h-3.5 drop-shadow-md" /> <span className="drop-shadow-md">{img.timeframe}</span>
                         </p>
-                        <h4 className="text-white text-2xl lg:text-3xl font-medium tracking-tight">{img.label}</h4>
+                        <h4 className="text-white text-2xl lg:text-3xl font-medium tracking-tight drop-shadow-md decoration-white/50">{img.label}</h4>
                       </div>
-                      <div className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-3 py-1.5 rounded-lg font-medium text-sm shrink-0">
+                      <div className="bg-slate-900/60 backdrop-blur-md border border-white/20 text-white px-3 py-1.5 rounded-lg font-medium text-sm shrink-0">
                         {idx + 1} / {selectedCase.progressImages.length}
                       </div>
                     </div>

@@ -118,9 +118,9 @@ export default function EducationPage() {
               transition={{ delay: idx * 0.1 }}
               className="flex flex-col items-center group cursor-pointer"
             >
-              <div className={`w-20 h-20 md:w-28 md:h-28 rounded-full ${cat.color} p-0.5 mb-4 group-hover:scale-110 transition-transform duration-500`}>
-                <div className="w-full h-full rounded-full bg-white flex items-center justify-center text-secondary border-4 border-transparent group-hover:border-primary/20 transition-all">
-                  <cat.icon className="w-8 h-8 md:w-10 md:h-10 text-primary" />
+              <div className={`w-20 h-20 md:w-28 md:h-28 rounded-[1rem] ${cat.color} p-0.5 mb-4 group-hover:scale-110 transition-transform duration-500 shadow-sm group-hover:shadow-md`}>
+                <div className="w-full h-full rounded-[0.9rem] bg-white flex items-center justify-center text-slate-400 border-2 border-transparent group-hover:border-primary/20 group-hover:bg-primary group-hover:text-white transition-all">
+                  <span className="font-display font-black text-2xl md:text-3xl tracking-tighter opacity-90">{idx < 9 ? `0${idx + 1}` : idx + 1}</span>
                 </div>
               </div>
               <span className="font-black text-secondary uppercase tracking-wider text-sm">{cat.title}</span>

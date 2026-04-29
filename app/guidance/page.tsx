@@ -122,8 +122,8 @@ export default function GuidancePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
                   
                   <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                    <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white mb-4 shadow-sm border border-white/20">
-                      <cat.icon className="w-5 h-5" />
+                    <div className="w-10 h-10 rounded-[12px] bg-white/20 backdrop-blur-md flex items-center justify-center text-white mb-4 shadow-sm border border-white/20 group-hover:bg-primary transition-all duration-300">
+                      <span className="font-display font-black text-lg tracking-tighter drop-shadow-sm">{idx < 9 ? `0${idx + 1}` : idx + 1}</span>
                     </div>
                     <span className="font-display font-black text-white text-xl md:text-2xl mb-1 group-hover:text-primary transition-colors">{cat.title}</span>
                     <span className="text-white/70 text-sm font-medium">{cat.count} Resources</span>
@@ -287,7 +287,7 @@ export default function GuidancePage() {
                   <div className="w-10 h-10 rounded-full bg-white/20" />
                   <div>
                     <p className="text-white font-black text-xs md:text-sm uppercase tracking-widest">Dr. Hayan</p>
-                    <p className="text-white/60 text-[10px] font-bold">Consultant Orthodontist</p>
+                    <p className="text-white/60 text-[10px] font-bold">Orthodontic Specialty</p>
                   </div>
                 </div>
               </motion.div>

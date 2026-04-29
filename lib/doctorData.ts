@@ -6,9 +6,9 @@
 
 export const doctorInfo = {
   name: "Dr. Hayan",
-  title: "Consultant Orthodontist",
+  title: "Orthodontic Specialty",
   shortBio: "Transforming smiles with precision and beauty. Over 15 years of experience in providing the latest orthodontic treatments using advanced digital technologies to ensure patient comfort and the best results.",
-  fullBio: "Dr. Hayan is a Consultant Orthodontist with extensive experience in treating complex cases and smile aesthetics. He believes that every smile is unique and requires a personalized treatment plan. He is always keen on using the latest global technologies such as clear aligners and digital orthodontics to ensure a comfortable experience and ideal results in the shortest possible time.",
+  fullBio: "Dr. Hayan specializes in Orthodontic Specialty with extensive experience in treating complex cases and smile aesthetics. He believes that every smile is unique and requires a personalized treatment plan. He is always keen on using the latest global technologies such as clear aligners and digital orthodontics to ensure a comfortable experience and ideal results in the shortest possible time.",
   philosophy: "Our philosophy is based on extreme precision, patient comfort, and commitment to the highest international quality standards in orthodontics.",
   stats: [
     { label: "Years of Experience", value: "+15", description: "In providing exceptional orthodontic care" },

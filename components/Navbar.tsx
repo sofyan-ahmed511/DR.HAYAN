@@ -72,7 +72,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-2 group">
             <div className="relative w-32 h-10 md:w-40 md:h-12">
               <Image 
-                src="https://i.postimg.cc/tJY6xZwx/imageye-imgi-7-width-892.png" 
+                src="https://i.postimg.cc/mD6PKqQD/Gemini-Generated-Image-fnac9nfnac9nfnac-1-removebg-preview.png" 
                 alt="Dr. Hayan Logo" 
                 fill 
                 className="object-contain object-left" 

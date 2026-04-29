@@ -57,7 +57,7 @@ export const timeline = [
   },
   {
     year: "2020 - Present",
-    title: "Consultant Orthodontist",
+    title: "Orthodontic Specialty",
     institution: "Smile Care Clinics",
     description: "Head of Orthodontics Department and supervision of complex cases."
   }
