@@ -19,7 +19,7 @@ export default function ThreeSteps() {
             <div className="w-fit px-4 py-2 bg-slate-200/50 rounded-full text-xs font-bold uppercase tracking-widest text-[#1A1A1A] mb-8">
               How It Works
             </div>
-            <h2 className="text-5xl md:text-6xl font-medium tracking-tight text-[#1A1A1A] leading-[1.1]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-[#1A1A1A] leading-[1.1]">
               Achieve Perfection <br/> 
               <span className="font-serif italic font-light text-slate-600">In 3 Simple Steps</span>
             </h2>

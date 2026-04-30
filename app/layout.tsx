@@ -55,7 +55,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" dir="ltr" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className="font-sans antialiased bg-slate-50 text-slate-800 min-h-screen flex flex-col selection:bg-primary selection:text-white">
+      <body className="font-sans antialiased bg-slate-50 text-slate-800 min-h-screen flex flex-col selection:bg-primary selection:text-white overflow-x-hidden">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />

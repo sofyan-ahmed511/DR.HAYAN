@@ -13,8 +13,9 @@
 }
 
 @layer base {
-  html {
-    /* Removed scroll-behavior: smooth to improve INP */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
   }
   body {
     @apply bg-slate-50 text-slate-800 font-sans antialiased selection:bg-primary selection:text-white;

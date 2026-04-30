@@ -38,7 +38,7 @@ export default function TestimonialsVisual() {
     <section className="py-24 md:py-32 bg-white relative z-20">
       <div className="w-full px-4 md:px-8 lg:px-12 xl:px-20 mx-auto">
         
-        <div className="bg-[#FAF8F5] rounded-3xl md:rounded-[3rem] px-6 py-16 md:p-24 relative shadow-sm border border-[#F2EFE9] text-center max-w-7xl mx-auto">
+        <div className="bg-[#FAF8F5] rounded-3xl md:rounded-[3rem] px-6 py-16 md:p-24 relative shadow-sm border border-[#F2EFE9] text-center w-full mx-auto">
           
           {/* Navigation Arrows */}
           <button 

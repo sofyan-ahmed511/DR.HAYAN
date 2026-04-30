@@ -11,10 +11,10 @@ export default function EnhancedFAQ() {
 
   return (
     <section className="py-24 md:py-32 bg-[#F6F5F2] relative z-20">
-      <div className="w-full px-4 md:px-8 lg:px-12 xl:px-20 mx-auto max-w-7xl">
+      <div className="w-full px-4 md:px-8 lg:px-12 xl:px-20 mx-auto">
         
         <div className="text-center max-w-3xl mx-auto mb-20 md:mb-24">
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-[#1A1A1A] mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] mb-4 md:mb-6 leading-[1.1]">
             Frequently Asked <span className="font-serif italic font-light text-slate-500">Questions</span>
           </h2>
         </div>

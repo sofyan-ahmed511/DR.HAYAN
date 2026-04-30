@@ -9,10 +9,10 @@ export default function Transformations() {
         
         {/* Top Header */}
         <div className="text-center max-w-3xl mx-auto mb-20 md:mb-32">
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-[#1A1A1A] mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-[#1A1A1A] mb-4 md:mb-6 leading-[1.1]">
             Stunning <span className="font-serif italic font-light">Transformations</span>
           </h2>
-          <p className="text-slate-500 font-medium md:text-lg max-w-xl mx-auto">
+          <p className="text-slate-500 font-medium text-sm md:text-base lg:text-lg max-w-xl mx-auto px-4 md:px-0">
             From initial consultation to the final reveal, our advanced treatments deliver results that exceed expectations in record time.
           </p>
         </div>

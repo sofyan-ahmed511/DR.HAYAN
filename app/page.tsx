@@ -39,7 +39,7 @@ export default function Home() {
           <div className="w-full h-px bg-black"></div>
         </div>
 
-        <div className="container mx-auto px-6 md:px-12 relative z-10 h-full flex flex-col justify-center min-h-[calc(100vh-8rem)]">
+        <div className="w-full px-6 md:px-12 lg:px-20 mx-auto relative z-10 h-full flex flex-col justify-center min-h-[calc(100vh-8rem)]">
           <div className="grid lg:grid-cols-12 gap-8 items-center h-full">
             
             {/* Left Column */}
@@ -49,7 +49,7 @@ export default function Home() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="text-5xl md:text-6xl lg:text-7xl font-serif text-[#1A1A1A] leading-[1.1] tracking-tight mb-8"
+                  className="text-[2.75rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl font-serif text-[#1A1A1A] tracking-tight mb-8"
                 >
                   Orthodontic<br />
                   <span className="italic"> Specialty</span>
@@ -144,7 +144,7 @@ export default function Home() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
-                  className="relative z-10 w-[270px] sm:w-[360px] md:w-[420px] lg:w-[460px] xl:w-[500px] bg-white rounded-2xl md:rounded-3xl border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] p-3 sm:p-4 md:p-6 flex items-center gap-3 sm:gap-4 md:gap-6 hover:-translate-y-1 transition-transform duration-300"
+                  className="relative z-10 w-full max-w-[270px] sm:max-w-[360px] md:max-w-[420px] xl:max-w-[500px] bg-white rounded-2xl md:rounded-3xl border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] p-3 sm:p-4 md:p-6 flex items-center gap-3 sm:gap-4 md:gap-6 hover:-translate-y-1 transition-transform duration-300"
                 >
                   <div className="w-16 h-16 md:w-24 md:h-24 shrink-0 relative bg-slate-50/50 rounded-xl md:rounded-2xl overflow-hidden flex items-center justify-center p-2">
                     <Image 
@@ -166,7 +166,7 @@ export default function Home() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-                  className="relative z-10 w-[270px] sm:w-[360px] md:w-[420px] lg:w-[460px] xl:w-[500px] bg-white rounded-2xl md:rounded-3xl border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] p-3 sm:p-4 md:p-6 flex items-center gap-3 sm:gap-4 md:gap-6 hover:-translate-y-1 transition-transform duration-300"
+                  className="relative z-10 w-full max-w-[270px] sm:max-w-[360px] md:max-w-[420px] xl:max-w-[500px] bg-white rounded-2xl md:rounded-3xl border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] p-3 sm:p-4 md:p-6 flex items-center gap-3 sm:gap-4 md:gap-6 hover:-translate-y-1 transition-transform duration-300"
                 >
                   <div className="w-16 h-16 md:w-24 md:h-24 shrink-0 relative bg-slate-50/50 rounded-xl md:rounded-2xl overflow-hidden flex items-center justify-center p-2">
                     <Image 
@@ -188,7 +188,7 @@ export default function Home() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.7, ease: "easeOut" }}
-                  className="relative z-10 w-[270px] sm:w-[360px] md:w-[420px] lg:w-[460px] xl:w-[500px] bg-white rounded-2xl md:rounded-3xl border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] p-3 sm:p-4 md:p-6 flex items-center gap-3 sm:gap-4 md:gap-6 hover:-translate-y-1 transition-transform duration-300"
+                  className="relative z-10 w-full max-w-[270px] sm:max-w-[360px] md:max-w-[420px] xl:max-w-[500px] bg-white rounded-2xl md:rounded-3xl border border-slate-100 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] p-3 sm:p-4 md:p-6 flex items-center gap-3 sm:gap-4 md:gap-6 hover:-translate-y-1 transition-transform duration-300"
                 >
                   <div className="w-16 h-16 md:w-24 md:h-24 shrink-0 relative bg-slate-50/50 rounded-xl md:rounded-2xl overflow-hidden flex items-center justify-center p-2">
                     <Image 

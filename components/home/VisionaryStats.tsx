@@ -14,7 +14,7 @@ export default function VisionaryStats() {
   ];
 
   const carouselImages = [
-    "https://images.unsplash.com/photo-1598256989800-fea5f67dba27?auto=format&fit=crop&w=400&q=80",
+    "https://images.unsplash.com/photo-1590680426861-12591a4593fc?auto=format&fit=crop&w=400&q=80",
     "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=400&q=80",
     "https://images.unsplash.com/photo-1555820585-c5ae44394b79?auto=format&fit=crop&w=400&q=80"
   ];
@@ -39,17 +39,17 @@ export default function VisionaryStats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="w-full bg-white rounded-full px-8 py-5 md:py-8 md:px-12 flex flex-col md:flex-row items-start md:items-center justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:scale-[1.01] transition-transform duration-500"
+              className="w-full bg-white rounded-3xl lg:rounded-full px-6 py-6 md:py-8 md:px-12 flex flex-col lg:flex-row items-start lg:items-center justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:scale-[1.01] transition-transform duration-500"
             >
-              <p className="text-slate-500 md:text-lg max-w-xl font-medium mb-4 md:mb-0 leading-relaxed pr-8">
+              <p className="text-slate-500 text-base md:text-lg max-w-xl font-medium mb-6 lg:mb-0 leading-relaxed lg:pr-8">
                 {stat.text}
               </p>
-              <div className="flex flex-col items-start md:items-end md:text-right shrink-0">
-                <span className="text-5xl md:text-6xl font-sans font-light text-[#1A1A1A] tracking-tighter mb-1 relative">
+              <div className="flex flex-col items-start lg:items-end lg:text-right shrink-0 min-w-[120px]">
+                <span className="text-5xl md:text-6xl lg:text-7xl font-sans font-light text-[#1A1A1A] tracking-tighter mb-1 flex items-start">
                   {stat.value.replace('+', '')}
-                  <span className="text-4xl absolute -top-1 -right-6">+</span>
+                  <span className="text-3xl md:text-4xl lg:text-5xl text-primary ml-1 font-medium mt-1">+</span>
                 </span>
-                <span className="text-sm font-bold text-slate-500 uppercase tracking-widest mt-1">{stat.label}</span>
+                <span className="text-xs md:text-sm font-bold text-slate-500 uppercase tracking-widest mt-1">{stat.label}</span>
               </div>
             </motion.div>
           ))}
@@ -62,8 +62,8 @@ export default function VisionaryStats() {
             <div className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6 flex items-center gap-4">
               <span className="w-10 h-px bg-slate-300"></span> 01
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-semibold tracking-tight text-[#1A1A1A] leading-[1.05] mb-12">
-              we specialize in <br/> designing and crafting <br/> high-quality <span className="text-primary italic">smiles</span> <br/> that blend aesthetics.
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold tracking-tight text-[#1A1A1A] leading-[1.1] md:leading-[1.05] mb-8 md:mb-12">
+              we specialize in <br className="hidden md:block"/> designing and crafting <br className="hidden lg:block"/> high-quality <span className="text-primary italic">smiles</span> <br className="hidden lg:block"/> that blend aesthetics.
             </h2>
             <Link href="/about" className="flex items-center gap-4 group cursor-pointer w-fit">
               <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center bg-white group-hover:bg-[#1A1A1A] group-hover:border-[#1A1A1A] transition-colors duration-300">

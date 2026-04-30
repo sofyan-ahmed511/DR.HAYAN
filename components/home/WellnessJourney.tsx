@@ -43,7 +43,7 @@ export default function WellnessJourney() {
         
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-semibold tracking-tight text-[#2C3E50] leading-[1.05] max-w-2xl">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold tracking-tight text-[#2C3E50] leading-[1.1] md:leading-[1.05] max-w-2xl mb-6 md:mb-0">
             Everything You Need For Your <span className="font-serif italic font-light text-[#4A5D70]">Smile Journey</span>
           </h2>
           <Link href="/guidance" className="flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-[#2C3E50] hover:text-primary transition-colors pb-4 border-b border-slate-200 hover:border-primary cursor-pointer w-fit">
