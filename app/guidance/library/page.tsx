@@ -27,7 +27,7 @@ function LibraryContent() {
   }, [activeCategory, searchQuery]);
 
   return (
-    <div className="min-h-screen bg-slate-50 selection:bg-primary selection:text-white pb-32">
+    <div className="min-h-screen bg-slate-50 selection:bg-primary selection:text-white pb-32 overflow-x-hidden w-full">
       {/* Visual Header */}
       <section className="relative w-full h-[40vh] md:h-[50vh] flex flex-col justify-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0 z-0">

@@ -19,7 +19,7 @@ export default function GuidancePage() {
   const [searchQuery, setSearchQuery] = useState('');
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden w-full">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute left-10 top-1/2 -translate-y-1/2 hidden xl:flex flex-col items-center gap-12 pointer-events-none">
@@ -278,7 +278,7 @@ export default function GuidancePage() {
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="absolute -bottom-6 -right-6 md:-bottom-10 md:-right-10 bg-primary p-6 md:p-10 rounded-[32px] md:rounded-[40px] shadow-2xl max-w-[280px] md:max-w-xs z-10"
+                className="absolute -bottom-6 right-0 md:-bottom-10 md:-right-10 bg-primary p-6 md:p-10 rounded-[32px] md:rounded-[40px] shadow-2xl max-w-[280px] md:max-w-xs z-10"
               >
                 <p className="text-white text-base md:text-lg font-bold leading-relaxed">
                   &quot;The best treatment is prevention. A few minutes a day can save you years of dental problems.&quot;

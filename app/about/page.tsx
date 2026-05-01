@@ -24,7 +24,7 @@ export default function AboutPage() {
   }, [emblaApi]);
 
   return (
-    <main className="bg-[#FAF9F6] min-h-screen text-slate-900 font-sans selection:bg-slate-900 selection:text-white pb-24 overflow-hidden">
+    <main className="bg-[#FAF9F6] min-h-screen text-slate-900 font-sans selection:bg-slate-900 selection:text-white pb-24 overflow-x-hidden w-full">
       
       {/* 1. HERO SECTION */}
       <section className="pt-40 pb-20 px-6 md:px-12 max-w-7xl mx-auto">

@@ -308,7 +308,7 @@ export default function CaseCategoryPage({ params }: { params: Promise<{ id: str
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 selection:bg-blue-600 selection:text-white">
+    <div className="min-h-screen bg-slate-50 selection:bg-blue-600 selection:text-white overflow-x-hidden w-full">
       
       {/* 1. Professional Minimal Hero Section (Full width background image) */}
       <section className="relative w-full h-[60vh] lg:h-[70vh] flex flex-col justify-center overflow-hidden bg-slate-900 border-b border-slate-200">

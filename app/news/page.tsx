@@ -26,7 +26,7 @@ export default function EducationPage() {
   const [selectedVideo, setSelectedVideo] = useState<any>(null);
 
   return (
-    <div className="min-h-screen bg-slate-50 pt-32 pb-20">
+    <div className="min-h-screen bg-slate-50 pt-32 pb-20 overflow-x-hidden w-full">
       {/* Hero Section - Inspired by Image 3 (Vertical Text) */}
       <section className="container mx-auto px-6 mb-24">
         {/* Search Bar - Inspired by Image 1 */}

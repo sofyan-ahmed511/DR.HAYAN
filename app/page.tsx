@@ -24,7 +24,7 @@ export default function Home() {
   });
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-white overflow-x-hidden w-full">
       {/* Hero Section - Skyline Reference Style (Unchanged format) */}
       <section ref={heroRef} className="relative min-h-screen bg-white text-[#1A1A1A] pt-32 pb-12 overflow-hidden font-sans">
         {/* Subtle background lines */}
