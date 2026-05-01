@@ -64,7 +64,7 @@ export default function AboutPage() {
       </section>
 
       {/* 2. FIXED BACKGROUND STATS */}
-      <section className="my-32 relative overflow-hidden h-[80vh] flex flex-col justify-center rounded-[3rem] mx-4 md:mx-12 shadow-2xl">
+      <section className="my-16 md:my-32 relative overflow-hidden min-h-[80vh] py-20 flex flex-col justify-center rounded-[2rem] md:rounded-[3rem] mx-4 md:mx-12 shadow-2xl">
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
           style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1629909613638-0e4a1fad8f81?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RGVudGlzdHJ5JTIwd2FsbHBhcGVyc3xlbnwwfHwwfHx8MA%3D%3D")' }}
@@ -72,7 +72,7 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-slate-900/40 z-10" />
         
-        <div className="relative z-20 max-w-5xl mx-auto w-full px-6 flex flex-col gap-8 md:gap-12">
+        <div className="relative z-20 max-w-5xl mx-auto w-full px-6 flex flex-col gap-6 md:gap-12">
           {[
             { text: "By making your orthodontic care professional and tailored, you experience lifelong confidence.", num: "15+", sub: "Years of Service" },
             { text: "By constantly integrating the latest digital 3D systems and treatment methodologies.", num: "80+", sub: "Advanced Courses" },
@@ -82,14 +82,14 @@ export default function AboutPage() {
               key={i}
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="bg-white/95 backdrop-blur-xl rounded-full px-8 md:px-12 py-6 flex flex-col md:flex-row justify-between items-center gap-6 shadow-2xl max-w-4xl hover:scale-[1.02] transition-transform duration-500"
+              className="bg-white/95 backdrop-blur-xl w-full rounded-3xl md:rounded-full px-6 py-6 md:px-12 md:py-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 shadow-2xl max-w-4xl hover:scale-[1.02] transition-transform duration-500 overflow-hidden"
             >
-              <p className="text-slate-700 font-medium text-sm md:text-base max-w-md text-center md:text-left">{stat.text}</p>
-              <div className="text-center md:text-right shrink-0">
-                <h3 className="text-5xl md:text-6xl font-light text-slate-900 tracking-tighter">{stat.num}</h3>
-                <p className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest mt-1">{stat.sub}</p>
+              <p className="text-slate-700 font-medium text-sm md:text-base w-full md:max-w-md text-center md:text-left">{stat.text}</p>
+              <div className="text-center md:text-right shrink-0 mt-2 md:mt-0 w-full md:w-auto min-w-0 md:min-w-[120px]">
+                <h3 className="text-4xl sm:text-5xl md:text-6xl font-light text-slate-900 tracking-tighter">{stat.num}</h3>
+                <p className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest mt-1 max-w-full break-words">{stat.sub}</p>
               </div>
             </motion.div>
           ))}
