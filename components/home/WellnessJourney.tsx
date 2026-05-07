@@ -38,7 +38,7 @@ export default function WellnessJourney() {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-white relative z-20">
+    <section className="py-24 md:py-32 bg-white relative z-20 overflow-hidden">
       <div className="w-full px-4 md:px-8 lg:px-12 xl:px-20 mx-auto">
         
         {/* Header */}
@@ -71,7 +71,7 @@ export default function WellnessJourney() {
             </div>
             {/* Background image half */}
             <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-slate-200 overflow-hidden">
-               <Image src={cards[0].bgImg!} alt="bg" fill className="object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
+               <Image src={cards[0].bgImg!} alt="bg" fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
             </div>
           </motion.div>
 
@@ -92,7 +92,7 @@ export default function WellnessJourney() {
             </div>
             {/* Split Image Style */}
             <div className="w-full sm:w-1/2 aspect-square sm:aspect-auto rounded-2xl overflow-hidden relative self-end h-full min-h-[200px]">
-              <Image src={cards[1].splitImg!} alt="bg" fill className="object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
+              <Image src={cards[1].splitImg!} alt="bg" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
             </div>
           </motion.div>
 
@@ -105,7 +105,7 @@ export default function WellnessJourney() {
             className={`bg-[#DCE7F0] rounded-3xl md:rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between group overflow-hidden relative min-h-[400px] lg:col-span-5`}
           >
             <div className="absolute inset-0 z-0">
-               <Image src={cards[2].bgImg!} alt="bg" fill className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 mix-blend-overlay" referrerPolicy="no-referrer" />
+               <Image src={cards[2].bgImg!} alt="bg" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 mix-blend-overlay" referrerPolicy="no-referrer" />
                <div className="absolute inset-0 bg-gradient-to-t from-[#DCE7F0] via-[#DCE7F0]/80 to-transparent"></div>
             </div>
             <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#2C3E50] mb-8 relative z-10 shadow-sm group-hover:scale-110 transition-transform">
@@ -126,7 +126,7 @@ export default function WellnessJourney() {
             className={`bg-[#1B2A38] rounded-3xl md:rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between group overflow-hidden relative min-h-[400px] lg:col-span-7`}
           >
             <div className="absolute inset-0 z-0 opacity-40 mix-blend-luminosity grayscale group-hover:grayscale-0 transition-all duration-700">
-               <Image src={cards[3].bgImg!} alt="bg" fill className="object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
+               <Image src={cards[3].bgImg!} alt="bg" fill sizes="(max-width: 1024px) 100vw, 60vw" className="object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
                <div className="absolute inset-0 bg-gradient-to-r from-[#1B2A38] to-transparent"></div>
             </div>
             <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white mb-8 relative z-10 border border-white/20 group-hover:bg-white group-hover:text-[#1B2A38] transition-colors">

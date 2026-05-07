@@ -10,7 +10,7 @@ export default function ThreeSteps() {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-[#F6F5F2] relative z-20">
+    <section className="py-24 md:py-32 bg-[#F6F5F2] relative z-20 overflow-hidden">
       <div className="w-full px-4 md:px-8 lg:px-12 xl:px-20 mx-auto">
         
         {/* Top Header Grid */}
@@ -46,6 +46,7 @@ export default function ThreeSteps() {
               src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1500&q=80"
               alt="Dental Consultation"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
               referrerPolicy="no-referrer"
             />
@@ -72,7 +73,7 @@ export default function ThreeSteps() {
                     {step.num}
                   </div>
                   <div className="pt-2">
-                    <h4 className="text-xl md:text-2xl font-bold text-[#1A1A1A] mb-3">{step.title}</h4>
+                    <h3 className="text-xl md:text-2xl font-bold text-[#1A1A1A] mb-3">{step.title}</h3>
                     <p className={`text-sm md:text-base leading-relaxed font-medium ${isActive ? "text-slate-500" : "text-slate-400"}`}>
                       {step.desc}
                     </p>

@@ -1,81 +1,97 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { motion, AnimatePresence, useScroll, useTransform } from 'motion/react';
+import dynamic from 'next/dynamic';
+import { motion, useScroll } from 'motion/react';
 import { ArrowLeft } from 'lucide-react';
 import { doctorInfo } from '@/lib/doctorData';
 
 // NEW COMPONENTS
-import MarqueeSection from '@/components/home/MarqueeSection';
-import VisionaryStats from '@/components/home/VisionaryStats';
-import ThreeSteps from '@/components/home/ThreeSteps';
-import Transformations from '@/components/home/Transformations';
-import WellnessJourney from '@/components/home/WellnessJourney';
-import TestimonialsVisual from '@/components/home/TestimonialsVisual';
-import EnhancedFAQ from '@/components/home/EnhancedFAQ';
+import IntroSplash from '@/components/home/IntroSplash';
+
+const MarqueeSection = dynamic(() => import('@/components/home/MarqueeSection'));
+const VisionaryStats = dynamic(() => import('@/components/home/VisionaryStats'));
+const ThreeSteps = dynamic(() => import('@/components/home/ThreeSteps'));
+const Transformations = dynamic(() => import('@/components/home/Transformations'));
+const WellnessJourney = dynamic(() => import('@/components/home/WellnessJourney'));
+const TestimonialsVisual = dynamic(() => import('@/components/home/TestimonialsVisual'));
+const EnhancedFAQ = dynamic(() => import('@/components/home/EnhancedFAQ'));
 
 export default function Home() {
+  const [introFinished, setIntroFinished] = useState(false);
   const heroRef = useRef(null);
+  
+  const handleIntroComplete = useCallback(() => {
+    setIntroFinished(true);
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"]
   });
 
   return (
-    <div className="flex flex-col min-h-screen bg-white overflow-x-hidden w-full">
-      {/* Hero Section - Skyline Reference Style (Unchanged format) */}
-      <section ref={heroRef} className="relative min-h-screen bg-white text-[#1A1A1A] pt-32 pb-12 overflow-hidden font-sans">
-        {/* Subtle background lines */}
-        <div className="absolute inset-0 pointer-events-none flex justify-between px-12 opacity-5">
-          <div className="w-px h-full bg-black"></div>
-          <div className="w-px h-full bg-black"></div>
-          <div className="w-px h-full bg-black"></div>
-          <div className="w-px h-full bg-black"></div>
-        </div>
-        <div className="absolute inset-0 pointer-events-none flex flex-col justify-between py-32 opacity-5">
-          <div className="w-full h-px bg-black"></div>
-          <div className="w-full h-px bg-black"></div>
-        </div>
+    <>
+      <IntroSplash onComplete={handleIntroComplete} />
+      
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: introFinished ? 1 : 0 }}
+        transition={{ duration: 1 }}
+        className="flex flex-col min-h-screen bg-white overflow-x-hidden w-full"
+      >
+        {/* Hero Section - Skyline Reference Style (Unchanged format) */}
+        <section ref={heroRef} className="relative min-h-screen bg-white text-[#1A1A1A] pt-32 pb-12 overflow-hidden font-sans">
+          {/* Subtle background lines */}
+          <div className="absolute inset-0 pointer-events-none flex justify-between px-12 opacity-5">
+            <div className="w-px h-full bg-black"></div>
+            <div className="w-px h-full bg-black"></div>
+            <div className="w-px h-full bg-black"></div>
+            <div className="w-px h-full bg-black"></div>
+          </div>
+          <div className="absolute inset-0 pointer-events-none flex flex-col justify-between py-32 opacity-5">
+            <div className="w-full h-px bg-black"></div>
+            <div className="w-full h-px bg-black"></div>
+          </div>
 
-        <div className="w-full px-6 md:px-12 lg:px-20 mx-auto relative z-10 h-full flex flex-col justify-center min-h-[calc(100vh-8rem)]">
-          <div className="grid lg:grid-cols-12 gap-8 items-center h-full">
-            
-            {/* Left Column */}
-            <div className="lg:col-span-4 flex flex-col justify-center space-y-12">
-              <div>
-                <motion.h1 
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="text-[3rem] leading-[1.05] sm:text-5xl md:text-[4rem] lg:text-[4.5rem] xl:text-[5.5rem] font-serif text-[#1A1A1A] tracking-tight mb-8"
-                >
-                  Orthodontic<br />
-                  <span className="inline-block mt-2 italic bg-clip-text text-transparent bg-gradient-to-r from-[#1A1A1A] to-slate-400">
-                    Specialty
-                  </span>
-                </motion.h1>
-                <motion.a 
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                  href={`https://wa.me/${doctorInfo.contact.whatsapp}`}
-                  className="inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-[#1A1A1A] px-2 py-2 pr-6 rounded-[2.5rem] font-semibold text-sm md:text-base transition-all duration-300 shadow-[0_15px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)] group hover:-translate-y-1"
-                >
-                  <span className="bg-white/80 w-10 h-10 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 shadow-sm transition-transform">
-                    <ArrowLeft className="w-4 h-4 rotate-135 text-[#1A1A1A]" />
-                  </span>
-                  Book Consultation
-                </motion.a>
-              </div>
+          <div className="w-full px-6 md:px-12 lg:px-20 mx-auto relative z-10 h-full flex flex-col justify-center min-h-[calc(100vh-8rem)]">
+            <div className="grid lg:grid-cols-12 gap-8 items-center h-full">
+              
+              {/* Left Column */}
+              <div className="lg:col-span-4 flex flex-col justify-center space-y-12">
+                <div>
+                  <motion.h1 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: introFinished ? 1 : 0, y: introFinished ? 0 : 20 }}
+                    transition={{ duration: 0.8, delay: introFinished ? 0.2 : 0, ease: "easeOut" }}
+                    className="text-[3rem] leading-[1.05] sm:text-5xl md:text-[4rem] lg:text-[4.5rem] xl:text-[5.5rem] font-serif text-[#1A1A1A] tracking-tight mb-8"
+                  >
+                    Orthodontic<br />
+                    <span className="inline-block mt-2 italic bg-clip-text text-transparent bg-gradient-to-r from-[#1A1A1A] to-slate-400">
+                      Specialty
+                    </span>
+                  </motion.h1>
+                  <motion.a 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: introFinished ? 1 : 0, y: introFinished ? 0 : 20 }}
+                    transition={{ duration: 0.8, delay: introFinished ? 0.4 : 0, ease: "easeOut" }}
+                    href={`https://wa.me/${doctorInfo.contact.whatsapp}`}
+                    className="inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-[#1A1A1A] px-2 py-2 pr-6 rounded-[2.5rem] font-semibold text-sm md:text-base transition-all duration-300 shadow-[0_15px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)] group hover:-translate-y-1"
+                  >
+                    <span className="bg-white/80 w-10 h-10 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 shadow-sm transition-transform">
+                      <ArrowLeft className="w-4 h-4 rotate-135 text-[#1A1A1A]" />
+                    </span>
+                    Book Consultation
+                  </motion.a>
+                </div>
 
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                className="max-w-sm relative z-10"
-              >
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: introFinished ? 1 : 0, y: introFinished ? 0 : 20 }}
+                  transition={{ duration: 0.8, delay: introFinished ? 0.6 : 0, ease: "easeOut" }}
+                  className="max-w-sm relative z-10"
+                >
                 <p className="text-[15px] xl:text-base text-gray-500 leading-relaxed mb-6">
                   Where medical expertise meets artistic vision. Dr. Hayan delivers world-class orthodontic solutions with a focus on precision and patient experience.
                 </p>
@@ -119,8 +135,8 @@ export default function Home() {
               <motion.div 
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ 
-                  opacity: 1, 
-                  scale: 1,
+                  opacity: introFinished ? 1 : 0, 
+                  scale: introFinished ? 1 : 0.9,
                   borderRadius: [
                     "60% 40% 30% 70% / 60% 30% 70% 40%", 
                     "30% 70% 70% 30% / 30% 30% 70% 70%", 
@@ -128,8 +144,8 @@ export default function Home() {
                   ] 
                 }}
                 transition={{ 
-                  opacity: { duration: 1, ease: "easeOut" },
-                  scale: { duration: 1, ease: "easeOut" },
+                  opacity: { duration: 1, ease: "easeOut", delay: introFinished ? 0.3 : 0 },
+                  scale: { duration: 1, ease: "easeOut", delay: introFinished ? 0.3 : 0 },
                   borderRadius: { duration: 8, repeat: Infinity, ease: "easeInOut" } 
                 }}
                 className="relative w-full max-w-[340px] md:max-w-[400px] aspect-[4/5] overflow-hidden shrink-0 z-20 shadow-[0_20px_60px_rgba(0,0,0,0.15)]"
@@ -139,19 +155,20 @@ export default function Home() {
                   src="https://i.postimg.cc/d3gxxH71/IMG-7809.png"
                   alt="Dr. Hayan"
                   fill
+                  sizes="(max-width: 768px) 340px, 400px"
                   className="object-cover object-center scale-[1.05]"
                   priority
                 />  
               </motion.div>
               {/* Organic glowing background shapes */}
               <motion.div 
-                animate={{ rotate: 360, scale: [1, 1.1, 1] }} 
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                animate={{ rotate: 360, scale: [1, 1.1, 1], opacity: introFinished ? 1 : 0 }} 
+                transition={{ opacity: { duration: 1, delay: introFinished ? 0.5 : 0 }, rotate: { duration: 20, repeat: Infinity, ease: "linear" }, scale: { duration: 20, repeat: Infinity, ease: "linear" } }}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/20 rounded-[60%_40%_70%_30%/40%_50%_60%_50%] blur-3xl pointer-events-none z-10"
               ></motion.div>
               <motion.div 
-                animate={{ rotate: -360, scale: [1, 1.2, 1] }} 
-                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                animate={{ rotate: -360, scale: [1, 1.2, 1], opacity: introFinished ? 1 : 0 }} 
+                transition={{ opacity: { duration: 1, delay: introFinished ? 0.6 : 0 }, rotate: { duration: 25, repeat: Infinity, ease: "linear" }, scale: { duration: 25, repeat: Infinity, ease: "linear" } }}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-blue-300/20 rounded-[30%_70%_40%_60%/50%_30%_70%_50%] blur-[80px] pointer-events-none z-0"
               ></motion.div>
             </div>
@@ -171,8 +188,8 @@ export default function Home() {
                 {/* Card 1 */}
                 <motion.div
                   initial={{ opacity: 0, x: 30, y: 10, filter: 'blur(10px)' }}
-                  animate={{ opacity: 1, x: 0, y: 0, filter: 'blur(0px)' }}
-                  transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+                  animate={{ opacity: introFinished ? 1 : 0, x: introFinished ? 0 : 30, y: introFinished ? 0 : 10, filter: introFinished ? 'blur(0px)' : 'blur(10px)' }}
+                  transition={{ duration: 0.8, delay: introFinished ? 0.5 : 0, ease: "easeOut" }}
                   className="relative z-10 w-full max-w-[280px] sm:max-w-[360px] md:max-w-[420px] xl:max-w-[460px] bg-white/70 backdrop-blur-2xl rounded-full border border-white/60 shadow-[0_15px_40px_-10px_rgba(0,0,0,0.08)] p-2 sm:p-3 pr-5 sm:pr-8 flex items-center gap-4 hover:scale-[1.02] hover:bg-white/90 transition-all duration-500 group"
                 >
                   <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 shrink-0 relative bg-gradient-to-tr from-slate-50 to-white rounded-full overflow-hidden flex items-center justify-center p-2.5 shadow-inner border border-white shadow-slate-200/50">
@@ -180,12 +197,13 @@ export default function Home() {
                       src="https://i.postimg.cc/288rN1Kd/Gemini-Generatervwj3orvwj3orvwj-removebg-preview.png" 
                       alt="Advanced 3D Technology" 
                       fill 
+                      sizes="80px"
                       className="object-contain scale-[1.15] group-hover:scale-[1.25] transition-transform duration-500" 
                       referrerPolicy="no-referrer"
                     />
                   </div>
                   <div className="py-1">
-                    <h4 className="font-bold text-[#1A1A1A] text-sm md:text-base leading-tight mb-0.5">Advanced 3D Technology</h4>
+                    <h2 className="font-bold text-[#1A1A1A] text-sm md:text-base leading-tight mb-0.5">Advanced 3D Technology</h2>
                     <p className="text-[11px] md:text-xs text-slate-500 leading-snug">Digital Precision Scanning for accurate treatment.</p>
                   </div>
                 </motion.div>
@@ -193,8 +211,8 @@ export default function Home() {
                 {/* Card 2 */}
                 <motion.div
                   initial={{ opacity: 0, x: 30, y: 10, filter: 'blur(10px)' }}
-                  animate={{ opacity: 1, x: 0, y: 0, filter: 'blur(0px)' }}
-                  transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+                  animate={{ opacity: introFinished ? 1 : 0, x: introFinished ? 0 : 30, y: introFinished ? 0 : 10, filter: introFinished ? 'blur(0px)' : 'blur(10px)' }}
+                  transition={{ duration: 0.8, delay: introFinished ? 0.6 : 0, ease: "easeOut" }}
                   className="relative z-10 w-full max-w-[280px] sm:max-w-[360px] md:max-w-[420px] xl:max-w-[460px] lg:translate-x-8 bg-white/70 backdrop-blur-2xl rounded-full border border-white/60 shadow-[0_15px_40px_-10px_rgba(0,0,0,0.08)] p-2 sm:p-3 pr-5 sm:pr-8 flex items-center gap-4 hover:scale-[1.02] hover:bg-white/90 transition-all duration-500 group"
                 >
                   <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 shrink-0 relative bg-gradient-to-tr from-slate-50 to-white rounded-full overflow-hidden flex items-center justify-center p-2.5 shadow-inner border border-white shadow-slate-200/50">
@@ -202,12 +220,13 @@ export default function Home() {
                       src="https://i.postimg.cc/QM5rJ1Hg/Gemini-Generated-Image-l5mlosl5mlosl5ml-removebg-preview.png" 
                       alt="Invisible Braces Solutions" 
                       fill 
+                      sizes="80px"
                       className="object-contain scale-[1.25] group-hover:scale-[1.35] transition-transform duration-500" 
                       referrerPolicy="no-referrer"
                     />
                   </div>
                   <div className="py-1">
-                    <h4 className="font-bold text-[#1A1A1A] text-sm md:text-base leading-tight mb-0.5">Invisible Braces</h4>
+                    <h2 className="font-bold text-[#1A1A1A] text-sm md:text-base leading-tight mb-0.5">Invisible Braces</h2>
                     <p className="text-[11px] md:text-xs text-slate-500 leading-snug">Aesthetic, comfortable, and discreet treatment.</p>
                   </div>
                 </motion.div>
@@ -215,8 +234,8 @@ export default function Home() {
                 {/* Card 3 */}
                 <motion.div
                   initial={{ opacity: 0, x: 30, y: 10, filter: 'blur(10px)' }}
-                  animate={{ opacity: 1, x: 0, y: 0, filter: 'blur(0px)' }}
-                  transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
+                  animate={{ opacity: introFinished ? 1 : 0, x: introFinished ? 0 : 30, y: introFinished ? 0 : 10, filter: introFinished ? 'blur(0px)' : 'blur(10px)' }}
+                  transition={{ duration: 0.8, delay: introFinished ? 0.7 : 0, ease: "easeOut" }}
                   className="relative z-10 w-full max-w-[280px] sm:max-w-[360px] md:max-w-[420px] xl:max-w-[460px] bg-white/70 backdrop-blur-2xl rounded-full border border-white/60 shadow-[0_15px_40px_-10px_rgba(0,0,0,0.08)] p-2 sm:p-3 pr-5 sm:pr-8 flex items-center gap-4 hover:scale-[1.02] hover:bg-white/90 transition-all duration-500 group"
                 >
                   <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 shrink-0 relative bg-gradient-to-tr from-slate-50 to-white rounded-full overflow-hidden flex items-center justify-center p-2.5 shadow-inner border border-white shadow-slate-200/50">
@@ -224,12 +243,13 @@ export default function Home() {
                       src="https://i.postimg.cc/cC1yWzT5/Gemini-Image-rvwj3orvwj3orvwj-removebg-preview.png" 
                       alt="Proven Results" 
                       fill 
+                      sizes="80px"
                       className="object-contain scale-[1.15] group-hover:scale-[1.25] transition-transform duration-500" 
                       referrerPolicy="no-referrer"
                     />
                   </div>
                   <div className="py-1">
-                    <h4 className="font-bold text-[#1A1A1A] text-sm md:text-base leading-tight mb-0.5">Proven Results</h4>
+                    <h2 className="font-bold text-[#1A1A1A] text-sm md:text-base leading-tight mb-0.5">Proven Results</h2>
                     <p className="text-[11px] md:text-xs text-slate-500 leading-snug">Over 5000+ Successful Cases with exceptional outcomes.</p>
                   </div>
                 </motion.div>
@@ -250,6 +270,7 @@ export default function Home() {
       <TestimonialsVisual />
       <EnhancedFAQ />
       
-    </div>
+      </motion.div>
+    </>
   );
 }

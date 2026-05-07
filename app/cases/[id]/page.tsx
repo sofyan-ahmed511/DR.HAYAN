@@ -68,7 +68,7 @@ function CaseFullSection({ caseItem, index, subSection }: { caseItem: any, index
         {/* Before / After Full Width Visuals */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 mb-24">
           <div className="relative aspect-[4/3] lg:aspect-[16/10] rounded-[2rem] overflow-hidden group border border-slate-100 shadow-sm">
-            <Image src={caseItem.beforeImg} alt="Before" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" referrerPolicy="no-referrer" />
+            <Image src={caseItem.beforeImg} alt="Before" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover transition-transform duration-1000 group-hover:scale-105" referrerPolicy="no-referrer" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
             <div className="absolute bottom-8 left-8">
               <div className="inline-flex items-center gap-2 bg-black/40 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/20 text-white font-medium text-sm shadow-xl mb-3">
@@ -79,7 +79,7 @@ function CaseFullSection({ caseItem, index, subSection }: { caseItem: any, index
           </div>
           
           <div className="relative aspect-[4/3] lg:aspect-[16/10] rounded-[2rem] overflow-hidden group border border-slate-100 shadow-sm">
-            <Image src={caseItem.afterImg} alt="After" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" referrerPolicy="no-referrer" />
+            <Image src={caseItem.afterImg} alt="After" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover transition-transform duration-1000 group-hover:scale-105" referrerPolicy="no-referrer" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80" />
             <div className="absolute bottom-8 left-8">
               <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/20 text-slate-900 font-medium text-sm shadow-xl mb-3">
@@ -110,7 +110,7 @@ function CaseFullSection({ caseItem, index, subSection }: { caseItem: any, index
               <div className="embla__container flex">
                 {caseItem.progressImages.map((img: any, idx: number) => (
                   <div key={idx} className="embla__slide flex-[0_0_100%] min-w-0 mr-4 relative h-[60vh] md:h-[75vh] w-full rounded-[2rem] overflow-hidden group shadow-2xl bg-slate-900 border border-white/5">
-                    <Image src={img.img} alt={img.label} fill className="object-cover transition-transform duration-1000 group-hover:scale-105" referrerPolicy="no-referrer" />
+                    <Image src={img.img} alt={img.label} fill sizes="(max-width: 1024px) 100vw, 80vw" className="object-cover transition-transform duration-1000 group-hover:scale-105" referrerPolicy="no-referrer" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/40 to-transparent opacity-90" />
                     
                     <div className="absolute bottom-8 left-8 right-8">
@@ -202,6 +202,7 @@ export default function CaseCategoryPage({ params }: { params: Promise<{ id: str
             src={heroImage}
             alt={category.title}
             fill
+            sizes="100vw"
             className="object-cover opacity-[0.35] scale-105"
             priority
             referrerPolicy="no-referrer"
@@ -269,7 +270,7 @@ export default function CaseCategoryPage({ params }: { params: Promise<{ id: str
                     <div key={i} className="flex gap-8 items-start py-8 border-b border-white/10 group hover:bg-white/[0.02] transition-colors -mx-6 px-6 sm:mx-0 sm:px-0">
                        <div className="text-amber-500/50 font-serif text-3xl font-light group-hover:text-amber-500 transition-colors">0{i+1}</div>
                        <div className="flex-grow pt-1">
-                         <h4 className="text-2xl text-white mb-3 font-medium tracking-tight group-hover:text-white transition-colors">{pt}</h4>
+                         <h3 className="text-2xl text-white mb-3 font-medium tracking-tight group-hover:text-white transition-colors">{pt}</h3>
                          <p className="text-base text-slate-500 leading-relaxed font-light">
                            Rigorous protocol execution ensures predictability and maintains the highest standards of care throughout the entire treatment phase.
                          </p>
@@ -282,7 +283,7 @@ export default function CaseCategoryPage({ params }: { params: Promise<{ id: str
               {/* Right Content - Strong Visual Substance */}
               <div className="lg:col-span-6 order-1 lg:order-2">
                 <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 group bg-slate-900">
-                   <Image src={heroImage} alt="Details" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" referrerPolicy="no-referrer" />
+                   <Image sizes="100vw" src={heroImage} alt="Details" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" referrerPolicy="no-referrer" />
                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
                    
                    <div className="absolute bottom-10 left-10 right-10">
@@ -312,7 +313,7 @@ export default function CaseCategoryPage({ params }: { params: Promise<{ id: str
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-12 border border-white/10">
                   <HeartPulse className="w-8 h-8 text-amber-500" />
                 </div>
-                <h3 className="text-4xl font-serif mb-8">Etiology & Causes</h3>
+                <h2 className="text-4xl font-serif mb-8">Etiology & Causes</h2>
                 <p className="text-slate-400 leading-relaxed text-xl font-light mb-12 max-w-sm">
                   {explainerInfo.causes}
                 </p>
@@ -340,7 +341,7 @@ export default function CaseCategoryPage({ params }: { params: Promise<{ id: str
                        )) }
                      </div>
                      <p className="text-3xl lg:text-5xl font-serif leading-[1.2] text-slate-900 max-w-2xl">
-                       "{explainerInfo.feedback}"
+                       &quot;{explainerInfo.feedback}&quot;
                      </p>
                    </div>
                    
@@ -362,9 +363,9 @@ export default function CaseCategoryPage({ params }: { params: Promise<{ id: str
              <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
                <div>
                  <p className="text-sm font-bold text-amber-600 uppercase tracking-widest mb-4">Patient Knowledge Base</p>
-                 <h3 className="text-4xl md:text-5xl font-serif text-slate-900 tracking-tight">
+                 <h2 className="text-4xl md:text-5xl font-serif text-slate-900 tracking-tight">
                    Frequently Asked Questions
-                 </h3>
+                 </h2>
                </div>
                <div className="w-16 h-16 rounded-full bg-slate-50 flex items-center justify-center border border-slate-100">
                  <HelpCircle className="w-8 h-8 text-slate-400" />
@@ -374,7 +375,7 @@ export default function CaseCategoryPage({ params }: { params: Promise<{ id: str
              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
                {explainerInfo.faq?.map((item: any, idx: number) => (
                  <div key={idx} className="group cursor-pointer">
-                   <h4 className="text-2xl font-serif text-slate-900 mb-4 group-hover:text-amber-600 transition-colors">{item.q}</h4>
+                   <h3 className="text-2xl font-serif text-slate-900 mb-4 group-hover:text-amber-600 transition-colors">{item.q}</h3>
                    <p className="text-slate-600 leading-relaxed text-lg font-light">{item.a}</p>
                  </div>
                ))}

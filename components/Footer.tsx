@@ -13,10 +13,13 @@ export default function Footer() {
         <div className="absolute top-0 inset-x-0 h-[40%] bg-gradient-to-b from-white via-white/80 to-transparent z-10" />
         
         {/* Scenic mountain/lake background for the plush, calming feel */}
-        <img 
+        <Image 
           src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop" 
           alt="Serene landscape" 
-          className="absolute bottom-0 w-full h-[80%] object-cover object-bottom opacity-90"
+          fill
+          sizes="100vw"
+          className="object-cover object-bottom opacity-90"
+          referrerPolicy="no-referrer"
         />
         
         {/* Overlay to give the glass-like misty effect */}

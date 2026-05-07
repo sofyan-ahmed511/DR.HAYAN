@@ -7,11 +7,13 @@ import FloatingSocial from '@/components/FloatingSocial';
 
 const inter = Inter({
   subsets: ['latin'],
+  display: 'swap',
   variable: '--font-inter',
 });
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
+  display: 'swap',
   variable: '--font-space',
 });
 

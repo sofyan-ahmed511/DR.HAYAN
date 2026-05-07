@@ -58,7 +58,12 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="fixed top-0 inset-x-0 z-[100] flex justify-center pointer-events-none pt-4 px-4 sm:px-6">
+      <motion.div 
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: isHomePage ? 2.5 : 0, ease: [0.16, 1, 0.3, 1] }}
+        className="fixed top-0 inset-x-0 z-[100] flex justify-center pointer-events-none pt-4 px-4 sm:px-6"
+      >
         <header
           className={`pointer-events-auto w-full max-w-6xl transition-all duration-500 rounded-[2rem] md:rounded-full ${
             isNavSolid
@@ -74,7 +79,9 @@ export default function Navbar() {
                   src="https://i.postimg.cc/mD6PKqQD/Gemini-Generated-Image-fnac9nfnac9nfnac-1-removebg-preview.png" 
                   alt="Dr. Hayan Logo" 
                   fill 
-                  className="object-contain object-left" 
+                  sizes="144px"
+                  priority
+                  className="object-contain object-left border-0" 
                   referrerPolicy="no-referrer"
                 />
               </div>
@@ -179,6 +186,7 @@ export default function Navbar() {
                                 src={category.iconImg || category.image} 
                                 alt={category.title} 
                                 fill 
+                                sizes="(max-width: 1024px) 50vw, 25vw"
                                 className="object-cover" 
                                 referrerPolicy="no-referrer" 
                               />
@@ -206,7 +214,7 @@ export default function Navbar() {
             )}
           </AnimatePresence>
         </header>
-      </div>
+      </motion.div>
 
     {/* Mobile Menu (Sidebar) */}
     <AnimatePresence>
@@ -278,7 +286,7 @@ export default function Navbar() {
                         >
                           {/* Image Container */}
                           <div className="absolute inset-y-0 left-0 w-[40%] transition-[width] duration-300 ease-out group-hover/mitem:w-full z-0 overflow-hidden bg-slate-100">
-                            <Image 
+                            <Image sizes="100vw" 
                               src={category.iconImg || category.image} 
                               alt={category.title} 
                               fill 

@@ -36,11 +36,12 @@ export default function Transformations() {
                 src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80"
                 alt="Before"
                 fill
+                sizes="340px"
                 className="object-cover"
                 referrerPolicy="no-referrer"
               />
             </div>
-            <h4 className="text-center font-bold text-xl text-[#1A1A1A] uppercase tracking-widest">Before</h4>
+            <h3 className="text-center font-bold text-xl text-[#1A1A1A] uppercase tracking-widest">Before</h3>
           </motion.div>
 
           {/* After Polaroid */}
@@ -57,12 +58,13 @@ export default function Transformations() {
                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80"
                 alt="After"
                 fill
+                sizes="340px"
                 className="object-cover"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
             </div>
-            <h4 className="text-center font-bold text-xl text-primary uppercase tracking-widest">After</h4>
+            <h3 className="text-center font-bold text-xl text-primary uppercase tracking-widest">After</h3>
             
             {/* Callout badge */}
             <div className="absolute -bottom-6 -right-6 md:right-[-40px] bg-[#1A1A1A] text-white text-xs font-bold uppercase tracking-widest py-3 px-6 rounded-full shadow-xl">

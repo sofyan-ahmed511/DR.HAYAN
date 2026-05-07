@@ -35,7 +35,7 @@ export default function TestimonialsVisual() {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-white relative z-20">
+    <section className="py-24 md:py-32 bg-white relative z-20 overflow-hidden">
       <div className="w-full px-4 md:px-8 lg:px-12 xl:px-20 mx-auto">
         
         <div className="bg-[#FAF8F5] rounded-3xl md:rounded-[3rem] px-6 py-16 md:p-24 relative shadow-sm border border-[#F2EFE9] text-center w-full mx-auto">
@@ -57,7 +57,7 @@ export default function TestimonialsVisual() {
           {/* Quote */}
           <div className="max-w-3xl mx-auto min-h-[180px] md:min-h-[160px] flex flex-col justify-center">
             <AnimatePresence mode="wait">
-              <motion.h3 
+              <motion.h2 
                 key={active}
                 initial={{ opacity: 0, scale: 0.98, filter: "blur(4px)" }}
                 animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
@@ -65,8 +65,8 @@ export default function TestimonialsVisual() {
                 transition={{ duration: 0.4 }}
                 className="text-2xl md:text-3xl lg:text-4xl font-serif text-[#2C3E50] leading-snug tracking-tight mb-8"
               >
-                "{testimonials[active].text}"
-              </motion.h3>
+                &quot;{testimonials[active].text}&quot;
+              </motion.h2>
             </AnimatePresence>
             
             <AnimatePresence mode="wait">
@@ -91,7 +91,7 @@ export default function TestimonialsVisual() {
                 onClick={() => setActive(i)}
                 className={`relative w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden transition-all duration-300 ${active === i ? 'ring-2 ring-offset-2 ring-[#1A1A1A] ring-offset-[#FAF8F5] scale-110 shadow-lg' : 'opacity-40 hover:opacity-100 grayscale hover:grayscale-0'}`}
               >
-                <Image src={t.img} alt={t.name} fill className="object-cover" referrerPolicy="no-referrer" />
+                <Image src={t.img} alt={t.name} fill sizes="56px" className="object-cover" referrerPolicy="no-referrer" />
               </button>
             ))}
           </div>

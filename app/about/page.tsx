@@ -57,7 +57,7 @@ export default function AboutPage() {
             className="pb-4"
           >
             <div className="relative aspect-[4/3] w-full rounded-[2rem] overflow-hidden shadow-2xl">
-               <Image src="https://images.unsplash.com/photo-1720685193975-3b449a7cb905?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fERlbnRpc3RyeXxlbnwwfHwwfHx8MA%3D%3D" alt="Modern clinic" fill className="object-cover" />
+               <Image src="https://images.unsplash.com/photo-1720685193975-3b449a7cb905?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fERlbnRpc3RyeXxlbnwwfHwwfHx8MA%3D%3D" alt="Modern clinic" fill sizes="(max-width: 1024px) 100vw, 50vw" priority className="object-cover" />
             </div>
           </motion.div>
         </div>
@@ -107,7 +107,7 @@ export default function AboutPage() {
               className="bg-[#D2C5B8] rounded-[3rem] p-8 md:p-12 pb-0 relative overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500"
             >
                <div className="relative aspect-[3/4] w-full rounded-t-[2.5rem] overflow-hidden drop-shadow-2xl">
-                 <Image 
+                 <Image sizes="100vw" 
                    src="https://i.postimg.cc/qMhzt4KT/Gemini-Generated-Image-pd93supd93supd93.png" 
                    alt={doctorInfo.name} 
                    fill 
@@ -122,7 +122,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">// The Specialist</p>
+              <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">{`// The Specialist`}</p>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif tracking-tighter text-slate-900 leading-[1.05] mb-8">
                 Experienced specialist <br /> you can trust.
               </h2>
@@ -169,7 +169,7 @@ export default function AboutPage() {
                     <div className="inline-block px-3 py-1 bg-[#FAF9F6] border border-slate-100 text-slate-600 text-xs font-bold rounded-full mb-3 shadow-sm">
                       {item.year}
                     </div>
-                    <h4 className="text-2xl font-medium text-slate-900 mb-2">{item.title}</h4>
+                    <h3 className="text-2xl font-medium text-slate-900 mb-2">{item.title}</h3>
                     <p className="text-primary font-bold text-sm mb-3 uppercase tracking-wide">{item.institution}</p>
                     <p className="text-slate-500">{item.description}</p>
                   </div>
@@ -216,7 +216,7 @@ export default function AboutPage() {
               <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mb-6 text-slate-400 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-300">
                 <skill.icon className="w-6 h-6" />
               </div>
-              <h4 className="text-xl font-medium text-slate-900 mb-3">{skill.name}</h4>
+              <h3 className="text-xl font-medium text-slate-900 mb-3">{skill.name}</h3>
               <p className="text-slate-500 leading-relaxed text-sm">{skill.description}</p>
             </motion.div>
           ))}
@@ -270,6 +270,7 @@ export default function AboutPage() {
                           src={cert.image} 
                           alt={cert.title} 
                           fill 
+                          sizes="(max-width: 768px) 85vw, (max-width: 1024px) 45vw, 35vw"
                           className="object-cover group-hover:scale-105 transition-transform duration-700" 
                         />
                         <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-colors duration-300 flex items-center justify-center">
@@ -279,7 +280,7 @@ export default function AboutPage() {
                         </div>
                       </div>
                       <div className="px-4 pb-2 text-center">
-                         <h4 className="text-xl font-medium text-slate-900 mb-1 leading-tight">{cert.title}</h4>
+                         <h3 className="text-xl font-medium text-slate-900 mb-1 leading-tight">{cert.title}</h3>
                          <p className="text-slate-500 text-sm font-medium">{cert.institution}</p>
                       </div>
                     </div>
@@ -311,7 +312,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="relative aspect-square w-full max-w-md rounded-[3rem] overflow-hidden shadow-2xl group"
             >
-              <Image src="https://images.unsplash.com/photo-1664529845836-433c172142ca?w=1800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fERlbnRpc3RyeXxlbnwwfHwwfHx8MA%3D%3D" alt="Steps" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image src="https://images.unsplash.com/photo-1664529845836-433c172142ca?w=1800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fERlbnRpc3RyeXxlbnwwfHwwfHx8MA%3D%3D" alt="Steps" fill sizes="(max-width: 1024px) 100vw, 400px" className="object-cover group-hover:scale-105 transition-transform duration-700" />
             </motion.div>
           </div>
 
@@ -335,7 +336,7 @@ export default function AboutPage() {
                   0{idx+1}
                 </div>
                 <div>
-                  <h4 className="text-2xl font-medium text-slate-900 mb-3 group-hover:text-primary transition-colors">{step.title}</h4>
+                  <h3 className="text-2xl font-medium text-slate-900 mb-3 group-hover:text-primary transition-colors">{step.title}</h3>
                   <p className="text-slate-500 leading-relaxed font-medium">{step.desc}</p>
                 </div>
               </motion.div>
@@ -376,6 +377,7 @@ export default function AboutPage() {
                   src={selectedCert} 
                   alt="Certificate Full View" 
                   fill 
+                  sizes="100vw"
                   className="object-contain p-4 mix-blend-multiply" 
                 />
               </div>

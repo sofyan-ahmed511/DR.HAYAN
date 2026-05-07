@@ -1,12 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MessageCircle, Instagram, Facebook, Youtube, Linkedin, X, LayoutGrid } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 import { doctorInfo } from '@/lib/doctorData';
 
 export default function FloatingSocial() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   const socialLinks = [
     { icon: MessageCircle, href: `https://wa.me/${doctorInfo.contact.whatsapp}`, color: 'bg-[#25D366]', label: 'WhatsApp' },
@@ -17,7 +20,12 @@ export default function FloatingSocial() {
   ];
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <motion.div 
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, delay: isHomePage ? 2.8 : 0, type: "spring", bounce: 0.4 }}
+      className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3"
+    >
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -69,6 +77,6 @@ export default function FloatingSocial() {
           {isOpen ? <X className="w-7 h-7" /> : <LayoutGrid className="w-7 h-7" />}
         </motion.div>
       </motion.button>
-    </div>
+    </motion.div>
   );
 }

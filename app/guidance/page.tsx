@@ -74,6 +74,7 @@ export default function GuidancePage() {
                   src="https://picsum.photos/seed/guidance-hero/1000/1000"
                   alt="Dental Guidance"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/40 via-transparent to-transparent" />
@@ -117,6 +118,7 @@ export default function GuidancePage() {
                     src={cat.image || 'https://picsum.photos/seed/guidance-default/800/800'} 
                     alt={cat.title} 
                     fill 
+                    sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 20vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-700" 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
@@ -192,6 +194,7 @@ export default function GuidancePage() {
                     src={section.image}
                     alt={section.title}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover hover:scale-105 transition-transform duration-1000"
                   />
                   <div className={`absolute inset-0 ${idx % 2 === 0 ? 'bg-primary/10' : 'bg-secondary/20'}`} />
@@ -236,6 +239,7 @@ export default function GuidancePage() {
                       src={video.thumbnail}
                       alt={video.title}
                       fill
+                      sizes="(max-width: 1024px) 100vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors" />
@@ -271,6 +275,7 @@ export default function GuidancePage() {
                   src="https://picsum.photos/seed/guidance-cta/1000/1000"
                   alt="Professional Advice"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>

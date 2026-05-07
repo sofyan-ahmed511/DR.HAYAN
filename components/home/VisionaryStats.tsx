@@ -28,7 +28,7 @@ export default function VisionaryStats() {
   }, [carouselImages.length]);
 
   return (
-    <section className="py-24 md:py-32 bg-[#F9FAFB] relative z-20">
+    <section className="py-24 md:py-32 bg-[#F9FAFB] relative z-20 overflow-hidden">
       <div className="w-full px-4 md:px-8 lg:px-12 xl:px-20 mx-auto">
         {/* Top Stats Pills */}
         <div className="flex flex-col gap-4 md:gap-6 mb-24 w-full xl:max-w-7xl mx-auto">
@@ -39,17 +39,17 @@ export default function VisionaryStats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="w-full bg-white rounded-3xl lg:rounded-full px-6 py-6 md:py-8 md:px-12 flex flex-col lg:flex-row items-start lg:items-center justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:scale-[1.01] transition-transform duration-500"
+              className="w-full bg-white rounded-3xl lg:rounded-full px-6 py-6 sm:px-8 sm:py-8 lg:px-12 flex flex-col lg:flex-row items-start lg:items-center justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 hover:scale-[1.01] transition-transform duration-500 overflow-hidden"
             >
-              <p className="text-slate-500 text-base md:text-lg max-w-xl font-medium mb-6 lg:mb-0 leading-relaxed lg:pr-8">
+              <p className="text-slate-500 text-sm sm:text-base md:text-lg max-w-xl font-medium mb-6 lg:mb-0 leading-relaxed pr-0 lg:pr-8">
                 {stat.text}
               </p>
-              <div className="flex flex-col items-start lg:items-end lg:text-right shrink-0 min-w-[120px]">
-                <span className="text-5xl md:text-6xl lg:text-7xl font-sans font-light text-[#1A1A1A] tracking-tighter mb-1 flex items-start">
+              <div className="flex flex-col items-start lg:items-end lg:text-right shrink-0 min-w-0 lg:min-w-[120px] w-full lg:w-auto mt-2 lg:mt-0">
+                <span className="text-4xl sm:text-5xl md:text-6xl font-sans font-light text-[#1A1A1A] tracking-tighter mb-1 inline-flex items-center">
                   {stat.value.replace('+', '')}
-                  <span className="text-3xl md:text-4xl lg:text-5xl text-primary ml-1 font-medium mt-1">+</span>
+                  <span className="text-2xl sm:text-3xl md:text-4xl text-primary ml-1 font-medium">+</span>
                 </span>
-                <span className="text-xs md:text-sm font-bold text-slate-500 uppercase tracking-widest mt-1">{stat.label}</span>
+                <span className="text-[10px] sm:text-xs md:text-sm font-bold text-slate-500 uppercase tracking-widest mt-1 block max-w-full break-words">{stat.label}</span>
               </div>
             </motion.div>
           ))}
@@ -86,6 +86,7 @@ export default function VisionaryStats() {
                 src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80"
                 alt="Clinic Interior"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -114,6 +115,7 @@ export default function VisionaryStats() {
                       src={carouselImages[currentIdx]}
                       alt="Detail"
                       fill
+                      sizes="112px"
                       className="object-cover"
                       referrerPolicy="no-referrer"
                     />
@@ -122,7 +124,7 @@ export default function VisionaryStats() {
               </div>
               <div>
                 <div className="text-[10px] text-white/50 font-bold uppercase tracking-widest mb-1">/0{currentIdx + 1}</div>
-                <h4 className="font-semibold text-lg md:text-xl leading-tight mb-3">Designing in Solution</h4>
+                <h3 className="font-semibold text-lg md:text-xl leading-tight mb-3">Designing in Solution</h3>
                 <div className="flex gap-1">
                   {carouselImages.map((_, idx) => (
                     <button 
