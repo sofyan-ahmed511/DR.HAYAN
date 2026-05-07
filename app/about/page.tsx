@@ -32,7 +32,7 @@ export default function AboutPage() {
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <div className="inline-block px-4 py-1.5 rounded-full bg-slate-200/50 text-slate-600 text-sm font-bold tracking-wider uppercase mb-8">
               / About Us
@@ -53,7 +53,7 @@ export default function AboutPage() {
           <motion.div 
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
             className="pb-4"
           >
             <div className="relative aspect-[4/3] w-full rounded-[2rem] overflow-hidden shadow-2xl">
@@ -83,7 +83,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
+              transition={{ duration: 0.3, delay: i * 0.1 }}
               className="bg-white/95 backdrop-blur-xl w-full rounded-3xl md:rounded-full px-6 py-6 md:px-12 md:py-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 shadow-2xl max-w-4xl hover:scale-[1.02] transition-transform duration-500 overflow-hidden"
             >
               <p className="text-slate-700 font-medium text-sm md:text-base w-full md:max-w-md text-center md:text-left">{stat.text}</p>
@@ -103,7 +103,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               className="bg-[#D2C5B8] rounded-[3rem] p-8 md:p-12 pb-0 relative overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500"
             >
                <div className="relative aspect-[3/4] w-full rounded-t-[2.5rem] overflow-hidden drop-shadow-2xl">
@@ -120,7 +120,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
             >
               <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">{`// The Specialist`}</p>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif tracking-tighter text-slate-900 leading-[1.05] mb-8">
@@ -162,7 +162,7 @@ export default function AboutPage() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
                   className={`flex flex-col md:flex-row gap-6 md:gap-12 items-start md:items-center ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
                 >
                   <div className={`flex-1 w-full pl-16 md:pl-0 ${idx % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
@@ -210,7 +210,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.05 }}
+              transition={{ duration: 0.3, delay: idx * 0.05 }}
               className="bg-white rounded-[2rem] p-8 border border-slate-100 hover:shadow-xl transition-shadow duration-300 group"
             >
               <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center mb-6 text-slate-400 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-300">
@@ -255,10 +255,9 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="overflow-hidden" 
-              ref={emblaRef}
             >
-              <div className="flex -ml-6 pb-8">
+              <div ref={emblaRef} className="overflow-hidden w-full">
+                <div className="flex -ml-6 pb-8">
                 {certifications.map((cert) => (
                   <div key={cert.id} className="min-w-0 flex-[0_0_85%] md:flex-[0_0_45%] lg:flex-[0_0_35%] pl-6">
                     <div 
@@ -287,7 +286,8 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
+          </motion.div>
           </div>
         </div>
       </section>
@@ -329,7 +329,7 @@ export default function AboutPage() {
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: idx * 0.15 }}
+                transition={{ duration: 0.3, delay: idx * 0.05 }}
                 className="bg-[#FAF9F6] rounded-[2rem] p-8 md:p-10 shadow-sm border border-slate-100 flex gap-6 md:gap-10 items-start group hover:shadow-xl transition-all duration-300 hover:scale-[1.02] relative"
               >
                 <div className="w-14 h-14 shrink-0 bg-white border border-slate-200 rounded-full flex items-center justify-center font-display font-black text-xl text-slate-400 group-hover:bg-slate-900 group-hover:text-white group-hover:border-slate-900 transition-colors shadow-sm">

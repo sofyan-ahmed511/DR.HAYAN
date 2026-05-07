@@ -61,7 +61,7 @@ export default function Navbar() {
       <motion.div 
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, delay: isHomePage ? 2.5 : 0, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.4, delay: isHomePage ? 1.0 : 0, ease: [0.16, 1, 0.3, 1] }}
         className="fixed top-0 inset-x-0 z-[100] flex justify-center pointer-events-none pt-4 px-4 sm:px-6"
       >
         <header
@@ -164,8 +164,8 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: -10, scale: 0.98 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -10, scale: 0.98 }}
-                  transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                  className="bg-white/80 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.1)] border border-white/60 rounded-[2rem] overflow-hidden p-3"
+                  transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                  className="bg-white/80 backdrop-blur-md shadow-[0_20px_60px_rgba(0,0,0,0.1)] border border-white/60 rounded-[2rem] overflow-hidden p-3"
                 >
                   <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
                     {caseCategories.map((category, index) => {
@@ -225,7 +225,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-slate-900/20 backdrop-blur-sm z-[60] lg:hidden"
             onClick={() => setMobileMenuOpen(false)}
           />
@@ -234,8 +234,8 @@ export default function Navbar() {
             initial={{ opacity: 0, x: '-100%', scale: 0.95 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: '-100%', scale: 0.95 }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed top-4 left-4 bottom-4 w-[calc(100%-32px)] max-w-sm bg-white/95 backdrop-blur-3xl z-[70] overflow-y-auto lg:hidden shadow-[0_20px_60px_rgba(0,0,0,0.15)] border border-white/60 rounded-[2.5rem]"
+            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            className="fixed top-4 left-4 bottom-4 w-[calc(100%-32px)] max-w-sm bg-white/95 backdrop-blur-md z-[70] overflow-y-auto lg:hidden shadow-[0_20px_60px_rgba(0,0,0,0.15)] border border-white/60 rounded-[2.5rem]"
           >
             <div className="p-8 pt-24 flex flex-col h-full relative">
               {/* Close Button inside Sidebar */}

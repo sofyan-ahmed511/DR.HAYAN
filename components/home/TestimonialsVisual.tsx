@@ -59,9 +59,9 @@ export default function TestimonialsVisual() {
             <AnimatePresence mode="wait">
               <motion.h2 
                 key={active}
-                initial={{ opacity: 0, scale: 0.98, filter: "blur(4px)" }}
-                animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-                exit={{ opacity: 0, scale: 0.98, filter: "blur(4px)" }}
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.98 }}
                 transition={{ duration: 0.4 }}
                 className="text-2xl md:text-3xl lg:text-4xl font-serif text-[#2C3E50] leading-snug tracking-tight mb-8"
               >

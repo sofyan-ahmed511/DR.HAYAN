@@ -57,7 +57,7 @@ export default function EducationPage() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
             >
               <h1 className="text-5xl md:text-7xl font-display font-black text-secondary leading-tight mb-6">
                 Your Daily <br />
@@ -81,10 +81,10 @@ export default function EducationPage() {
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.5 }}
               className="relative aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl"
             >
-              <Image 
+              <Image sizes="100vw" 
                 src="https://picsum.photos/seed/news-hero/1000/1250"
                 alt="Dental Care"
                 fill
@@ -157,7 +157,7 @@ export default function EducationPage() {
                   {step.number}
                 </div>
                 <div className="relative h-48 mb-8 rounded-2xl overflow-hidden">
-                  <Image 
+                  <Image sizes="100vw" 
                     src={step.image}
                     alt={step.title}
                     fill
@@ -217,7 +217,7 @@ export default function EducationPage() {
             </div>
             <div className="lg:w-1/2 relative">
               <div className="relative aspect-square rounded-[60px] overflow-hidden shadow-2xl">
-                <Image 
+                <Image sizes="100vw" 
                   src="https://picsum.photos/seed/news-tips/1000/1000"
                   alt="Doctor Advice"
                   fill
@@ -276,7 +276,7 @@ export default function EducationPage() {
               onClick={() => setSelectedVideo(video)}
             >
               <div className="relative aspect-video rounded-3xl overflow-hidden mb-6 shadow-lg group-hover:shadow-2xl transition-all duration-500">
-                <Image 
+                <Image sizes="100vw" 
                   src={video.thumbnail}
                   alt={video.title}
                   fill

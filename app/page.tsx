@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import { motion, useScroll } from 'motion/react';
+import { motion } from 'motion/react';
 import { ArrowLeft } from 'lucide-react';
 import { doctorInfo } from '@/lib/doctorData';
 
@@ -20,16 +20,10 @@ const EnhancedFAQ = dynamic(() => import('@/components/home/EnhancedFAQ'));
 
 export default function Home() {
   const [introFinished, setIntroFinished] = useState(false);
-  const heroRef = useRef(null);
   
   const handleIntroComplete = useCallback(() => {
     setIntroFinished(true);
   }, []);
-
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"]
-  });
 
   return (
     <>
@@ -38,11 +32,11 @@ export default function Home() {
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: introFinished ? 1 : 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.2 }}
         className="flex flex-col min-h-screen bg-white overflow-x-hidden w-full"
       >
         {/* Hero Section - Skyline Reference Style (Unchanged format) */}
-        <section ref={heroRef} className="relative min-h-screen bg-white text-[#1A1A1A] pt-32 pb-12 overflow-hidden font-sans">
+        <section className="relative min-h-screen bg-white text-[#1A1A1A] pt-32 pb-12 overflow-hidden font-sans">
           {/* Subtle background lines */}
           <div className="absolute inset-0 pointer-events-none flex justify-between px-12 opacity-5">
             <div className="w-px h-full bg-black"></div>
@@ -64,7 +58,7 @@ export default function Home() {
                   <motion.h1 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: introFinished ? 1 : 0, y: introFinished ? 0 : 20 }}
-                    transition={{ duration: 0.8, delay: introFinished ? 0.2 : 0, ease: "easeOut" }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
                     className="text-[3rem] leading-[1.05] sm:text-5xl md:text-[4rem] lg:text-[4.5rem] xl:text-[5.5rem] font-serif text-[#1A1A1A] tracking-tight mb-8"
                   >
                     Orthodontic<br />
@@ -75,7 +69,7 @@ export default function Home() {
                   <motion.a 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: introFinished ? 1 : 0, y: introFinished ? 0 : 20 }}
-                    transition={{ duration: 0.8, delay: introFinished ? 0.4 : 0, ease: "easeOut" }}
+                    transition={{ duration: 0.3, delay: introFinished ? 0.1 : 0, ease: "easeOut" }}
                     href={`https://wa.me/${doctorInfo.contact.whatsapp}`}
                     className="inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-[#1A1A1A] px-2 py-2 pr-6 rounded-[2.5rem] font-semibold text-sm md:text-base transition-all duration-300 shadow-[0_15px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)] group hover:-translate-y-1"
                   >
@@ -89,7 +83,7 @@ export default function Home() {
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: introFinished ? 1 : 0, y: introFinished ? 0 : 20 }}
-                  transition={{ duration: 0.8, delay: introFinished ? 0.6 : 0, ease: "easeOut" }}
+                  transition={{ duration: 0.3, delay: introFinished ? 0.2 : 0, ease: "easeOut" }}
                   className="max-w-sm relative z-10"
                 >
                 <p className="text-[15px] xl:text-base text-gray-500 leading-relaxed mb-6">
@@ -144,8 +138,8 @@ export default function Home() {
                   ] 
                 }}
                 transition={{ 
-                  opacity: { duration: 1, ease: "easeOut", delay: introFinished ? 0.3 : 0 },
-                  scale: { duration: 1, ease: "easeOut", delay: introFinished ? 0.3 : 0 },
+                  opacity: { duration: 0.5, ease: "easeOut", delay: introFinished ? 0.2 : 0 },
+                  scale: { duration: 0.5, ease: "easeOut", delay: introFinished ? 0.2 : 0 },
                   borderRadius: { duration: 8, repeat: Infinity, ease: "easeInOut" } 
                 }}
                 className="relative w-full max-w-[340px] md:max-w-[400px] aspect-[4/5] overflow-hidden shrink-0 z-20 shadow-[0_20px_60px_rgba(0,0,0,0.15)]"
@@ -163,12 +157,12 @@ export default function Home() {
               {/* Organic glowing background shapes */}
               <motion.div 
                 animate={{ rotate: 360, scale: [1, 1.1, 1], opacity: introFinished ? 1 : 0 }} 
-                transition={{ opacity: { duration: 1, delay: introFinished ? 0.5 : 0 }, rotate: { duration: 20, repeat: Infinity, ease: "linear" }, scale: { duration: 20, repeat: Infinity, ease: "linear" } }}
+                transition={{ opacity: { duration: 0.5, delay: introFinished ? 0.3 : 0 }, rotate: { duration: 20, repeat: Infinity, ease: "linear" }, scale: { duration: 20, repeat: Infinity, ease: "linear" } }}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/20 rounded-[60%_40%_70%_30%/40%_50%_60%_50%] blur-3xl pointer-events-none z-10"
               ></motion.div>
               <motion.div 
                 animate={{ rotate: -360, scale: [1, 1.2, 1], opacity: introFinished ? 1 : 0 }} 
-                transition={{ opacity: { duration: 1, delay: introFinished ? 0.6 : 0 }, rotate: { duration: 25, repeat: Infinity, ease: "linear" }, scale: { duration: 25, repeat: Infinity, ease: "linear" } }}
+                transition={{ opacity: { duration: 0.5, delay: introFinished ? 0.4 : 0 }, rotate: { duration: 25, repeat: Infinity, ease: "linear" }, scale: { duration: 25, repeat: Infinity, ease: "linear" } }}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-blue-300/20 rounded-[30%_70%_40%_60%/50%_30%_70%_50%] blur-[80px] pointer-events-none z-0"
               ></motion.div>
             </div>
@@ -187,10 +181,10 @@ export default function Home() {
 
                 {/* Card 1 */}
                 <motion.div
-                  initial={{ opacity: 0, x: 30, y: 10, filter: 'blur(10px)' }}
-                  animate={{ opacity: introFinished ? 1 : 0, x: introFinished ? 0 : 30, y: introFinished ? 0 : 10, filter: introFinished ? 'blur(0px)' : 'blur(10px)' }}
-                  transition={{ duration: 0.8, delay: introFinished ? 0.5 : 0, ease: "easeOut" }}
-                  className="relative z-10 w-full max-w-[280px] sm:max-w-[360px] md:max-w-[420px] xl:max-w-[460px] bg-white/70 backdrop-blur-2xl rounded-full border border-white/60 shadow-[0_15px_40px_-10px_rgba(0,0,0,0.08)] p-2 sm:p-3 pr-5 sm:pr-8 flex items-center gap-4 hover:scale-[1.02] hover:bg-white/90 transition-all duration-500 group"
+                  initial={{ opacity: 0, x: 30, y: 10 }}
+                  animate={{ opacity: introFinished ? 1 : 0, x: introFinished ? 0 : 30, y: introFinished ? 0 : 10 }}
+                  transition={{ duration: 0.4, delay: introFinished ? 0.3 : 0, ease: "easeOut" }}
+                  className="relative z-10 w-full max-w-[280px] sm:max-w-[360px] md:max-w-[420px] xl:max-w-[460px] bg-white/70 backdrop-blur-md rounded-full border border-white/60 shadow-[0_15px_40px_-10px_rgba(0,0,0,0.08)] p-2 sm:p-3 pr-5 sm:pr-8 flex items-center gap-4 hover:scale-[1.02] hover:bg-white/90 transition-all duration-500 group"
                 >
                   <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 shrink-0 relative bg-gradient-to-tr from-slate-50 to-white rounded-full overflow-hidden flex items-center justify-center p-2.5 shadow-inner border border-white shadow-slate-200/50">
                     <Image 
@@ -210,10 +204,10 @@ export default function Home() {
 
                 {/* Card 2 */}
                 <motion.div
-                  initial={{ opacity: 0, x: 30, y: 10, filter: 'blur(10px)' }}
-                  animate={{ opacity: introFinished ? 1 : 0, x: introFinished ? 0 : 30, y: introFinished ? 0 : 10, filter: introFinished ? 'blur(0px)' : 'blur(10px)' }}
-                  transition={{ duration: 0.8, delay: introFinished ? 0.6 : 0, ease: "easeOut" }}
-                  className="relative z-10 w-full max-w-[280px] sm:max-w-[360px] md:max-w-[420px] xl:max-w-[460px] lg:translate-x-8 bg-white/70 backdrop-blur-2xl rounded-full border border-white/60 shadow-[0_15px_40px_-10px_rgba(0,0,0,0.08)] p-2 sm:p-3 pr-5 sm:pr-8 flex items-center gap-4 hover:scale-[1.02] hover:bg-white/90 transition-all duration-500 group"
+                  initial={{ opacity: 0, x: 30, y: 10 }}
+                  animate={{ opacity: introFinished ? 1 : 0, x: introFinished ? 0 : 30, y: introFinished ? 0 : 10 }}
+                  transition={{ duration: 0.4, delay: introFinished ? 0.4 : 0, ease: "easeOut" }}
+                  className="relative z-10 w-full max-w-[280px] sm:max-w-[360px] md:max-w-[420px] xl:max-w-[460px] lg:translate-x-8 bg-white/70 backdrop-blur-md rounded-full border border-white/60 shadow-[0_15px_40px_-10px_rgba(0,0,0,0.08)] p-2 sm:p-3 pr-5 sm:pr-8 flex items-center gap-4 hover:scale-[1.02] hover:bg-white/90 transition-all duration-500 group"
                 >
                   <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 shrink-0 relative bg-gradient-to-tr from-slate-50 to-white rounded-full overflow-hidden flex items-center justify-center p-2.5 shadow-inner border border-white shadow-slate-200/50">
                     <Image 
@@ -233,10 +227,10 @@ export default function Home() {
 
                 {/* Card 3 */}
                 <motion.div
-                  initial={{ opacity: 0, x: 30, y: 10, filter: 'blur(10px)' }}
-                  animate={{ opacity: introFinished ? 1 : 0, x: introFinished ? 0 : 30, y: introFinished ? 0 : 10, filter: introFinished ? 'blur(0px)' : 'blur(10px)' }}
-                  transition={{ duration: 0.8, delay: introFinished ? 0.7 : 0, ease: "easeOut" }}
-                  className="relative z-10 w-full max-w-[280px] sm:max-w-[360px] md:max-w-[420px] xl:max-w-[460px] bg-white/70 backdrop-blur-2xl rounded-full border border-white/60 shadow-[0_15px_40px_-10px_rgba(0,0,0,0.08)] p-2 sm:p-3 pr-5 sm:pr-8 flex items-center gap-4 hover:scale-[1.02] hover:bg-white/90 transition-all duration-500 group"
+                  initial={{ opacity: 0, x: 30, y: 10 }}
+                  animate={{ opacity: introFinished ? 1 : 0, x: introFinished ? 0 : 30, y: introFinished ? 0 : 10 }}
+                  transition={{ duration: 0.4, delay: introFinished ? 0.5 : 0, ease: "easeOut" }}
+                  className="relative z-10 w-full max-w-[280px] sm:max-w-[360px] md:max-w-[420px] xl:max-w-[460px] bg-white/70 backdrop-blur-md rounded-full border border-white/60 shadow-[0_15px_40px_-10px_rgba(0,0,0,0.08)] p-2 sm:p-3 pr-5 sm:pr-8 flex items-center gap-4 hover:scale-[1.02] hover:bg-white/90 transition-all duration-500 group"
                 >
                   <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 shrink-0 relative bg-gradient-to-tr from-slate-50 to-white rounded-full overflow-hidden flex items-center justify-center p-2.5 shadow-inner border border-white shadow-slate-200/50">
                     <Image 

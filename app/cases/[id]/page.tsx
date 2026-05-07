@@ -217,7 +217,7 @@ export default function CaseCategoryPage({ params }: { params: Promise<{ id: str
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.4 }}
               className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 text-white font-medium text-xs mb-10 uppercase tracking-widest shadow-2xl"
             >
               <Star className="w-4 h-4 text-amber-500" /> Premium Clinical Documentation
@@ -226,7 +226,7 @@ export default function CaseCategoryPage({ params }: { params: Promise<{ id: str
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.4, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="text-6xl md:text-8xl lg:text-[8rem] font-serif text-white tracking-tight leading-[0.95] mb-8"
             >
               {category.title}
@@ -235,7 +235,7 @@ export default function CaseCategoryPage({ params }: { params: Promise<{ id: str
             <motion.p 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.4, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="text-xl md:text-2xl text-slate-300 max-w-2xl leading-relaxed font-light"
             >
                Methodical documentation of structural transformations, showcasing predictability and clinical excellence.

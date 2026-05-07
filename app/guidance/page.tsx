@@ -35,7 +35,7 @@ export default function GuidancePage() {
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
               >
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-black text-[10px] uppercase tracking-widest mb-8">
                   <Sparkles className="w-3 h-3" /> Knowledge is Power
@@ -67,7 +67,7 @@ export default function GuidancePage() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                transition={{ duration: 1, ease: "easeOut" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
                 className="relative aspect-[4/5] rounded-[60px] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)]"
               >
                 <Image 
@@ -111,7 +111,7 @@ export default function GuidancePage() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ delay: idx * 0.1, duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                   className="relative aspect-[4/5] rounded-[32px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
                 >
                   <Image 
@@ -147,7 +147,7 @@ export default function GuidancePage() {
                   initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8 }}
+                  transition={{ duration: 0.4 }}
                 >
                   <p className={`text-[10px] font-black uppercase tracking-[0.5em] mb-6 ${idx % 2 === 0 ? 'text-primary' : 'text-primary'}`}>
                     {section.subtitle}
@@ -187,7 +187,7 @@ export default function GuidancePage() {
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 1 }}
+                  transition={{ duration: 0.5 }}
                   className="relative w-full h-full rounded-[40px] md:rounded-[80px] overflow-hidden shadow-2xl"
                 >
                   <Image 

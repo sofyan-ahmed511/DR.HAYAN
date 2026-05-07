@@ -15,7 +15,7 @@ export default function IntroSplash({ onComplete }: IntroSplashProps) {
     const timer = setTimeout(() => {
       setIsVisible(false);
       onComplete(); // Notify parent so the main content can start animating in
-    }, 2500);
+    }, 300);
 
     return () => clearTimeout(timer);
   }, [onComplete]);
@@ -25,8 +25,8 @@ export default function IntroSplash({ onComplete }: IntroSplashProps) {
       {isVisible && (
         <motion.div
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, y: -50, filter: 'blur(10px)' }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="fixed inset-0 z-[999] flex items-center justify-center bg-[#FAFAFA] overflow-hidden"
         >
           {/* Subtle elegant organic background for intro splash */}
@@ -45,9 +45,9 @@ export default function IntroSplash({ onComplete }: IntroSplashProps) {
 
           <div className="relative flex flex-col items-center justify-center z-10">
             <motion.div
-              initial={{ scale: 0.8, opacity: 0, filter: 'blur(10px)' }}
-              animate={{ scale: 1, opacity: 1, filter: 'blur(0px)' }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
               className="flex flex-col items-center"
             >
               <h1 className="text-5xl md:text-7xl font-sans font-light text-[#1A1A1A] tracking-widest mb-1 uppercase">
@@ -59,13 +59,13 @@ export default function IntroSplash({ onComplete }: IntroSplashProps) {
               <motion.div 
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
-                transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+                transition={{ duration: 0.3, delay: 0.1, ease: "easeInOut" }}
                 className="h-[1px] bg-[#1A1A1A]/30 w-full mb-3"
               />
               <motion.p 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
+                transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
                 className="text-xs md:text-sm uppercase tracking-[0.3em] text-gray-500"
               >
                 Orthodontic Specialty
