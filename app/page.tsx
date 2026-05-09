@@ -9,6 +9,7 @@ import { doctorInfo } from '@/lib/doctorData';
 
 // NEW COMPONENTS
 import IntroSplash from '@/components/home/IntroSplash';
+import LazySection from '@/components/LazySection';
 
 const MarqueeSection = dynamic(() => import('@/components/home/MarqueeSection'));
 const VisionaryStats = dynamic(() => import('@/components/home/VisionaryStats'));
@@ -30,8 +31,8 @@ export default function Home() {
       <IntroSplash onComplete={handleIntroComplete} />
       
       <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: introFinished ? 1 : 0 }}
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.2 }}
         className="flex flex-col min-h-screen bg-white overflow-x-hidden w-full"
       >
@@ -130,21 +131,16 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ 
                   opacity: introFinished ? 1 : 0, 
-                  scale: introFinished ? 1 : 0.9,
-                  borderRadius: [
-                    "60% 40% 30% 70% / 60% 30% 70% 40%", 
-                    "30% 70% 70% 30% / 30% 30% 70% 70%", 
-                    "60% 40% 30% 70% / 60% 30% 70% 40%"
-                  ] 
+                  scale: introFinished ? [1, 1.05, 1] : 0.9,
+                  borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%"
                 }}
                 transition={{ 
                   opacity: { duration: 0.5, ease: "easeOut", delay: introFinished ? 0.2 : 0 },
-                  scale: { duration: 0.5, ease: "easeOut", delay: introFinished ? 0.2 : 0 },
-                  borderRadius: { duration: 8, repeat: Infinity, ease: "easeInOut" } 
+                  scale: { duration: 8, repeat: Infinity, ease: "easeInOut", delay: introFinished ? 0.2 : 0 }
                 }}
                 className="relative w-full max-w-[340px] md:max-w-[400px] aspect-[4/5] overflow-hidden shrink-0 z-20 shadow-[0_20px_60px_rgba(0,0,0,0.15)]"
               >
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent z-10 pointer-events-none"></div>
                 <Image
                   src="https://i.postimg.cc/d3gxxH71/IMG-7809.png"
                   alt="Dr. Hayan"
@@ -156,14 +152,16 @@ export default function Home() {
               </motion.div>
               {/* Organic glowing background shapes */}
               <motion.div 
-                animate={{ rotate: 360, scale: [1, 1.1, 1], opacity: introFinished ? 1 : 0 }} 
-                transition={{ opacity: { duration: 0.5, delay: introFinished ? 0.3 : 0 }, rotate: { duration: 20, repeat: Infinity, ease: "linear" }, scale: { duration: 20, repeat: Infinity, ease: "linear" } }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/20 rounded-[60%_40%_70%_30%/40%_50%_60%_50%] blur-3xl pointer-events-none z-10"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: introFinished ? 1 : 0, scale: 1.1 }} 
+                transition={{ opacity: { duration: 1.5, delay: introFinished ? 0.3 : 0 }, scale: { duration: 2, ease: "easeOut" } }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/20 rounded-full blur-[80px] pointer-events-none z-10"
               ></motion.div>
               <motion.div 
-                animate={{ rotate: -360, scale: [1, 1.2, 1], opacity: introFinished ? 1 : 0 }} 
-                transition={{ opacity: { duration: 0.5, delay: introFinished ? 0.4 : 0 }, rotate: { duration: 25, repeat: Infinity, ease: "linear" }, scale: { duration: 25, repeat: Infinity, ease: "linear" } }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-blue-300/20 rounded-[30%_70%_40%_60%/50%_30%_70%_50%] blur-[80px] pointer-events-none z-0"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: introFinished ? 1 : 0, scale: 1.2 }} 
+                transition={{ opacity: { duration: 1.5, delay: introFinished ? 0.4 : 0 }, scale: { duration: 2, ease: "easeOut" } }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-blue-300/20 rounded-full blur-[80px] pointer-events-none z-0"
               ></motion.div>
             </div>
 
@@ -256,13 +254,13 @@ export default function Home() {
       </section>
 
       {/* NEW MODULAR SECTIONS REPLACING THE OLD ONES */}
-      <MarqueeSection />
-      <VisionaryStats />
-      <ThreeSteps />
-      <Transformations />
-      <WellnessJourney />
-      <TestimonialsVisual />
-      <EnhancedFAQ />
+      <LazySection><MarqueeSection /></LazySection>
+      <LazySection><VisionaryStats /></LazySection>
+      <LazySection><ThreeSteps /></LazySection>
+      <LazySection><Transformations /></LazySection>
+      <LazySection><WellnessJourney /></LazySection>
+      <LazySection><TestimonialsVisual /></LazySection>
+      <LazySection><EnhancedFAQ /></LazySection>
       
       </motion.div>
     </>

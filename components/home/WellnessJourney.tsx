@@ -105,7 +105,7 @@ export default function WellnessJourney() {
             className={`bg-[#DCE7F0] rounded-3xl md:rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between group overflow-hidden relative min-h-[400px] lg:col-span-5`}
           >
             <div className="absolute inset-0 z-0">
-               <Image src={cards[2].bgImg!} alt="bg" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 mix-blend-overlay" referrerPolicy="no-referrer" />
+               <Image src={cards[2].bgImg!} alt="bg" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover opacity-30 group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
                <div className="absolute inset-0 bg-gradient-to-t from-[#DCE7F0] via-[#DCE7F0]/80 to-transparent"></div>
             </div>
             <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#2C3E50] mb-8 relative z-10 shadow-sm group-hover:scale-110 transition-transform">
@@ -125,7 +125,7 @@ export default function WellnessJourney() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className={`bg-[#1B2A38] rounded-3xl md:rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between group overflow-hidden relative min-h-[400px] lg:col-span-7`}
           >
-            <div className="absolute inset-0 z-0 opacity-40 mix-blend-luminosity grayscale group-hover:grayscale-0 transition-all duration-700">
+            <div className="absolute inset-0 z-0 opacity-40 transition-opacity duration-700 group-hover:opacity-60">
                <Image src={cards[3].bgImg!} alt="bg" fill sizes="(max-width: 1024px) 100vw, 60vw" className="object-cover group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
                <div className="absolute inset-0 bg-gradient-to-r from-[#1B2A38] to-transparent"></div>
             </div>

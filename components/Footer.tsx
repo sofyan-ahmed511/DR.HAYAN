@@ -17,13 +17,13 @@ export default function Footer() {
           src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop" 
           alt="Serene landscape" 
           fill
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, 400px"
           className="object-cover object-bottom opacity-90"
           referrerPolicy="no-referrer"
         />
         
         {/* Overlay to give the glass-like misty effect */}
-        <div className="absolute inset-0 bg-[#e2ebf0]/20 backdrop-blur-[1px] z-10 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-[#e2ebf0]/20 z-10" />
         <div className="absolute bottom-0 inset-x-0 h-[60%] bg-gradient-to-t from-[#1b2a38] via-[#213647]/80 to-transparent z-20" />
       </div>
 

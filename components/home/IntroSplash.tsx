@@ -15,7 +15,7 @@ export default function IntroSplash({ onComplete }: IntroSplashProps) {
     const timer = setTimeout(() => {
       setIsVisible(false);
       onComplete(); // Notify parent so the main content can start animating in
-    }, 2800);
+    }, 2200);
 
     return () => clearTimeout(timer);
   }, [onComplete]);
@@ -32,14 +32,14 @@ export default function IntroSplash({ onComplete }: IntroSplashProps) {
           {/* Subtle elegant organic background for intro splash */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1, rotate: 360 }} 
-            transition={{ opacity: { duration: 2 }, rotate: { duration: 40, repeat: Infinity, ease: "linear" } }}
+            animate={{ opacity: 1, scale: 1, rotate: 180 }} 
+            transition={{ opacity: { duration: 2 }, rotate: { duration: 3, ease: "linear" } }}
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-slate-200/40 rounded-[60%_40%_70%_30%/40%_50%_60%_50%] blur-3xl pointer-events-none"
           ></motion.div>
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1, rotate: -360 }} 
-            transition={{ opacity: { duration: 2 }, rotate: { duration: 50, repeat: Infinity, ease: "linear" } }}
+            animate={{ opacity: 1, scale: 1, rotate: -180 }} 
+            transition={{ opacity: { duration: 2 }, rotate: { duration: 3, ease: "linear" } }}
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30rem] h-[30rem] bg-blue-100/30 rounded-[30%_70%_40%_60%/50%_30%_70%_50%] blur-[80px] pointer-events-none"
           ></motion.div>
 
@@ -66,7 +66,7 @@ export default function IntroSplash({ onComplete }: IntroSplashProps) {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-                className="text-xs md:text-sm uppercase tracking-[0.3em] text-blue-500"
+                className="text-xs md:text-sm uppercase tracking-[0.3em] text-gray-500"
               >
                 Orthodontic Specialty
               </motion.p>
