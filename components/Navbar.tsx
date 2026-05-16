@@ -79,7 +79,7 @@ export default function Navbar() {
         className="fixed top-0 inset-x-0 z-[100] flex justify-center pointer-events-none pt-4 px-4 sm:px-6"
       >
         <header
-          className={`pointer-events-auto w-full max-w-6xl transition-all duration-500 rounded-[2rem] md:rounded-full ${
+          className={`pointer-events-auto relative w-full max-w-6xl transition-all duration-500 rounded-[2rem] md:rounded-full ${
             isNavSolid
               ? 'bg-white/80 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/50 py-3 px-4 md:px-6'
               : 'bg-white/40 backdrop-blur-md shadow-[0_4px_16px_rgba(0,0,0,0.02)] border border-white/20 py-4 px-4 md:px-6'
@@ -123,10 +123,11 @@ export default function Navbar() {
 
               {/* Cases Mega Menu Trigger */}
               <div
-                className="relative group"
+                className="relative group flex items-center h-full"
                 onMouseEnter={openCasesMenu}
                 onMouseLeave={closeCasesMenu}
               >
+                <div className="absolute inset-x-0 -bottom-8 h-8 bg-transparent" /> {/* Invisible bridge */}
                 <button
                   className={`flex items-center gap-1.5 text-[13px] font-medium transition-all px-5 py-2.5 rounded-full relative ${
                     pathname.startsWith('/cases') || casesDropdownOpen
@@ -278,7 +279,7 @@ export default function Navbar() {
               
               <div className="mt-12 pt-8 border-t border-slate-100">
                 <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-6 px-4">Clinical Cases</p>
-                <div className="grid grid-cols-2 gap-3 px-2">
+                <div className="grid grid-cols-1 gap-3 px-2">
                   {caseCategories.map((category, index) => {
                     return (
                       <motion.div
@@ -290,7 +291,7 @@ export default function Navbar() {
                         <Link
                           href={`/cases/${category.id}`}
                           onClick={() => setMobileMenuOpen(false)}
-                          className="relative h-20 rounded-xl overflow-hidden group/mitem border border-slate-200 bg-white shadow-sm block"
+                          className="relative h-28 rounded-xl overflow-hidden group/mitem border border-slate-200 bg-white shadow-sm block"
                         >
                           {/* Image Container */}
                           <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-slate-100">
