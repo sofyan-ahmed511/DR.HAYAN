@@ -15,7 +15,7 @@ export default function IntroSplash({ onComplete }: IntroSplashProps) {
     const timer = setTimeout(() => {
       setIsVisible(false);
       onComplete(); // Notify parent so the main content can start animating in
-    }, 2200);
+    }, 800);
 
     return () => clearTimeout(timer);
   }, [onComplete]);
@@ -32,15 +32,17 @@ export default function IntroSplash({ onComplete }: IntroSplashProps) {
           {/* Subtle elegant organic background for intro splash */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1, rotate: 180 }} 
-            transition={{ opacity: { duration: 2 }, rotate: { duration: 3, ease: "linear" } }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-slate-200/40 rounded-[60%_40%_70%_30%/40%_50%_60%_50%] blur-3xl pointer-events-none"
+            animate={{ opacity: 1, scale: 1 }} 
+            transition={{ opacity: { duration: 1 }, scale: { duration: 1.5, ease: "easeOut" } }}
+            style={{ background: 'radial-gradient(circle, rgba(226,232,240,0.6) 0%, rgba(226,232,240,0) 70%)' }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] pointer-events-none"
           ></motion.div>
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1, rotate: -180 }} 
-            transition={{ opacity: { duration: 2 }, rotate: { duration: 3, ease: "linear" } }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30rem] h-[30rem] bg-blue-100/30 rounded-[30%_70%_40%_60%/50%_30%_70%_50%] blur-[80px] pointer-events-none"
+            animate={{ opacity: 1, scale: 1 }} 
+            transition={{ opacity: { duration: 1 }, scale: { duration: 1.5, ease: "easeOut" } }}
+            style={{ background: 'radial-gradient(circle, rgba(219,234,254,0.5) 0%, rgba(219,234,254,0) 70%)' }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30rem] h-[30rem] pointer-events-none"
           ></motion.div>
 
           <div className="relative flex flex-col items-center justify-center z-10">

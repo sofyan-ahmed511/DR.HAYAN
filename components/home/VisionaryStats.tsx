@@ -14,7 +14,7 @@ export default function VisionaryStats() {
   ];
 
   const carouselImages = [
-    "https://images.unsplash.com/photo-1590680426861-12591a4593fc?auto=format&fit=crop&w=400&q=80",
+    "https://images.unsplash.com/photo-1629909613638-0e4a1fad8f81?auto=format&fit=crop&w=400&q=80",
     "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=400&q=80",
     "https://images.unsplash.com/photo-1555820585-c5ae44394b79?auto=format&fit=crop&w=400&q=80"
   ];

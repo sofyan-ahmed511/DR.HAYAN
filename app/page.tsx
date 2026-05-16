@@ -131,14 +131,20 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ 
                   opacity: introFinished ? 1 : 0, 
-                  scale: introFinished ? [1, 1.05, 1] : 0.9,
-                  borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%"
+                  scale: introFinished ? 1 : 0.9,
+                  borderRadius: [
+                    "60% 40% 30% 70% / 60% 30% 70% 40%", 
+                    "30% 70% 70% 30% / 30% 30% 70% 70%", 
+                    "60% 40% 30% 70% / 60% 30% 70% 40%"
+                  ]
                 }}
                 transition={{ 
                   opacity: { duration: 0.5, ease: "easeOut", delay: introFinished ? 0.2 : 0 },
-                  scale: { duration: 8, repeat: Infinity, ease: "easeInOut", delay: introFinished ? 0.2 : 0 }
+                  scale: { duration: 0.5, ease: "easeOut", delay: introFinished ? 0.2 : 0 },
+                  borderRadius: { duration: 8, repeat: Infinity, ease: "easeInOut" }
                 }}
                 className="relative w-full max-w-[340px] md:max-w-[400px] aspect-[4/5] overflow-hidden shrink-0 z-20 shadow-[0_20px_60px_rgba(0,0,0,0.15)]"
+                style={{ willChange: "border-radius, transform" }}
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent z-10 pointer-events-none"></div>
                 <Image
@@ -154,14 +160,16 @@ export default function Home() {
               <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: introFinished ? 1 : 0, scale: 1.1 }} 
-                transition={{ opacity: { duration: 1.5, delay: introFinished ? 0.3 : 0 }, scale: { duration: 2, ease: "easeOut" } }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/20 rounded-full blur-[80px] pointer-events-none z-10"
+                transition={{ opacity: { duration: 1.0, delay: introFinished ? 0.1 : 0 }, scale: { duration: 1.5, ease: "easeOut" } }}
+                style={{ background: 'radial-gradient(circle, rgba(26,77,67,0.15) 0%, rgba(26,77,67,0) 70%)' }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] pointer-events-none z-10"
               ></motion.div>
               <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: introFinished ? 1 : 0, scale: 1.2 }} 
-                transition={{ opacity: { duration: 1.5, delay: introFinished ? 0.4 : 0 }, scale: { duration: 2, ease: "easeOut" } }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-blue-300/20 rounded-full blur-[80px] pointer-events-none z-0"
+                transition={{ opacity: { duration: 1.0, delay: introFinished ? 0.2 : 0 }, scale: { duration: 1.5, ease: "easeOut" } }}
+                style={{ background: 'radial-gradient(circle, rgba(147,197,253,0.15) 0%, rgba(147,197,253,0) 70%)' }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[35rem] h-[35rem] pointer-events-none z-0"
               ></motion.div>
             </div>
 

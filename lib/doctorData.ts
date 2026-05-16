@@ -18,8 +18,8 @@ export const doctorInfo = {
   ],
   image: "https://picsum.photos/seed/dr-hayan-profile/800/800",
   contact: {
-    phone: "+20 100 000 0000",
-    whatsapp: "201000000000",
+    phone: "+20 10 03457115",
+    whatsapp: "201003457115",
     email: "info@drhayanortho.com",
     address: "Cairo, Egypt - 5th Settlement, North 90th St, Medical Clinics Building",
   },

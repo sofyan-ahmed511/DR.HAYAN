@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -19,6 +19,20 @@ export default function Navbar() {
   const [casesDropdownOpen, setCasesDropdownOpen] = useState(false);
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const pathname = usePathname();
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const openCasesMenu = () => {
+    if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
+    setCasesDropdownOpen(true);
+    setHoveredLink('cases');
+  };
+
+  const closeCasesMenu = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setCasesDropdownOpen(false);
+      if (hoveredLink === 'cases') setHoveredLink(null);
+    }, 300); // 300ms delay to safely bridge the gap
+  };
 
   useEffect(() => {
     let ticking = false;
@@ -110,11 +124,8 @@ export default function Navbar() {
               {/* Cases Mega Menu Trigger */}
               <div
                 className="relative group"
-                onMouseEnter={() => {
-                  setCasesDropdownOpen(true);
-                  setHoveredLink('cases');
-                }}
-                onMouseLeave={() => setCasesDropdownOpen(false)}
+                onMouseEnter={openCasesMenu}
+                onMouseLeave={closeCasesMenu}
               >
                 <button
                   className={`flex items-center gap-1.5 text-[13px] font-medium transition-all px-5 py-2.5 rounded-full relative ${
@@ -156,9 +167,9 @@ export default function Navbar() {
           <AnimatePresence>
             {casesDropdownOpen && (
               <div 
-                className="absolute top-[calc(100%+16px)] left-0 w-full hidden lg:block z-50 pointer-events-auto"
-                onMouseEnter={() => setCasesDropdownOpen(true)}
-                onMouseLeave={() => setCasesDropdownOpen(false)}
+                className="absolute top-full pt-4 left-0 w-full hidden lg:block z-50 pointer-events-auto"
+                onMouseEnter={openCasesMenu}
+                onMouseLeave={closeCasesMenu}
               >
                 <motion.div
                   initial={{ opacity: 0, y: -10, scale: 0.98 }}
@@ -178,31 +189,28 @@ export default function Navbar() {
                         >
                           <Link
                             href={`/cases/${category.id}`}
-                            className="relative h-24 lg:h-28 rounded-2xl overflow-hidden group/item shadow-sm border border-slate-100 bg-white block"
+                            className="relative h-28 lg:h-32 rounded-2xl overflow-hidden group/item shadow-sm border border-slate-100 bg-slate-900 block"
                           >
                             {/* Image Container */}
-                            <div className="absolute inset-x-0 bottom-0 h-[60%] transition-[height] duration-400 ease-out group-hover/item:h-full z-0 overflow-hidden bg-slate-50">
+                            <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-slate-900">
                               <Image 
                                 src={category.iconImg || category.image} 
                                 alt={category.title} 
                                 fill 
                                 sizes="(max-width: 1024px) 50vw, 25vw"
-                                className="object-cover" 
+                                className="object-cover opacity-80 group-hover/item:scale-110 group-hover/item:opacity-100 transition-all duration-700" 
                                 referrerPolicy="no-referrer" 
                               />
                             </div>
                             
-                            {/* Dark overlay that fades in only on hover */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-400 z-10" />
+                            {/* Dark overlay */}
+                            <div className="absolute inset-0 bg-slate-900/40 group-hover/item:bg-slate-900/60 transition-colors duration-400 z-10" />
                             
                             {/* Text Content */}
-                            <div className="absolute inset-0 flex flex-col justify-between p-4 z-20 pointer-events-none">
-                              <span className="font-bold text-slate-800 text-[13px] lg:text-[15px] leading-tight group-hover/item:text-white transition-colors duration-400 drop-shadow-sm">
+                            <div className="absolute inset-0 flex items-center justify-center p-4 z-20 pointer-events-none">
+                              <span className="font-bold text-white text-[14px] lg:text-[16px] leading-tight text-center drop-shadow-md group-hover/item:scale-105 transition-transform duration-300">
                                 {category.title}
                               </span>
-                              <div className="self-end w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 translate-y-2 group-hover/item:translate-y-0 text-white">
-                                <ArrowLeft className="w-4 h-4 rotate-135" />
-                              </div>
                             </div>
                           </Link>
                         </motion.div>
@@ -235,7 +243,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: '-100%', scale: 0.95 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed top-4 left-4 bottom-4 w-[calc(100%-32px)] max-w-sm bg-white/95 backdrop-blur-md z-[70] overflow-y-auto lg:hidden shadow-[0_20px_60px_rgba(0,0,0,0.15)] border border-white/60 rounded-[2.5rem]"
+            className="fixed inset-0 w-screen h-[100dvh] bg-white z-[70] overflow-y-auto lg:hidden shadow-2xl"
           >
             <div className="p-8 pt-24 flex flex-col h-full relative">
               {/* Close Button inside Sidebar */}
@@ -285,8 +293,8 @@ export default function Navbar() {
                           className="relative h-20 rounded-xl overflow-hidden group/mitem border border-slate-200 bg-white shadow-sm block"
                         >
                           {/* Image Container */}
-                          <div className="absolute inset-y-0 left-0 w-[40%] transition-[width] duration-300 ease-out group-hover/mitem:w-full z-0 overflow-hidden bg-slate-100">
-                            <Image sizes="100vw" 
+                          <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-slate-100">
+                            <Image sizes="(max-width: 768px) 100vw, 400px" 
                               src={category.iconImg || category.image} 
                               alt={category.title} 
                               fill 
@@ -294,12 +302,12 @@ export default function Navbar() {
                               referrerPolicy="no-referrer" 
                             />
                             {/* Dark overlay */}
-                            <div className="absolute inset-0 bg-slate-900/50 opacity-0 group-hover/mitem:opacity-100 transition-opacity duration-300" />
+                            <div className="absolute inset-0 bg-slate-900/40 group-hover/mitem:bg-slate-900/60 transition-colors duration-300" />
                           </div>
                           
                           {/* Text Content */}
-                          <div className="absolute inset-y-0 right-0 w-[60%] transition-[width] duration-300 ease-out group-hover/mitem:w-full flex items-center justify-center p-2 z-10 pointer-events-none">
-                            <span className="font-bold text-slate-700 text-[11px] xs:text-xs leading-tight text-center tracking-wide group-hover/mitem:text-white group-hover/mitem:text-[14px] group-hover/mitem:font-serif transition-colors duration-300 drop-shadow-sm">
+                          <div className="absolute inset-0 w-full h-full flex items-center justify-center p-3 z-10 pointer-events-none">
+                            <span className="font-bold text-white text-[13px] sm:text-[15px] leading-tight text-center tracking-wide group-hover/mitem:scale-105 transition-transform duration-300 drop-shadow-md">
                               {category.title}
                             </span>
                           </div>
@@ -334,3 +342,4 @@ export default function Navbar() {
   </>
   );
 }
+
