@@ -53,7 +53,7 @@ export default function Navbar() {
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: 'Guidance', href: '/guidance' },
-    { name: 'Testimonials', href: '/#testimonials' },
+    { name: 'Video Library', href: '/guidance/library' },
   ];
 
   const isHomePage = pathname === '/';
