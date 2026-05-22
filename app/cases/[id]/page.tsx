@@ -119,25 +119,60 @@ function CaseFullSection({ caseItem, index, subSection }: { caseItem: any, index
           
           <div className="embla overflow-hidden relative z-10 w-full pl-6 lg:pl-12" ref={emblaRef}>
             <div className="embla__container flex">
-              {caseItem.progressImages.map((img: any, idx: number) => (
-                <div key={idx} className="embla__slide flex-[0_0_85%] sm:flex-[0_0_70%] md:flex-[0_0_60%] lg:flex-[0_0_45%] xl:flex-[0_0_35%] min-w-0 mr-6 md:mr-10 relative flex flex-col gap-6">
-                  <div className="w-full aspect-[4/5] rounded-[2rem] overflow-hidden group shadow-2xl bg-black border border-white/5 relative p-2 md:p-3">
-                    <div className="relative w-full h-full rounded-[1.5rem] overflow-hidden">
-                       <Image src={img.img} alt={img.label} fill sizes="(max-width: 1024px) 100vw, 85vw" className="object-cover transition-transform duration-1000 group-hover:scale-105" referrerPolicy="no-referrer" />
-                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-                       
-                       <div className="absolute bottom-6 left-6 right-6">
-                          <p className="text-amber-400 font-bold text-[10px] md:text-xs mb-2 tracking-widest uppercase flex items-center gap-2 bg-black/40 w-fit px-3 py-1.5 rounded-full backdrop-blur-md border border-white/5">
-                            Phase {idx + 1}
-                          </p>
-                          <h5 className="text-white text-xl md:text-2xl font-serif leading-tight">{img.label}</h5>
-                          <p className="text-slate-300 mt-2 text-sm max-w-[90%] font-light line-clamp-2">{img.timeframe}</p>
-                       </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+  {caseItem.progressImages.map((img: any, idx: number) => (
+    <div
+      key={idx}
+      className="
+        embla__slide
+        flex-[0_0_95%]
+        sm:flex-[0_0_85%]
+        md:flex-[0_0_75%]
+        lg:flex-[0_0_65%]
+        xl:flex-[0_0_58%]
+        min-w-0
+        mr-6
+        md:mr-10
+        relative
+        flex
+        flex-col
+        gap-6
+      "
+    >
+      <div className="w-full aspect-[16/9] rounded-[2rem] overflow-hidden group shadow-2xl bg-black border border-white/5 relative p-2 md:p-3">
+        
+        <div className="relative w-full h-full rounded-[1.5rem] overflow-hidden">
+          
+          <Image
+            src={img.img}
+            alt={img.label}
+            fill
+            sizes="(max-width: 1024px) 100vw, 70vw"
+            className="object-cover transition-transform duration-1000 group-hover:scale-105"
+            referrerPolicy="no-referrer"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+
+          <div className="absolute bottom-6 left-6 right-6">
+            
+            <p className="text-amber-400 font-bold text-[10px] md:text-xs mb-2 tracking-widest uppercase flex items-center gap-2 bg-black/40 w-fit px-3 py-1.5 rounded-full backdrop-blur-md border border-white/5">
+              Phase {idx + 1}
+            </p>
+
+            <h5 className="text-white text-2xl md:text-3xl font-serif leading-tight">
+              {img.label}
+            </h5>
+
+            <p className="text-slate-300 mt-2 text-base max-w-[90%] font-light line-clamp-2">
+              {img.timeframe}
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
           </div>
           {/* Mobile Navigation */}
           <div className="flex md:hidden justify-center gap-4 mt-8 relative z-10">

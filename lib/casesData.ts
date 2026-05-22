@@ -11,6 +11,8 @@ import { impactedTeethCases } from './cases/impactedTeeth';
 import { openBiteCases } from './cases/openBite';
 import { scissorBiteCases } from './cases/scissorBite';
 import { spacingCases } from './cases/spacing';
+import { crossBite } from './cases/crossBite';
+import { miniScrewTad } from './cases/miniScrewTad';
 
 export const caseCategories = [
   {
@@ -22,6 +24,7 @@ export const caseCategories = [
     subSections: ['Overview'],
     cases: alignerCases,
   },
+  
 
   {
     id: 'bimaxillary-protrusion',
@@ -142,4 +145,40 @@ export const caseCategories = [
     subSections: ['Overview'],
     cases: spacingCases,
   },
+
+  {
+  id: "mini-screw-tad",
+
+  title: "Mini Screw TAD",
+
+  image:
+    "https://i.postimg.cc/6qk1D4zW/IMG-9922.jpg",
+
+  iconImg:
+    "https://i.postimg.cc/6qk1D4zW/IMG-9922.jpg",
+
+  subSections: [
+    "Overview",
+  ],
+
+  cases: miniScrewTad,
+},
+
+{
+  id: "cross-bite",
+
+  title: "Cross Bite",
+
+  image:
+    "https://i.postimg.cc/J40GRhHt/IMG-7746.jpg",
+
+  iconImg:
+    "https://i.postimg.cc/J40GRhHt/IMG-7746.jpg",
+
+  subSections: [
+    "Overview",
+  ],
+
+  cases: crossBite,
+},
 ];
