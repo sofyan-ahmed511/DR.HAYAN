@@ -120,58 +120,59 @@ function CaseFullSection({ caseItem, index, subSection }: { caseItem: any, index
           <div className="embla overflow-hidden relative z-10 w-full pl-6 lg:pl-12" ref={emblaRef}>
             <div className="embla__container flex">
   {caseItem.progressImages.map((img: any, idx: number) => (
-    <div
-      key={idx}
-      className="
-        embla__slide
-        flex-[0_0_95%]
-        sm:flex-[0_0_85%]
-        md:flex-[0_0_75%]
-        lg:flex-[0_0_65%]
-        xl:flex-[0_0_58%]
-        min-w-0
-        mr-6
-        md:mr-10
-        relative
-        flex
-        flex-col
-        gap-6
-      "
-    >
-      <div className="w-full aspect-[16/9] rounded-[2rem] overflow-hidden group shadow-2xl bg-black border border-white/5 relative p-2 md:p-3">
+  <div
+    key={idx}
+    className="
+      embla__slide
+      flex-[0_0_95%]
+      sm:flex-[0_0_85%]
+      md:flex-[0_0_75%]
+      lg:flex-[0_0_65%]
+      xl:flex-[0_0_58%]
+      min-w-0
+      mr-6
+      md:mr-10
+    "
+  >
+    <div className="bg-[#111111] rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl group transition-all duration-500 hover:-translate-y-1">
+      
+      {/* IMAGE */}
+      <div className="relative w-full aspect-[16/9] overflow-hidden">
+        <Image
+          src={img.img}
+          alt={img.label}
+          fill
+          sizes="(max-width: 1024px) 100vw, 70vw"
+          className="object-cover transition-transform duration-1000 group-hover:scale-105"
+          referrerPolicy="no-referrer"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
+      </div>
+
+      {/* CONTENT UNDER IMAGE */}
+      <div className="p-6 md:p-8 bg-[#111111]">
         
-        <div className="relative w-full h-full rounded-[1.5rem] overflow-hidden">
-          
-          <Image
-            src={img.img}
-            alt={img.label}
-            fill
-            sizes="(max-width: 1024px) 100vw, 70vw"
-            className="object-cover transition-transform duration-1000 group-hover:scale-105"
-            referrerPolicy="no-referrer"
-          />
+        <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 px-4 py-2 rounded-full mb-5">
+          <span className="w-2 h-2 rounded-full bg-amber-400"></span>
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-
-          <div className="absolute bottom-6 left-6 right-6">
-            
-            <p className="text-amber-400 font-bold text-[10px] md:text-xs mb-2 tracking-widest uppercase flex items-center gap-2 bg-black/40 w-fit px-3 py-1.5 rounded-full backdrop-blur-md border border-white/5">
-              Phase {idx + 1}
-            </p>
-
-            <h5 className="text-white text-2xl md:text-3xl font-serif leading-tight">
-              {img.label}
-            </h5>
-
-            <p className="text-slate-300 mt-2 text-base max-w-[90%] font-light line-clamp-2">
-              {img.timeframe}
-            </p>
-
-          </div>
+          <p className="text-amber-400 font-bold text-[10px] md:text-xs tracking-[0.2em] uppercase">
+            Phase {idx + 1}
+          </p>
         </div>
+
+        <h5 className="text-white text-2xl md:text-3xl font-serif leading-tight mb-4">
+          {img.label}
+        </h5>
+
+        <p className="text-slate-400 text-base md:text-lg leading-relaxed font-light">
+          {img.timeframe}
+        </p>
+
       </div>
     </div>
-  ))}
+  </div>
+))}
 </div>
           </div>
           {/* Mobile Navigation */}
