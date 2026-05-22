@@ -4,7 +4,7 @@ import { use } from 'react';
 import { motion } from 'motion/react';
 import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
-import { caseCategories, generateMockCases } from '@/lib/casesData';
+import { caseCategories } from '@/lib/casesData';
 import { categoryDetails } from '@/lib/caseDetailsData';
 import { ChevronLeft, Clock, Quote, Star, CheckCircle2, HeartPulse, HelpCircle, FileText, Activity } from 'lucide-react';
 import Link from 'next/link';
@@ -151,34 +151,48 @@ function CaseFullSection({ caseItem, index, subSection }: { caseItem: any, index
 }
 
 // --- SUBSECTION LAYOUT ---
-function SubSectionRouter({ subSection, categoryId, categorySubtitle }: any) {
-  // Only fetching cases now, the data should exactly be 2 due to previous adjustments
-  const cases = generateMockCases(categoryId, subSection);
-  
+function SubSectionRouter({
+  subSection,
+  category,
+  categorySubtitle,
+}: any) {
+
+  const cases = category?.cases?.[subSection] || [];
+
   return (
     <div className="w-full">
       {/* Subsection Header Banner */}
       <div className="py-24 md:py-32 bg-[#F8F9FA] text-center border-b border-slate-200 relative overflow-hidden">
         <div className="absolute inset-0 flex justify-center items-center opacity-[0.03] pointer-events-none">
-           <div className="w-[120%] h-px bg-black rotate-12"></div>
-           <div className="w-[120%] h-px bg-black -rotate-12 absolute"></div>
+          <div className="w-[120%] h-px bg-black rotate-12"></div>
+          <div className="w-[120%] h-px bg-black -rotate-12 absolute"></div>
         </div>
+
         <div className="container relative z-10 mx-auto px-6 max-w-4xl">
-           <h2 className="text-xs font-bold text-amber-600 uppercase tracking-widest mb-6">Clinical Domain / {categorySubtitle}</h2>
-           <h3 className="text-5xl md:text-7xl font-serif text-[#1A1A1A] tracking-tight leading-[1.1]">{subSection}</h3>
+          <h2 className="text-xs font-bold text-amber-600 uppercase tracking-widest mb-6">
+            Clinical Domain / {categorySubtitle}
+          </h2>
+
+          <h3 className="text-5xl md:text-7xl font-serif text-[#1A1A1A] tracking-tight leading-[1.1]">
+            {subSection}
+          </h3>
         </div>
       </div>
 
-      {/* Render each case as a full 100vw block */}
+      {/* Cases */}
       <div>
         {cases.map((caseItem: any, idx: number) => (
-          <CaseFullSection key={caseItem.id} caseItem={caseItem} index={idx} subSection={subSection} />
+          <CaseFullSection
+            key={caseItem.id}
+            caseItem={caseItem}
+            index={idx}
+            subSection={subSection}
+          />
         ))}
       </div>
     </div>
   );
 }
-
 
 // --- MAIN PAGE ---
 export default function CaseCategoryPage({ params }: { params: Promise<{ id: string }> }) {
@@ -407,13 +421,12 @@ export default function CaseCategoryPage({ params }: { params: Promise<{ id: str
       {/* 4. Display the Sections (Each section contains 2 full-screen cases) */}
       <div className="w-full">
         {category.subSections.map((subSection, index) => (
-           <SubSectionRouter 
-             key={index}
-             subSection={subSection}
-             categoryId={categoryId}
-             categorySubtitle={category.title}
-             index={index}
-           />
+           <SubSectionRouter
+  key={index}
+  subSection={subSection}
+  category={category}
+  categorySubtitle={category.title}
+/>
         ))}
       </div>
       
