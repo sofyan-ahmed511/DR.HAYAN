@@ -3,9 +3,9 @@ export const crossBite = {
     {
       id: "crossbite-1",
 
-      patientInfo: "Female patient, 18 years old",
+      patientInfo: "Female patient, 17 years old",
 
-      duration: "8 months",
+      duration: "15 months",
 
       description:
         "Cross bite correction using aligners with controlled expansion and bite coordination.",
@@ -14,34 +14,79 @@ export const crossBite = {
         "Excellent arch balance and functional improvement achieved after treatment.",
 
       beforeImg:
-        "https://i.postimg.cc/J40GRhHt/IMG-7746.jpg",
+        "https://i.postimg.cc/3x5DSKC7/IMG-8288.jpg",
 
       afterImg:
-        "https://i.postimg.cc/kMz4BYzy/IMG-2729.jpg",
+        "https://i.postimg.cc/ZYXcmzFD/IMG-8311.jpg",
 
       progressImages: [
-        {
-          label: "Initial Condition",
-          timeframe: "Month 1",
-          img: "https://i.postimg.cc/J40GRhHt/IMG-7746.jpg",
-        },
 
         {
           label: "Expansion Progress",
-          timeframe: "Month 3",
-          img: "https://i.postimg.cc/6qk1D4zW/IMG-9922.jpg",
+          timeframe: "Month 1-2",
+          img: "https://i.postimg.cc/Wp7NLsv1/IMG-8289.jpg",
         },
 
         {
           label: "Bite Correction",
-          timeframe: "Month 5",
-          img: "https://i.postimg.cc/5tmdLgg1/IMG-2721-(1).jpg",
+          timeframe: "Month 1-2",
+          img: "https://i.postimg.cc/MGRwsS5x/IMG-8290.jpg",
         },
 
         {
+          label: "Expansion Progress",
+          timeframe: "Month 1-2",
+          img: "https://i.postimg.cc/VL6cxMgL/IMG-8291.jpg",
+        },
+        {
+          label: "Expansion Progresst",
+          timeframe: "Month 1-2",
+          img: "https://i.postimg.cc/Hx2fKs7X/IMG-8292.jpg",
+        },
+        {
+          label: "Expansion Progress",
+          timeframe: "Month 1-2",
+          img: "https://i.postimg.cc/prc3WGCZ/IMG-8293.jpg",
+        },
+        {
+          label: "Bite Correction",
+          timeframe: "Month 3-4",
+          img: "https://i.postimg.cc/m2qKKnhd/IMG-8299.jpg",
+        },
+        {
+          label: "Bite Correction",
+          timeframe: "Month 3-4",
+          img: "https://i.postimg.cc/KYhw8gPJ/IMG-8300.jpg",
+        },
+        {
+          label: "Bite Correction",
+          timeframe: "Month 3-4",
+          img: "https://i.postimg.cc/d1qf8PS5/IMG-8301.jpg",
+        },
+        {
           label: "Final Result",
-          timeframe: "Month 8",
-          img: "https://i.postimg.cc/kMz4BYzy/IMG-2729.jpg",
+          timeframe: "Month 10-11",
+          img: "https://i.postimg.cc/v82K6K7V/IMG-8308.jpg",
+        },
+        {
+          label: "Final Result",
+          timeframe: "Month 10-11",
+          img: "https://i.postimg.cc/jdGkMJkF/IMG-8309.jpg",
+        },
+        {
+          label: "Final Result",
+          timeframe: "Month 10-11",
+          img: "https://i.postimg.cc/fRmqpTGB/IMG-8310.jpg",
+        },
+        {
+          label: "Final Result",
+          timeframe: "Month 12",
+          img: "https://i.postimg.cc/3wZSrfJD/IMG-8312.jpg",
+        },
+        {
+          label: "Final Result",
+          timeframe: "Month 12",
+          img: "https://i.postimg.cc/63jMn7vH/IMG-8313.jpg",
         },
       ],
     },

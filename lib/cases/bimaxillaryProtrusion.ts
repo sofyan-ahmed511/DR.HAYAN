@@ -11,8 +11,8 @@ export const bimaxillaryProtrusionCases: Record<string, any[]> = {
       duration: "12 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",
-      afterImg: "https://i.postimg.cc/qRvBJR1R/IMG-7746.jpg",
-      beforeImg: "https://i.postimg.cc/0NMYjf63/IMG-7753.jpg",
+      afterImg: "https://i.postimg.cc/6qM9xfF7/IMG-7769.jpg",
+      beforeImg: "https://i.postimg.cc/m2rLNKF3/IMG-7760.jpg",
       progressImages: [
         { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/wMh9Fmvf/IMG-7755.jpg" },
         { label: "Month 2", timeframe: "Month 2", img: "https://i.postimg.cc/tCNXxW89/IMG-7756.jpg" },
@@ -28,8 +28,8 @@ export const bimaxillaryProtrusionCases: Record<string, any[]> = {
       duration: "14 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",
-      beforeImg: "https://i.postimg.cc/W1VdR2cr/IMG-7753.jpg",
-      afterImg: "https://i.postimg.cc/qRvBJR1R/IMG-7746.jpg",
+      beforeImg: "https://i.postimg.cc/2j7dBL4S/IMG-753.png",
+      afterImg: "https://i.postimg.cc/Xq4wzn0j/IMG-46.jpg",
       progressImages: [
         { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/v86Tc1Qt/IMG-7754.jpg" },
         { label: "Month 2", timeframe: "Month 2", img: "https://i.postimg.cc/G2fRbjB7/IMG-7752.jpg" },
