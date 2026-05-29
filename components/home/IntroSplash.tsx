@@ -53,10 +53,10 @@ export default function IntroSplash({ onComplete }: IntroSplashProps) {
               className="flex flex-col items-center"
             >
               <h1 className="text-5xl md:text-7xl font-sans font-light text-[#1A1A1A] tracking-widest mb-1 uppercase">
-                Hayaan
+                Dr.Hayan
               </h1>
               <h2 className="text-2xl md:text-3xl font-serif text-[#1A1A1A] italic mb-4">
-                Dr. Hayan
+                Orthodontic Specialty
               </h2>
               <motion.div 
                 initial={{ width: 0 }}
@@ -67,10 +67,10 @@ export default function IntroSplash({ onComplete }: IntroSplashProps) {
               <motion.p 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+                transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
                 className="text-xs md:text-sm uppercase tracking-[0.3em] text-gray-500"
               >
-                Orthodontic Specialty
+                Because your smile deserves the best
               </motion.p>
             </motion.div>
           </div>
