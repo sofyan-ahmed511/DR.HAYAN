@@ -98,11 +98,11 @@ function CaseFullSection({ caseItem, index, subSection }: { caseItem: any, index
 
       {/* Progress Carousel */}
       {caseItem.progressImages && caseItem.progressImages.length > 0 && (
-        <div className="w-full relative bg-[#0A0A0A] py-16 md:py-24 border-y border-white/5 shadow-[0_30px_80px_rgba(0,0,0,0.4)] mt-12 md:mt-24 overflow-hidden">
+        <div className="w-full relative bg-[#000000] py-16 md:py-24 border-y border-white/5 shadow-[0_30px_80px_rgba(0,0,0,0.4)] mt-12 md:mt-24 overflow-hidden">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/5 blur-[120px] rounded-full pointer-events-none translate-y-1/2 -translate-x-1/3"></div>
 
-          <div className="container mx-auto px-6 lg:px-12 max-w-[1400px]">
+          <div className="container mx-auto px-6 lg:px-12 max-w-[1600px]">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 relative z-10 gap-6">
               <div>
                 <p className="text-amber-500 text-sm font-bold uppercase tracking-widest mb-3 flex items-center gap-2">
