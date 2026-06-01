@@ -16,6 +16,11 @@ export const crossBite = {
         {
           label: "Expansion Progress",
           timeframe: "Month 1-2",
+          img: "https://i.postimg.cc/3x5DSKC7/IMG-8288.jpg",
+        },
+        {
+          label: "Expansion Progress",
+          timeframe: "Month 1-2",
           img: "https://i.postimg.cc/Wp7NLsv1/IMG-8289.jpg",
         },
         {
@@ -78,6 +83,11 @@ export const crossBite = {
           timeframe: "Month 12",
           img: "https://i.postimg.cc/63jMn7vH/IMG-8313.jpg",
         },
+        {
+          label: "Final Result",
+          timeframe: "Month 12",
+          img: "https://i.postimg.cc/ZYXcmzFD/IMG-8311.jpg",
+        },
       ],
     },
     {
@@ -93,6 +103,11 @@ export const crossBite = {
       afterImg:
         "https://i.postimg.cc/9FRmW3hs/IMG-3458.jpg",
       progressImages: [
+        {
+          label: "Expansion Progress",
+          timeframe: "Month 1-2",
+          img: "https://i.postimg.cc/Y0Vt1R6k/IMG-3462.jpg",
+        },
         {
           label: "Expansion Progress",
           timeframe: "Month 1-2",
@@ -187,6 +202,11 @@ export const crossBite = {
           label: "Final Result",
           timeframe: "Month 12",
           img: "https://i.postimg.cc/brTLSVkk/IMG-3461.jpg",
+        },
+        {
+          label: "Final Result",
+          timeframe: "Month 12",
+          img: "https://i.postimg.cc/9FRmW3hs/IMG-3458.jpg",
         },
       ],
     },

@@ -23,6 +23,11 @@ export const miniScrewTad = {
         {
           label: "Initial Records",
           timeframe: "Month 1-2",
+          img: "https://i.postimg.cc/V5QsskD0/IMG-821.png",
+        },
+        {
+          label: "Initial Records",
+          timeframe: "Month 1-2",
           img: "https://i.postimg.cc/VvjvCtS3/IMG-8084.jpg",
         },
         {
@@ -97,6 +102,11 @@ export const miniScrewTad = {
           label: "Final Result",
           timeframe: "Month 12",
           img: "https://i.postimg.cc/mDWGF57V/IMG-8119.png",
+        },
+        {
+          label: "Final Result",
+          timeframe: "Month 12",
+          img: "https://i.postimg.cc/m2Y1cvMp/IMG-120.png",
         },
       ],
     },

@@ -14,6 +14,7 @@ export const classIiiCases: Record<string, any[]> = {
       beforeImg: "https://i.postimg.cc/J7DHcDVW/IMG-7598.jpg",
       afterImg: "https://i.postimg.cc/NfRyS3jN/IMG-7599.png",
       progressImages: [
+        { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/J7DHcDVW/IMG-7598.jpg" },
         { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/vTr9sTsr/IMG-7602.png" },
         { label: "Month 1 ", timeframe: "Month 1-2", img: "https://i.postimg.cc/Rh5fyfjx/IMG-7601.png" },
         { label: "Month 2", timeframe: "Month 1-2", img: "https://i.postimg.cc/dtR14G5b/IMG-7586.jpg" },
@@ -26,6 +27,7 @@ export const classIiiCases: Record<string, any[]> = {
         { label: "Month 10", timeframe: "Month 9-10", img: "https://i.postimg.cc/9XZFQGHW/IMG-7596.jpg" },
         { label: "Month 11", timeframe: "Month 11", img: "https://i.postimg.cc/CL0k4GG8/IMG-7603.png" },
         { label: "Final Result", timeframe: "Month 11", img: "https://i.postimg.cc/XJydsx1w/IMG-7600.png" },
+        { label: "Final Result", timeframe: "Month 11", img: "https://i.postimg.cc/NfRyS3jN/IMG-7599.png" },
       ]
     },
     {
@@ -37,6 +39,7 @@ export const classIiiCases: Record<string, any[]> = {
       beforeImg: "https://i.postimg.cc/PqKFmRWT/IMG-4074.jpg",
       afterImg: "https://i.postimg.cc/RFFpGLdf/IMG-4091.jpg",
       progressImages: [
+        { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/PqKFmRWT/IMG-4074.jpg" },
         { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/gJJt4Hst/IMG-4075.jpg" },
         { label: "Month 2", timeframe: "Month 2", img: "https://i.postimg.cc/pTTckJkH/IMG-4076.jpg" },
         { label: "Month 3", timeframe: "Month 3", img: "https://i.postimg.cc/50R7rQk1/IMG-4077.jpg" },
@@ -50,6 +53,7 @@ export const classIiiCases: Record<string, any[]> = {
         { label: "Month 11", timeframe: "Month 11", img: "https://i.postimg.cc/rw9LPgG0/IMG-4088.jpg" },
         { label: "Month 11", timeframe: "Month 11", img: "https://i.postimg.cc/fbThnX59/IMG-4089.jpg" },
         { label: "Month 11", timeframe: "Month 11", img: "https://i.postimg.cc/wBfY6vbX/IMG-4090.jpg" },
+        { label: "Month 11", timeframe: "Month 11", img: "https://i.postimg.cc/RFFpGLdf/IMG-4091.jpg" },
       ]
     }
   ],

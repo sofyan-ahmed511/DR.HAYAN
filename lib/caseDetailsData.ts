@@ -219,5 +219,41 @@ export const categoryDetails: Record<string, any> = {
       { q: "How do you prevent it from relapsing again?", a: "We strongly recommend fixed bonded retainers (bars behind the teeth) along with nightly clear retainers." }
     ],
     feedback: "My teeth shifted in my 20s because I lost my retainer. The 6-month aligner process got everything back to perfect."
-  }
+  },
+  'orthognathic-camouflage': {
+  layout: 'center-text',
+
+  prefix: 'Clinical Overview',
+
+  title: 'Orthognathic Camouflage Treatment',
+
+  desc:
+    'Orthognathic camouflage treatment focuses on correcting skeletal discrepancies through advanced orthodontic mechanics without surgical intervention.',
+
+  points: [
+    'Advanced bite correction planning',
+    'Facial balance optimization',
+    'Long-term occlusal stability',
+  ],
+
+  causes:
+    'Skeletal discrepancies may arise from genetic growth patterns, jaw imbalance, and developmental conditions.',
+
+  duration: '18–24 Months',
+
+  faq: [
+    {
+      q: 'Can camouflage treatment replace surgery?',
+      a: 'In selected moderate skeletal cases, camouflage treatment can provide excellent functional and aesthetic outcomes without surgery.',
+    },
+
+    {
+      q: 'Is the treatment stable long term?',
+      a: 'With proper planning and retention protocols, results are typically stable and predictable.',
+    },
+  ],
+
+  feedback:
+    'The transformation significantly improved both the bite function and facial aesthetics while avoiding surgical intervention.',
+},
 };

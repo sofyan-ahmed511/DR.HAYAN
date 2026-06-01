@@ -13,6 +13,7 @@ import { scissorBiteCases } from './cases/scissorBite';
 import { spacingCases } from './cases/spacing';
 import { crossBite } from './cases/crossBite';
 import { miniScrewTad } from './cases/miniScrewTad';
+import { orthognathicCamophlage } from './cases/orthognathicCamophlage';
 
 export const caseCategories = [
   {
@@ -24,7 +25,6 @@ export const caseCategories = [
     subSections: ['Overview'],
     cases: alignerCases,
   },
-  
 
   {
     id: 'bimaxillary-protrusion',
@@ -147,38 +147,52 @@ export const caseCategories = [
   },
 
   {
-  id: "mini-screw-tad",
+    id: 'mini-screw-tad',
 
-  title: "Mini Screw TAD",
+    title: 'Mini Screw TAD',
 
-  image:
-    "https://i.postimg.cc/6qk1D4zW/IMG-9922.jpg",
+    image:
+      'https://i.postimg.cc/6qk1D4zW/IMG-9922.jpg',
 
-  iconImg:
-    "https://i.postimg.cc/6qk1D4zW/IMG-9922.jpg",
+    iconImg:
+      'https://i.postimg.cc/6qk1D4zW/IMG-9922.jpg',
 
-  subSections: [
-    "Overview",
-  ],
+    subSections: ['Overview'],
 
-  cases: miniScrewTad,
-},
+    cases: miniScrewTad,
+  },
 
-{
-  id: "cross-bite",
+  {
+    id: 'cross-bite',
 
-  title: "Cross Bite",
+    title: 'Cross Bite',
 
-  image:
-    "https://i.postimg.cc/J40GRhHt/IMG-7746.jpg",
+    image:
+      'https://i.postimg.cc/J40GRhHt/IMG-7746.jpg',
 
-  iconImg:
-    "https://i.postimg.cc/J40GRhHt/IMG-7746.jpg",
+    iconImg:
+      'https://i.postimg.cc/J40GRhHt/IMG-7746.jpg',
 
-  subSections: [
-    "Overview",
-  ],
+    subSections: ['Overview'],
 
-  cases: crossBite,
-},
+    cases: crossBite,
+  },
+
+  {
+    id: 'orthognathic-Camophlage',
+
+    title: 'Orthognathic Camophlage',
+
+    subtitle: 'Advanced Skeletal Camophlage Cases',
+
+    image:
+      'https://i.postimg.cc/3R9bL1hM/IMG-9921.jpg',
+
+    iconImg:
+      'https://i.postimg.cc/3R9bL1hM/IMG-9921.jpg',
+
+    subSections: ['Overview'],
+
+    cases: orthognathicCamophlage,
+  },
 ];
