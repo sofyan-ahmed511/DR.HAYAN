@@ -204,7 +204,7 @@ function LibraryContent() {
                 <div className="mt-auto bg-white border border-slate-200 rounded-2xl p-6">
                   <div className="flex items-center gap-4 text-sm font-bold text-slate-700">
                     <div className="w-12 h-12 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center">
-                       <Play className="w-5 h-5 ml-1 fill-current" />
+                        <Play className="w-5 h-5 ml-1 fill-current" />
                     </div>
                     <div>
                       <div className="text-slate-400 text-[10px] uppercase tracking-widest mb-1">Duration</div>

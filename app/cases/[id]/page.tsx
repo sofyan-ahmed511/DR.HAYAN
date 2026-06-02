@@ -111,8 +111,8 @@ function CaseFullSection({ caseItem, index, subSection }: { caseItem: any, index
                 <h4 className="text-3xl md:text-5xl font-serif text-white tracking-tight">Treatment Progression</h4>
               </div>
               <div className="flex gap-4 shrink-0 hidden md:flex">
-                <button onClick={() => emblaApi?.scrollPrev()} className="w-14 h-14 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-white transition-all hover:scale-105 backdrop-blur-sm"><ChevronLeft className="w-6 h-6" /></button>
-                <button onClick={() => emblaApi?.scrollNext()} className="w-14 h-14 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-white transition-all rotate-180 hover:scale-105 backdrop-blur-sm"><ChevronLeft className="w-6 h-6" /></button>
+                <button onClick={() => emblaApi?.scrollPrev()} className="w-19 h-14 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-white transition-all hover:scale-105 backdrop-blur-sm"><ChevronLeft className="w-6 h-6" /></button>
+                <button onClick={() => emblaApi?.scrollNext()} className="w-19 h-14 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-white transition-all rotate-180 hover:scale-105 backdrop-blur-sm"><ChevronLeft className="w-6 h-6" /></button>
               </div>
             </div>
           </div>
