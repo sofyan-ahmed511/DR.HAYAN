@@ -7,7 +7,7 @@ export const openBiteCases: Record<string, any[]> = {
   "Overview": [
     {
       id: "open-bite-Overview-1",
-      patientInfo: "Female patient, 20 years old",
+      patientInfo: "male patient, 20 years old",
       duration: "12 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",
@@ -29,6 +29,30 @@ export const openBiteCases: Record<string, any[]> = {
         { label: "Final Result", timeframe: "Month 12", img: "https://i.postimg.cc/7hb6xdVm/IMG-3961.jpg" },
         { label: "Final Result", timeframe: "Month 12", img: "https://i.postimg.cc/SR5KjdT1/IMG-3962.jpg" },
         { label: "Final Result", timeframe: "Month 12", img: "https://i.postimg.cc/hG9Qwky9/IMG-3959.jpg" },
+      ]
+    },
+    {
+      id: "open-bite-Overview-2",
+      patientInfo: "male patient, 15 years old",
+      duration: "9 months",
+      description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
+      notes: "Patient reported high satisfaction and comfortable progression.",
+      beforeImg: "https://i.postimg.cc/s27jJQN2/IMG-8636.jpg",
+      afterImg: "https://i.postimg.cc/T2Hzp2tk/IMG-8628.jpg",
+      progressImages: [
+        { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/s27jJQN2/IMG-8636.jpg" },
+        { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/qRGpPf0J/IMG-8637.jpg" },
+        { label: "Month 2", timeframe: "Month 2", img: "https://i.postimg.cc/RZn4MJ96/IMG-8630.jpg" },
+        { label: "Month 3", timeframe: "Month 3", img: "https://i.postimg.cc/3wXhGMkG/IMG-8631.jpg" },
+        { label: "Month 4", timeframe: "Month 4", img: "https://i.postimg.cc/FRGQPjgc/IMG-8632.jpg" },
+        { label: "Month 5", timeframe: "Month 5", img: "https://i.postimg.cc/7Psk0nZQ/IMG-8619.jpg" },
+        { label: "Month 6", timeframe: "Month 6", img: "https://i.postimg.cc/FswXnFc3/IMG-8620.jpg" },
+        { label: "Month 7", timeframe: "Month 7", img: "https://i.postimg.cc/sgSCFF4s/IMG-8621.jpg" },
+        { label: "Month 8", timeframe: "Month 8", img: "https://i.postimg.cc/6Qfs3dPZ/IMG-8622.jpg" },
+        { label: "Month 9", timeframe: "Month 9", img: "https://i.postimg.cc/76HFT58Y/IMG-8623.jpg" },
+        { label: "Month 10", timeframe: "Month 10", img: "https://i.postimg.cc/8csxtxzd/IMG-8624.jpg" },
+        { label: "Month 11", timeframe: "Month 11", img: "https://i.postimg.cc/fTG1f2ng/IMG-8629.jpg" },
+        { label: "Final Result", timeframe: "Month 12", img: "https://i.postimg.cc/T2Hzp2tk/IMG-8628.jpg" },
       ]
     },
     

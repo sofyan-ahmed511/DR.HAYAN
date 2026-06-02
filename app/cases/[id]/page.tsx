@@ -78,7 +78,7 @@ function CaseFullSection({ caseItem, index, subSection }: { caseItem: any, index
               </div>
             </div>
 
-            <div className="w-full aspect-[4/3] md:aspect-[16/9] lg:aspect-[20/9] rounded-[2rem] overflow-hidden border border-slate-100 shadow-xl group">
+            <div className="w-full aspect-[4/3] md:aspect-[16/9] lg:aspect-[17/9] rounded-[2rem] overflow-hidden border border-slate-100 shadow-xl group">
               <ReactCompareSlider
                 itemOne={<ReactCompareSliderImage src={caseItem.beforeImg} alt="Before" className="object-cover w-full h-full" />}
                 itemTwo={<ReactCompareSliderImage src={caseItem.afterImg} alt="After" className="object-cover w-full h-full" />}
