@@ -37,7 +37,7 @@ export default function AboutPage() {
             <div className="inline-block px-4 py-1.5 rounded-full bg-slate-200/50 text-slate-600 text-sm font-bold tracking-wider uppercase mb-8">
               / About Us
             </div>
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif tracking-tighter leading-[0.95] mb-6 text-slate-900">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif tracking-tighter leading-[0.95] mb-6 text-slate-900">
               Empowering <br />
               <span className="italic text-slate-500 font-light">Visionary</span> <br />
               Smiles.
