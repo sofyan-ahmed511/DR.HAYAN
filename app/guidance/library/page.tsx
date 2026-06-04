@@ -24,6 +24,7 @@ function LibraryContent() {
                             video.description.toLowerCase().includes(searchQuery.toLowerCase());
       return matchesCategory && matchesSearch;
     });
+    2
   }, [activeCategory, searchQuery]);
 
   return (
@@ -170,7 +171,14 @@ function LibraryContent() {
               {/* Left: Video Player */}
               <div className="w-full lg:w-2/3 bg-black relative aspect-video lg:aspect-auto flex items-center">
                 <iframe 
-                  src={`https://www.youtube.com/embed/${selectedVideo.videoId}?autoplay=1`}
+                  src={`https://www.youtube.com/embed/${
+                    (() => {
+                      const url = selectedVideo?.url || '';
+                      const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+                      const match = url.match(regExp);
+                      return (match && match[2].length === 11) ? match[2] : 'dQw4w9WgXcQ';
+                    })()
+                  }?autoplay=1`}
                   className="w-full h-full aspect-video"
                   allowFullScreen
                   allow="autoplay"

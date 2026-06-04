@@ -29,7 +29,7 @@ export const libraryVideos = [
     description: 'Learn the professional 45-degree angle method for brushing. This technique ensures that plaque is removed right at the gumline where it is most dangerous, promoting long-term gum health and preventing gingivitis.',
     thumbnail: 'https://picsum.photos/seed/oral-1/800/600',
     duration: '04:15',
-    videoId: 'BhaALhBJJz0',
+    url: 'https://youtu.be/SJKmvunlWP8?si=nNhuTCBYiS-gNvLZ',
   },
   {
     id: 'vid-2',
@@ -38,7 +38,7 @@ export const libraryVideos = [
     description: 'A detailed walkthrough of how to guide an oscillating electric toothbrush across each tooth surface for maximum plaque disruption.',
     thumbnail: 'https://picsum.photos/seed/oral-2/800/600',
     duration: '06:30',
-    videoId: 'HhdoPXNKNqc',
+    url: 'https://www.youtube.com/watch?v=HhdoPXNKNqc',
   },
   {
     id: 'vid-3',
@@ -47,7 +47,7 @@ export const libraryVideos = [
     description: 'Why brushing your teeth isn\'t enough. Integrating tongue scraping daily significantly reduces halitosis (bad breath) and decreases the overall bacterial load in your mouth.',
     thumbnail: 'https://picsum.photos/seed/oral-3/800/600',
     duration: '03:45',
-    videoId: 'BhaALhBJJz0',
+    url: 'https://www.youtube.com/watch?v=BhaALhBJJz0',
   },
   {
     id: 'vid-4',
@@ -56,7 +56,7 @@ export const libraryVideos = [
     description: 'Orthodontic hardware creates thousands of traps for plaque. Watch a step-by-step tutorial on navigating brackets and wires without causing damage.',
     thumbnail: 'https://picsum.photos/seed/brush-1/800/600',
     duration: '05:20',
-    videoId: 'HhdoPXNKNqc',
+    url: 'https://www.youtube.com/watch?v=HhdoPXNKNqc',
   },
   {
     id: 'vid-5',
@@ -65,7 +65,7 @@ export const libraryVideos = [
     description: 'Fluoride, Stannous Fluoride, or Hydroxyapatite? Decoding toothpaste ingredients to choose the right one for sensitivity, whitening, or cavity protection.',
     thumbnail: 'https://picsum.photos/seed/brush-2/800/600',
     duration: '07:10',
-    videoId: 'BhaALhBJJz0',
+    url: 'https://www.youtube.com/watch?v=BhaALhBJJz0',
   },
 
   // Flossing & Interdental (Bounds of Service / Other Hygiene)
@@ -76,7 +76,7 @@ export const libraryVideos = [
     description: 'The C-shape flossing technique is mandatory for interproximal health. Understand how to wrap, glide, and curve the floss to remove hidden plaque.',
     thumbnail: 'https://picsum.photos/seed/floss-1/800/600',
     duration: '04:55',
-    videoId: 'HhdoPXNKNqc',
+    url: 'https://www.youtube.com/watch?v=HhdoPXNKNqc',
   },
   {
     id: 'vid-7',
@@ -85,7 +85,7 @@ export const libraryVideos = [
     description: 'An analysis of oral irrigators. While they are excellent at flushing out food debris, learn how they complement, rather than replace, traditional string floss.',
     thumbnail: 'https://picsum.photos/seed/floss-2/800/600',
     duration: '05:40',
-    videoId: 'BhaALhBJJz0',
+    url: 'https://www.youtube.com/watch?v=BhaALhBJJz0',
   },
   {
     id: 'vid-8',
@@ -94,7 +94,7 @@ export const libraryVideos = [
     description: 'For patients with open contacts, periodontal disease, or braces, interdental brushes often outperform string floss. Here is how to size and use them.',
     thumbnail: 'https://picsum.photos/seed/floss-3/800/600',
     duration: '03:30',
-    videoId: 'HhdoPXNKNqc',
+    url: 'https://www.youtube.com/watch?v=HhdoPXNKNqc',
   },
   {
     id: 'vid-9',
@@ -103,7 +103,7 @@ export const libraryVideos = [
     description: 'Keep your Invisalign or clear aligners invisible and odor-free. The essential cleaning protocols using safe chemical agents and soft brushing.',
     thumbnail: 'https://picsum.photos/seed/aligner-maint/800/600',
     duration: '04:15',
-    videoId: 'BhaALhBJJz0',
+    url: 'https://www.youtube.com/watch?v=BhaALhBJJz0',
   },
   {
     id: 'vid-10',
@@ -112,7 +112,7 @@ export const libraryVideos = [
     description: 'Your retainer is for life, and so is its maintenance. Step-by-step cleaning to prevent calculus buildup on Essex and Hawley retainers.',
     thumbnail: 'https://picsum.photos/seed/retainer-care/800/600',
     duration: '03:50',
-    videoId: 'HhdoPXNKNqc',
+    url: 'https://www.youtube.com/watch?v=HhdoPXNKNqc',
   },
 
   // Prevention
@@ -123,7 +123,7 @@ export const libraryVideos = [
     description: 'An animated micro-level view of demineralization. Understand the role of Streptococcus mutans and time in the decay process.',
     thumbnail: 'https://picsum.photos/seed/cavity-form/800/600',
     duration: '08:20',
-    videoId: 'BhaALhBJJz0',
+    url: 'https://www.youtube.com/watch?v=BhaALhBJJz0',
   },
   {
     id: 'vid-12',
@@ -132,7 +132,7 @@ export const libraryVideos = [
     description: 'Sealants block the deep grooves (pits and fissures) of molars where 80% of cavities occur. See how they are painlessly applied.',
     thumbnail: 'https://picsum.photos/seed/sealants/800/600',
     duration: '04:10',
-    videoId: 'HhdoPXNKNqc',
+    url: 'https://www.youtube.com/watch?v=HhdoPXNKNqc',
   },
   {
     id: 'vid-13',
@@ -141,7 +141,7 @@ export const libraryVideos = [
     description: 'Why professional high-concentration fluoride is a game-changer for remineralizing weak enamel and reversing early white-spot lesions.',
     thumbnail: 'https://picsum.photos/seed/fluoride/800/600',
     duration: '05:05',
-    videoId: 'BhaALhBJJz0',
+    url: 'https://www.youtube.com/watch?v=BhaALhBJJz0',
   },
   {
     id: 'vid-14',
@@ -150,7 +150,7 @@ export const libraryVideos = [
     description: 'Acidic diets weaken enamel before brushing even begins. Learn the timing rules: wait 30 minutes after acidic foods before brushing.',
     thumbnail: 'https://picsum.photos/seed/erosion/800/600',
     duration: '06:15',
-    videoId: 'HhdoPXNKNqc',
+    url: 'https://www.youtube.com/watch?v=HhdoPXNKNqc',
   },
   {
     id: 'vid-15',
@@ -159,7 +159,7 @@ export const libraryVideos = [
     description: 'Bruxism destroys tooth structure and causes TMJ pain. Identifying the signs of grinding and how custom night guards offer protection.',
     thumbnail: 'https://picsum.photos/seed/grinding/800/600',
     duration: '07:30',
-    videoId: 'BhaALhBJJz0',
+    url: 'https://www.youtube.com/watch?v=BhaALhBJJz0',
   },
 
   // Nutrition
@@ -170,7 +170,7 @@ export const libraryVideos = [
     description: 'Understand how frequency of eating matters more than quantity. Every sugar exposure drops oral pH to critical levels for 20 minutes.',
     thumbnail: 'https://picsum.photos/seed/stephan/800/600',
     duration: '06:45',
-    videoId: 'HhdoPXNKNqc',
+    url: 'https://www.youtube.com/watch?v=HhdoPXNKNqc',
   },
   {
     id: 'vid-17',
@@ -179,7 +179,7 @@ export const libraryVideos = [
     description: 'Sticky candies, citrus fruits, and continuous sipping of soft drinks. Discover the biggest dietary culprits of enamel destruction.',
     thumbnail: 'https://picsum.photos/seed/worstfoods/800/600',
     duration: '05:50',
-    videoId: 'BhaALhBJJz0',
+    url: 'https://www.youtube.com/watch?v=BhaALhBJJz0',
   },
   {
     id: 'vid-18',
@@ -188,7 +188,7 @@ export const libraryVideos = [
     description: 'Cheese, milk, and crunchy structural vegetables. How specific dietary choices actively help rebuild your tooth enamel and stimulate saliva.',
     thumbnail: 'https://picsum.photos/seed/safefoods/800/600',
     duration: '04:40',
-    videoId: 'HhdoPXNKNqc',
+    url: 'https://www.youtube.com/watch?v=HhdoPXNKNqc',
   },
   {
     id: 'vid-19',
@@ -197,7 +197,7 @@ export const libraryVideos = [
     description: 'Dry mouth drastically accelerates decay. The critical importance of water intake for salivary flow, which naturally cleanses the teeth.',
     thumbnail: 'https://picsum.photos/seed/hydration/800/600',
     duration: '03:15',
-    videoId: 'BhaALhBJJz0',
+    url: 'https://www.youtube.com/watch?v=BhaALhBJJz0',
   },
 
   // Emergencies
@@ -208,7 +208,7 @@ export const libraryVideos = [
     description: 'Time is critical. What to do in the first 30 minutes if a permanent adult tooth gets completely knocked out. (Hint: Keep it in milk!).',
     thumbnail: 'https://picsum.photos/seed/knockout/800/600',
     duration: '04:00',
-    videoId: 'HhdoPXNKNqc',
+    url: 'https://www.youtube.com/watch?v=HhdoPXNKNqc',
   },
   {
     id: 'vid-21',
@@ -217,7 +217,7 @@ export const libraryVideos = [
     description: 'Orthodontic emergencies happen. How to safely secure a loose bracket or clip an irritating wire until you can see your orthodontist.',
     thumbnail: 'https://picsum.photos/seed/bracket/800/600',
     duration: '03:25',
-    videoId: 'BhaALhBJJz0',
+    url: 'https://www.youtube.com/watch?v=BhaALhBJJz0',
   },
   {
     id: 'vid-22',
@@ -226,7 +226,7 @@ export const libraryVideos = [
     description: 'Differentiating between sensitivity and the severe throbbing pain of an abscess. Safe pain management strategies before your clinical visit.',
     thumbnail: 'https://picsum.photos/seed/toothache/800/600',
     duration: '05:30',
-    videoId: 'HhdoPXNKNqc',
+    url: 'https://www.youtube.com/watch?v=HhdoPXNKNqc',
   },
   {
     id: 'vid-23',
@@ -235,7 +235,7 @@ export const libraryVideos = [
     description: 'From minor chips to severe fractures. Identifying the depth of the break, managing sensitivity, and protecting the remaining structure.',
     thumbnail: 'https://picsum.photos/seed/chipped/800/600',
     duration: '04:45',
-    videoId: 'BhaALhBJJz0',
+    url: 'https://www.youtube.com/watch?v=BhaALhBJJz0',
   },
   {
     id: 'vid-24',
@@ -244,7 +244,7 @@ export const libraryVideos = [
     description: 'Managing bleeding and cuts on the lips, cheek, or tongue following trauma. Recognizing when sutures and professional care are required.',
     thumbnail: 'https://picsum.photos/seed/laceration/800/600',
     duration: '03:55',
-    videoId: 'HhdoPXNKNqc',
+    url: 'https://www.youtube.com/watch?v=HhdoPXNKNqc',
   },
   {
     id: 'vid-25',
@@ -253,6 +253,6 @@ export const libraryVideos = [
     description: 'A displaced restoration leaves the tooth highly sensitive and vulnerable. Temporary measures you can take at home to protect it.',
     thumbnail: 'https://picsum.photos/seed/lostcrown/800/600',
     duration: '04:10',
-    videoId: 'BhaALhBJJz0',
+    url: 'https://www.youtube.com/watch?v=BhaALhBJJz0',
   }
 ];

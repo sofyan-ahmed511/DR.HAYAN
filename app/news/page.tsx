@@ -320,19 +320,50 @@ export default function EducationPage() {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="relative w-full max-w-5xl aspect-video bg-black rounded-[40px] overflow-hidden shadow-2xl"
+              className="relative w-full max-w-5xl bg-white rounded-[40px] overflow-hidden shadow-2xl flex flex-col max-h-[90vh]"
             >
               <button 
                 onClick={() => setSelectedVideo(null)}
-                className="absolute top-6 right-6 z-10 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-white/20 transition-colors border border-white/20"
+                className="absolute top-6 right-6 z-10 w-12 h-12 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center text-white hover:bg-black/70 transition-colors border border-white/20"
               >
                 <X className="w-6 h-6" />
               </button>
-              <iframe 
-                src={`https://www.youtube.com/embed/${selectedVideo.url.split('v=')[1] || 'dQw4w9WgXcQ'}`}
-                className="w-full h-full"
-                allowFullScreen
-              />
+              
+              {/* Video Player */}
+              <div className="w-full aspect-video bg-black relative shrink-0">
+                <iframe 
+                  src={`https://www.youtube.com/embed/${
+                    (() => {
+                      const url = selectedVideo?.url || '';
+                      const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+                      const match = url.match(regExp);
+                      return (match && match[2].length === 11) ? match[2] : 'dQw4w9WgXcQ';
+                    })()
+                  }?autoplay=1`}
+                  className="absolute inset-0 w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+
+              {/* Video Data Content */}
+              <div className="p-8 md:p-10 overflow-y-auto w-full">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="px-3 py-1 bg-primary/10 text-primary font-bold text-xs uppercase tracking-widest rounded-full">
+                    {selectedVideo.category}
+                  </span>
+                  <span className="flex items-center gap-1 text-slate-500 text-sm font-medium">
+                    <Clock className="w-4 h-4" />
+                    {selectedVideo.duration}
+                  </span>
+                </div>
+                <h2 className="text-2xl md:text-3xl font-display font-black text-secondary mb-4">
+                  {selectedVideo.title}
+                </h2>
+                <p className="text-slate-600 leading-relaxed text-lg">
+                  {selectedVideo.description || "Discover tips, tutorials, and deep dives into this dental topic. Taking care of your oral health ensures a brighter and healthier smile for years to come."}
+                </p>
+              </div>
             </motion.div>
           </div>
         )}
