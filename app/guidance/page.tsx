@@ -21,7 +21,7 @@ export default function GuidancePage() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden w-full">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-40 md:pt-32 pb-20 overflow-hidden">
         <div className="absolute left-10 top-1/2 -translate-y-1/2 hidden xl:flex flex-col items-center gap-12 pointer-events-none">
           <div className="writing-mode-vertical-rl rotate-180 text-[10px] uppercase tracking-[0.8em] font-black text-slate-200 whitespace-nowrap">
             EDUCATIONAL GUIDANCE • PROFESSIONAL ADVICE • DENTAL CARE

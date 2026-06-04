@@ -37,7 +37,7 @@
           className="flex flex-col min-h-screen bg-white overflow-x-hidden w-full"
         >
           {/* Hero Section - Skyline Reference Style (Unchanged format) */}
-          <section className="relative min-h-screen bg-white text-[#1A1A1A] pt-32 pb-12 overflow-hidden font-sans">
+          <section className="relative min-h-screen bg-white text-[#1A1A1A] pt-40 md:pt-32 pb-12 overflow-hidden font-sans">
             {/* Subtle background lines */}
             <div className="absolute inset-0 pointer-events-none flex justify-between px-12 opacity-5">
               <div className="w-px h-full bg-black"></div>

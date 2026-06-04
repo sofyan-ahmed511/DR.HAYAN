@@ -266,7 +266,7 @@ export default function CaseCategoryPage({ params }: { params: Promise<{ id: str
     <div className="min-h-screen bg-slate-50 selection:bg-amber-500 selection:text-white overflow-x-hidden w-full">
 
       {/* 1. Professional Hero Section */}
-      <section className="relative w-full min-h-[70vh] flex flex-col justify-end pb-24 overflow-hidden ">
+      <section className="relative w-full min-h-[80vh] md:min-h-[70vh] pt-40 md:pt-32 flex flex-col justify-end pb-24 overflow-hidden ">
         <div className="absolute inset-0 z-0">
           <Image
             src={heroImage}

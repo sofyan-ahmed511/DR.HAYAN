@@ -29,7 +29,7 @@ function LibraryContent() {
   return (
     <div className="min-h-screen bg-slate-50 selection:bg-primary selection:text-white pb-32 overflow-x-hidden w-full">
       {/* Visual Header */}
-      <section className="relative w-full h-[40vh] md:h-[50vh] flex flex-col justify-center overflow-hidden bg-slate-900">
+      <section className="relative w-full min-h-[50vh] md:min-h-[60vh] pt-40 md:pt-32 pb-16 flex flex-col justify-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://picsum.photos/seed/guidance-lib-hero/2000/1000"

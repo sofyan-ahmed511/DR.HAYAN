@@ -27,7 +27,7 @@ export default function AboutPage() {
     <main className="bg-[#FAF9F6] min-h-screen text-slate-900 font-sans selection:bg-slate-900 selection:text-white pb-24 overflow-x-hidden w-full">
 
       {/* 1. HERO SECTION */}
-      <section className="pt-40 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+      <section className="pt-48 lg:pt-40 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-end">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
