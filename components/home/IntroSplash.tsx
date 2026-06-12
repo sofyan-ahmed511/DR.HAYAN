@@ -70,7 +70,7 @@ export default function IntroSplash({ onComplete }: IntroSplashProps) {
                 transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
                 className="text-xs md:text-sm uppercase tracking-[0.3em] text-gray-500"
               >
-                Because your smile deserves the best
+                fixed your smile 
               </motion.p>
             </motion.div>
           </div>
