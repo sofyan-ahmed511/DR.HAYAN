@@ -4,8 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Transformations() {
-  const [activeStage, setActiveStage] = useState<'before'|'during'|'after'>('after');
-
+const [activeStage, setActiveStage] = useState<'before' | 'after'>('after');
   const stages = {
     before: {
       label: "Initial State",
