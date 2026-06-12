@@ -42,7 +42,7 @@ export default function Transformations() {
             Follow the clinical progression from initial consultation, through the treatment phase, to the final perfected smile.
           </p>
         </div>
-
+ 
         {/* Interactive Viewer */}
         <div className="max-w-[1700px] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           
