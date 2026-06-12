@@ -9,23 +9,16 @@ export default function Transformations() {
   const stages = {
     before: {
       label: "Initial State",
-      img: "https://images.unsplash.com/photo-1629909613638-0e4a1fad8f81?auto=format&fit=crop&w=1200&q=80",
+      img: "https://i.postimg.cc/9XdnW0S3/IMG-5558.jpg",
       desc: "Severe crowding and misalignment",
       color: "bg-slate-500",
       textColor: "text-slate-500",
       activeBg: "bg-slate-100"
     },
-    during: {
-      label: "Month 6 (During)",
-      img: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80",
-      desc: "Arch expansion and alignment in progress",
-      color: "bg-amber-500",
-      textColor: "text-amber-600",
-      activeBg: "bg-amber-50"
-    },
+    
     after: {
       label: "Month 12 (Final)",
-      img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=80",
+      img: "https://i.postimg.cc/XNfzVqhq/IMG-5566.jpg",
       desc: "Perfect occlusion and aesthetic smile",
       color: "bg-emerald-500",
       textColor: "text-emerald-600",
@@ -51,7 +44,7 @@ export default function Transformations() {
         </div>
 
         {/* Interactive Viewer */}
-        <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+        <div className="max-w-[1700px] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           
           <div className="w-full lg:w-1/3 flex flex-row lg:flex-col gap-4 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 snap-x py-2 px-2">
             {(Object.keys(stages) as Array<keyof typeof stages>).map((key) => {
