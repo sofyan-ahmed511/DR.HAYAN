@@ -83,7 +83,7 @@ export default function VisionaryStats() {
               className="rounded-[3rem] overflow-hidden bg-white shadow-2xl aspect-[4/3] relative"
             >
               <Image 
-                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80"
+                src="https://images.unsplash.com/photo-1674775372046-ff6cd6cb8b68?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Clinic Interior"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
