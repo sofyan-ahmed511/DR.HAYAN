@@ -80,8 +80,8 @@ export const caseCategories = [
     id: 'deep-bite',
     title: 'Deep Bite',
     subtitle: 'Vertical Occlusion Adjustments',
-    iconImg: 'https://i.postimg.cc/brqKDGwP/Gemini-Generated-Image-1dkafn1dkafn1dka.png',
-    image: 'https://i.postimg.cc/brqKDGwP/Gemini-Generated-Image-1dkafn1dkafn1dka.png',
+    iconImg: 'https://i.postimg.cc/8zdJqsxm/Gemini-Generated-Image-pci0qzpci0qzpci0.png',
+    image: 'https://i.postimg.cc/8zdJqsxm/Gemini-Generated-Image-pci0qzpci0qzpci0.png',
     subSections: ['Overview'],
     cases: deepBiteCases,
   },
@@ -130,8 +130,8 @@ export const caseCategories = [
     id: 'scissor-bite',
     title: 'Scissor Bite',
     subtitle: 'Transverse Discrepancy Correction',
-    iconImg: 'https://i.postimg.cc/DZRR6C6F/Gemini-Generated-Image-ra6hprra6hprra6h.png',
-    image: 'https://i.postimg.cc/DZRR6C6F/Gemini-Generated-Image-ra6hprra6hprra6h.png',
+    iconImg: 'https://i.postimg.cc/bvN5nSPq/Gemini-Generated-Image-7m4x677m4x677m4x.png',
+    image: 'https://i.postimg.cc/bvN5nSPq/Gemini-Generated-Image-7m4x677m4x677m4x.png',
     subSections: ['Overview'],
     cases: scissorBiteCases,
   },
@@ -152,10 +152,10 @@ export const caseCategories = [
     title: 'Mini Screw TAD',
 
     image:
-      'https://i.postimg.cc/6qk1D4zW/IMG-9922.jpg',
+      'https://i.postimg.cc/qRj0HHGz/Gemini-Generated-Image-56b0e956b0e956b0.png',
 
     iconImg:
-      'https://i.postimg.cc/6qk1D4zW/IMG-9922.jpg',
+      'https://i.postimg.cc/qRj0HHGz/Gemini-Generated-Image-56b0e956b0e956b0.png',
 
     subSections: ['Overview'],
 
@@ -168,10 +168,10 @@ export const caseCategories = [
     title: 'Cross Bite',
 
     image:
-      'https://i.postimg.cc/J40GRhHt/IMG-7746.jpg',
+      'https://i.postimg.cc/ZqKR2HrG/Gemini-Generated-Image-wstfxywstfxywstf.png',
 
     iconImg:
-      'https://i.postimg.cc/J40GRhHt/IMG-7746.jpg',
+      'https://i.postimg.cc/ZqKR2HrG/Gemini-Generated-Image-wstfxywstfxywstf.png',
 
     subSections: ['Overview'],
 
@@ -186,10 +186,10 @@ export const caseCategories = [
     subtitle: 'Advanced Skeletal Camophlage Cases',
 
     image:
-      'https://i.postimg.cc/3R9bL1hM/IMG-9921.jpg',
+      'https://i.postimg.cc/bNJmYfqQ/Gemini-Generated-Image-z946x0z946x0z946.png',
 
     iconImg:
-      'https://i.postimg.cc/3R9bL1hM/IMG-9921.jpg',
+      'https://i.postimg.cc/bNJmYfqQ/Gemini-Generated-Image-z946x0z946x0z946.png',
 
     subSections: ['Overview'],
 
