@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import Image from 'next/image';
 import { useState } from 'react';
 
+// سكشن فى صفحه  home  لافضل حاله 
 export default function Transformations() {
 const [activeStage, setActiveStage] = useState<'before' | 'after'>('after');
   const stages = {
@@ -43,7 +44,7 @@ const [activeStage, setActiveStage] = useState<'before' | 'after'>('after');
         </div>
  
         {/* Interactive Viewer */}
-        <div className="max-w-[1700px] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+        <div className="max-w-[2000px] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           
           <div className="w-full lg:w-1/3 flex flex-row lg:flex-col gap-4 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 snap-x py-2 px-2">
             {(Object.keys(stages) as Array<keyof typeof stages>).map((key) => {
