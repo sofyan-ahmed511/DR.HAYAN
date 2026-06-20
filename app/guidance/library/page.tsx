@@ -30,30 +30,35 @@ function LibraryContent() {
   return (
     <div className="min-h-screen bg-slate-50 selection:bg-primary selection:text-white pb-32 overflow-x-hidden w-full">
       {/* Visual Header */}
-      <section className="relative w-full min-h-[50vh] md:min-h-[60vh] pt-40 md:pt-32 pb-16 flex flex-col justify-center overflow-hidden bg-slate-900">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://picsum.photos/seed/guidance-lib-hero/2000/1000"
-            alt="Knowledge Base"
-            fill
-            className="object-cover opacity-30 scale-105"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
-        </div>
+      <section
+  className="relative w-full min-h-[50vh] md:min-h-[60vh] pt-40 md:pt-32 pb-16 flex flex-col justify-center overflow-hidden bg-slate-700 bg-cover bg-center bg-fixed"
+  style={{
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+  }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/60 z-0" />
 
-        <div className="relative z-10 w-full px-6 lg:px-12 mx-auto max-w-7xl pt-10 text-center">
-          <Link href="/guidance" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors font-medium text-sm mb-8 bg-white/5 px-4 py-2 rounded-full backdrop-blur-md border border-white/10">
-            <ChevronLeft className="w-4 h-4" /> Back to Guidance Overview
-          </Link>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white tracking-tight mb-6 drop-shadow-xl">
-            Educational Video Library
-          </h1>
-          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto font-medium">
-            Over 20+ professional visual guides explaining techniques, procedures, and best practices for complete oral healthcare.
-          </p>
-        </div>
-      </section>
+  <div className="relative z-10 w-full px-6 lg:px-12 mx-auto max-w-7xl pt-10 text-center">
+    <Link
+      href="/guidance"
+      className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors font-medium text-sm mb-8 bg-white/5 px-4 py-2 rounded-full backdrop-blur-md border border-white/10"
+    >
+      <ChevronLeft className="w-4 h-4" />
+      Back to Guidance Overview
+    </Link>
+
+    <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white tracking-tight mb-6 drop-shadow-xl">
+      Educational Video Library
+    </h1>
+
+    <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto font-medium">
+      Over 20+ professional visual guides explaining techniques,
+      procedures, and best practices for complete oral healthcare.
+    </p>
+  </div>
+</section>
 
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl -mt-10 relative z-20">
         {/* Controls - Filter & Search */}
