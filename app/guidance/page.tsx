@@ -71,7 +71,7 @@ export default function GuidancePage() {
                 className="relative aspect-[4/5] rounded-[60px] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)]"
               >
                 <Image 
-                  src="https://picsum.photos/seed/guidance-hero/1000/1000"
+                  src="https://images.unsplash.com/photo-1662837625421-1f9f79491cf5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Dental Guidance"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
@@ -79,13 +79,13 @@ export default function GuidancePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/40 via-transparent to-transparent" />
                 
-                <div className="absolute bottom-10 left-10 right-10 p-6 bg-white/10 backdrop-blur-xl rounded-[32px] border border-white/20">
+                <div className="absolute bottom-10 left-10 right-10 p-5 bg-white/10 backdrop-blur-xl rounded-[32px] border border-white/20">
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-white/60 text-[10px] uppercase font-black tracking-widest mb-1">Success Rate</p>
                       <p className="text-white text-3xl font-black">99.9%</p>
                     </div>
-                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30">
+                    <div className="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30">
                       <Play className="w-5 h-5 fill-current" />
                     </div>
                   </div>
@@ -272,7 +272,7 @@ export default function GuidancePage() {
             <div className="relative order-2 lg:order-1">
               <div className="relative w-full aspect-[4/5] rounded-[40px] md:rounded-[60px] overflow-hidden shadow-2xl">
                 <Image 
-                  src="https://picsum.photos/seed/guidance-cta/1000/1000"
+                  src="https://plus.unsplash.com/premium_photo-1744142824003-a7c1d54a37f7?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Professional Advice"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

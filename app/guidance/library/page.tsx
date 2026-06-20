@@ -59,6 +59,7 @@ function LibraryContent() {
         {/* Controls - Filter & Search */}
         <div className="bg-white rounded-3xl p-4 md:p-6 shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col xl:flex-row gap-6 justify-between items-center mb-16">
           
+          
           <div className="flex bg-slate-50 border border-slate-100 rounded-full p-2 overflow-x-auto w-full xl:w-auto custom-scrollbar no-scrollbar">
             <div className="flex items-center gap-2 px-1">
               {videoCategories.map((cat) => (

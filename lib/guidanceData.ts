@@ -25,7 +25,7 @@ export const guidanceCategories = [
     icon: Sparkles, 
     color: 'bg-primary', 
     count: 15,
-    image: 'https://picsum.photos/seed/cat-oralhygiene/800/600',
+    image: 'https://images.unsplash.com/photo-1584516087628-34b49798a58f?q=80&w=1104&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description: 'Comprehensive strategies and daily habits to maintain peak oral health and prevent decay.',
     content: 'Oral hygiene is the practice of keeping one\'s mouth clean and free of disease and other problems by regular brushing of the teeth (dental hygiene) and cleaning between the teeth. It is important that oral hygiene be carried out on a regular basis to enable prevention of dental disease and bad breath.'
   },
@@ -35,7 +35,7 @@ export const guidanceCategories = [
     icon: Smile, 
     color: 'bg-blue-500', 
     count: 24,
-    image: 'https://picsum.photos/seed/cat-hardware/800/600',
+    image: 'https://plus.unsplash.com/premium_photo-1723914178151-4a11fcbd968a?q=80&w=1116&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description: 'Specialized guidelines on managing hygiene for braces, clear aligners, and retainers.',
     content: 'Hygiene extends beyond just teeth. This includes managing braces, clear aligners, retainers, and general oral appliances. Proper care of these appliances prevents bacterial buildup and ensures treatment stays on track without complications.'
   },
@@ -45,7 +45,7 @@ export const guidanceCategories = [
     icon: Shield, 
     color: 'bg-emerald-500', 
     count: 12,
-    image: 'https://picsum.photos/seed/cat-prevention/800/600',
+    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description: 'Proactive medical measures and sealants to stop dental issues before they even start.',
     content: 'Preventive dentistry is the modern way of helping you keep a healthy mouth. It helps you to keep your teeth, and means you need to have less dental treatment. The two main causes of tooth loss are decay and gum disease. The better you prevent or deal with these two problems, the more chance you will have of keeping your teeth for life.'
   },
@@ -55,7 +55,7 @@ export const guidanceCategories = [
     icon: Zap, 
     color: 'bg-amber-500', 
     count: 8,
-    image: 'https://picsum.photos/seed/cat-nutrition/800/600',
+    image: 'https://plus.unsplash.com/premium_photo-1733342485605-42058eb2daf3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description: 'Dietary tips focused on remineralization, maintaining strong teeth, and healthy, robust gums.',
     content: 'What you eat affects your teeth. Foods high in sugars and carbohydrates lead to tooth decay, while foods rich in calcium, phosphorus, and vitamins help strengthen enamel and gums.'
   },
@@ -65,7 +65,7 @@ export const guidanceCategories = [
     icon: Activity, 
     color: 'bg-rose-500', 
     count: 6,
-    image: 'https://picsum.photos/seed/cat-emergencies/800/600',
+    image: 'https://images.unsplash.com/photo-1745694036086-60c18c4a0b19?q=80&w=769&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description: 'Immediate first-aid actions to take during a dental crisis such as avulsion or severe pain.',
     content: 'Dental emergencies can range from a broken tooth to a knocked-out tooth or severe infection. Knowing exactly what to do in the first 30 minutes can save a tooth. Always seek professional care immediately.'
   },
@@ -77,7 +77,7 @@ export const guidanceArticles = [
     title: 'The Art of Brushing',
     subtitle: 'Precision & Technique',
     description: 'Mastering the technique is crucial. Learn the professional 45-degree angle method that hygienists swear by.',
-    image: 'https://picsum.photos/seed/article-brushing-main/800/600',
+    image: 'https://plus.unsplash.com/premium_photo-1736435137357-d861ad57787c?q=80&w=1112&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     stats: [
       { label: 'Plaque Removal', value: '95%' },
       { label: 'Gum Health', value: '+40%' }
@@ -110,7 +110,7 @@ export const guidanceArticles = [
     title: 'The Bounds of the Service',
     subtitle: 'Interdental Excellence',
     description: 'Brushing only cleans 60% of your teeth. Flossing reaches the hidden 40% where most cavities naturally start.',
-    image: 'https://picsum.photos/seed/article-floss-main/800/600',
+    image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8RGVudGFsJTIwY2xlYW5pbmclMjBzZXJ2aWNlJTIwbGltaXRzfGVufDB8fDB8fHww',
     stats: [
       { label: 'Cavity Prevention', value: '85%' },
       { label: 'Fresh Breath', value: '100%' }

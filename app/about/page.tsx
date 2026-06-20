@@ -74,9 +74,9 @@ export default function AboutPage() {
 
         <div className="relative z-20 max-w-5xl mx-auto w-full px-6 flex flex-col gap-6 md:gap-12">
           {[
-            { text: "By making your orthodontic care professional and tailored, you experience lifelong confidence.", num: "15+", sub: "Years of Service" },
-            { text: "By constantly integrating the latest digital 3D systems and treatment methodologies.", num: "80+", sub: "Advanced Courses" },
-            { text: "By maintaining meticulous clinical quality and offering genuine patient-first compassion.", num: "3K+", sub: "Happy Patients" },
+            { text: "By making your orthodontic care professional and tailored, you experience lifelong confidence.", num: "4+", sub: "Years of Service" },
+            { text: "By constantly integrating the latest digital 3D systems and treatment methodologies.", num: "7+", sub: "Advanced Courses" },
+            { text: "By maintaining meticulous clinical quality and offering genuine patient-first compassion.", num: "1K+", sub: "Happy Patients" },
           ].map((stat, i) => (
             <motion.div
               key={i}
