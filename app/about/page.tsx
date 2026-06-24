@@ -28,13 +28,16 @@ export default function AboutPage() {
               Transforming<br />
               <span className="italic text-slate-500 font-light">Smiles</span> with Precision
             </h1>
-            <div className="inline-flex items-center gap-4 bg-slate-900 text-white px-6 py-3 rounded-full mt-6 hover:bg-slate-800 transition-colors cursor-pointer group shadow-xl hover:shadow-2xl">
-              <span className="font-semibold text-sm">Book Consultation</span>
-              <div className="w-8 h-8 rounded-full bg-white text-slate-900 flex items-center justify-center group-hover:rotate-45 transition-transform duration-300">
-                <ArrowRight className="w-4 h-4" />
-              </div>
-            </div>
-          </motion.div>
+            <div 
+        onClick={() => window.open('https://wa.me/201003457115', '_blank')}
+        className="inline-flex items-center gap-4 bg-slate-900 text-white px-6 py-3 rounded-full mt-6 hover:bg-slate-800 transition-colors cursor-pointer group shadow-xl hover:shadow-2xl"
+      >
+        <span className="font-semibold text-sm">Book Consultation</span>
+        <div className="w-8 h-8 rounded-full bg-white text-slate-900 flex items-center justify-center group-hover:rotate-45 transition-transform duration-300">
+          <ArrowRight className="w-4 h-4" />
+        </div>
+      </div>
+    </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 40 }}
@@ -295,12 +298,6 @@ export default function AboutPage() {
                 {
                   year: "4 Nov 2022",
                   title: "Orthodontic Wire Bending Course",
-                  institution: "OneTrack Academy",
-                  description: "Hands-on training in wire sequencing and bending."
-                },
-                {
-                  year: "2 Nov 2022",
-                  title: "Orthodontic Mini Screws Course",
                   institution: "OneTrack Academy",
                   description: "Hands-on training in wire sequencing and bending."
                 }
