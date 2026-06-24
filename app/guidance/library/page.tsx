@@ -11,7 +11,7 @@ import { libraryVideos, videoCategories } from '@/lib/videoLibraryData';
 function LibraryContent() {
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get('category') || 'all';
-  
+
   const [internalCategory, setInternalCategory] = useState<string | null>(null);
   const activeCategory = internalCategory || categoryParam;
   const [searchQuery, setSearchQuery] = useState('');
@@ -20,8 +20,8 @@ function LibraryContent() {
   const filteredVideos = useMemo(() => {
     return libraryVideos.filter((video) => {
       const matchesCategory = activeCategory === 'all' || video.category === activeCategory;
-      const matchesSearch = video.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                            video.description.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesSearch = video.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        video.description.toLowerCase().includes(searchQuery.toLowerCase());
       return matchesCategory && matchesSearch;
     });
     2
@@ -31,40 +31,40 @@ function LibraryContent() {
     <div className="min-h-screen bg-slate-50 selection:bg-primary selection:text-white pb-32 overflow-x-hidden w-full">
       {/* Visual Header */}
       <section
-  className="relative w-full min-h-[50vh] md:min-h-[60vh] pt-40 md:pt-32 pb-16 flex flex-col justify-center overflow-hidden bg-slate-700 bg-cover bg-center bg-fixed"
-  style={{
-    backgroundImage:
-      "url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-  }}
->
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/60 z-0" />
+        className="relative w-full min-h-[50vh] md:min-h-[60vh] pt-40 md:pt-32 pb-16 flex flex-col justify-center overflow-hidden bg-slate-700 bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60 z-0" />
 
-  <div className="relative z-10 w-full px-6 lg:px-12 mx-auto max-w-7xl pt-10 text-center">
-    <Link
-      href="/guidance"
-      className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors font-medium text-sm mb-8 bg-white/5 px-4 py-2 rounded-full backdrop-blur-md border border-white/10"
-    >
-      <ChevronLeft className="w-4 h-4" />
-      Back to Guidance Overview
-    </Link>
+        <div className="relative z-10 w-full px-6 lg:px-12 mx-auto max-w-7xl pt-10 text-center">
+          <Link
+            href="/guidance"
+            className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors font-medium text-sm mb-8 bg-white/5 px-4 py-2 rounded-full backdrop-blur-md border border-white/10"
+          >
+            <ChevronLeft className="w-4 h-4" />
+            Back to Guidance Overview
+          </Link>
 
-    <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white tracking-tight mb-6 drop-shadow-xl">
-      Educational Video Library
-    </h1>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-white tracking-tight mb-6 drop-shadow-xl">
+            Educational Video Library
+          </h1>
 
-    <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto font-medium">
-      Over 20+ professional visual guides explaining techniques,
-      procedures, and best practices for complete oral healthcare.
-    </p>
-  </div>
-</section>
+          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto font-medium">
+            Over 20+ professional visual guides explaining techniques,
+            procedures, and best practices for complete oral healthcare.
+          </p>
+        </div>
+      </section>
 
       <div className="container mx-auto px-6 lg:px-12 max-w-7xl -mt-10 relative z-20">
         {/* Controls - Filter & Search */}
         <div className="bg-white rounded-3xl p-4 md:p-6 shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col xl:flex-row gap-6 justify-between items-center mb-16">
-          
-          
+
+
           <div className="flex bg-slate-50 border border-slate-100 rounded-full p-2 overflow-x-auto w-full xl:w-auto custom-scrollbar no-scrollbar">
             <div className="flex items-center gap-2 px-1">
               {videoCategories.map((cat) => (
@@ -73,9 +73,9 @@ function LibraryContent() {
                   onClick={() => setInternalCategory(cat.id)}
                   className={`whitespace-nowrap px-6 py-3 rounded-full text-sm font-bold tracking-wide transition-all ${
                     activeCategory === cat.id 
-                    ? 'bg-secondary text-white shadow-md' 
-                    : 'text-slate-500 hover:text-secondary hover:bg-slate-200/50'
-                  }`}
+                      ? 'bg-secondary text-white shadow-md'
+                      : 'text-slate-500 hover:text-secondary hover:bg-slate-200/50'
+                    }`}
                 >
                   {cat.label}
                 </button>
@@ -84,14 +84,14 @@ function LibraryContent() {
           </div>
 
           <div className="relative w-full xl:w-auto min-w-[300px]">
-             <input
-               type="text"
-               placeholder="Search guides..."
-               value={searchQuery}
-               onChange={(e) => setSearchQuery(e.target.value)}
-               className="w-full bg-slate-50 border border-slate-200 rounded-full py-3.5 px-6 pl-14 text-secondary font-bold focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all shadow-inner"
-             />
-             <Search className="w-5 h-5 absolute left-5 top-1/2 -translate-y-1/2 text-slate-400" />
+            <input
+              type="text"
+              placeholder="Search guides..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full bg-slate-50 border border-slate-200 rounded-full py-3.5 px-6 pl-14 text-secondary font-bold focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all shadow-inner"
+            />
+            <Search className="w-5 h-5 absolute left-5 top-1/2 -translate-y-1/2 text-slate-400" />
           </div>
 
         </div>
@@ -99,10 +99,10 @@ function LibraryContent() {
         {/* Video Grid */}
         {filteredVideos.length === 0 ? (
           <div className="text-center py-32 bg-white rounded-3xl border border-slate-200">
-             <Filter className="w-16 h-16 text-slate-200 mx-auto mb-6" />
-             <h3 className="text-2xl font-black text-secondary mb-2">No guides found</h3>
-             <p className="text-slate-500 font-medium">Try adjusting your filters or search query.</p>
-             <button onClick={() => { setInternalCategory('all'); setSearchQuery(''); }} className="mt-8 text-primary font-bold hover:underline">Clear all filters</button>
+            <Filter className="w-16 h-16 text-slate-200 mx-auto mb-6" />
+            <h3 className="text-2xl font-black text-secondary mb-2">No guides found</h3>
+            <p className="text-slate-500 font-medium">Try adjusting your filters or search query.</p>
+            <button onClick={() => { setInternalCategory('all'); setSearchQuery(''); }} className="mt-8 text-primary font-bold hover:underline">Clear all filters</button>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
@@ -119,25 +119,25 @@ function LibraryContent() {
                   className="group cursor-pointer flex flex-col bg-white border border-slate-100 rounded-[32px] overflow-hidden hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500"
                 >
                   <div className="relative aspect-video w-full overflow-hidden bg-slate-200/50">
-                    <Image 
-                      src={video.thumbnail} 
-                      alt={video.title} 
-                      fill 
-                      className="object-cover group-hover:scale-105 transition-transform duration-700" 
+                    <Image
+                      src={video.thumbnail}
+                      alt={video.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-secondary/30 group-hover:bg-secondary/10 transition-colors duration-500" />
-                    
+
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-xl flex items-center justify-center border border-white/30 group-hover:bg-primary group-hover:border-primary group-hover:scale-110 transition-all duration-500 shadow-xl">
                         <Play className="w-6 h-6 text-white ml-1 fill-current" />
                       </div>
                     </div>
-                    
+
                     <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg text-white font-black text-[10px] tracking-widest uppercase">
                       {video.duration}
                     </div>
                   </div>
-                  
+
                   <div className="p-8 flex flex-col flex-grow">
                     <span className="text-primary text-[10px] uppercase font-black tracking-[0.2em] mb-4 bg-primary/10 w-fit px-3 py-1 rounded-md">
                       {videoCategories.find(c => c.id === video.category)?.label || 'Video Guide'}
@@ -166,7 +166,7 @@ function LibraryContent() {
             className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 bg-slate-900/95 backdrop-blur-lg"
           >
             <div className="absolute inset-0" onClick={() => setSelectedVideo(null)} />
-            
+
             <motion.div
               initial={{ scale: 0.95, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -176,24 +176,23 @@ function LibraryContent() {
             >
               {/* Left: Video Player */}
               <div className="w-full lg:w-2/3 bg-black relative aspect-video lg:aspect-auto flex items-center">
-                <iframe 
-                  src={`https://www.youtube.com/embed/${
-                    (() => {
+                <iframe
+                  src={`https://www.youtube.com/embed/${(() => {
                       const url = selectedVideo?.url || '';
                       const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
                       const match = url.match(regExp);
                       return (match && match[2].length === 11) ? match[2] : 'dQw4w9WgXcQ';
                     })()
-                  }?autoplay=1`}
+                    }?autoplay=1`}
                   className="w-full h-full aspect-video"
                   allowFullScreen
                   allow="autoplay"
                 />
               </div>
-              
+
               {/* Right: Info & Description */}
               <div className="w-full lg:w-1/3 p-8 md:p-12 overflow-y-auto flex flex-col custom-scrollbar relative bg-slate-50">
-                <button 
+                <button
                   onClick={() => setSelectedVideo(null)}
                   className="absolute top-6 right-6 z-20 w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-300 transition-colors"
                 >
@@ -203,13 +202,13 @@ function LibraryContent() {
                 <span className="text-primary text-[10px] uppercase font-black tracking-widest mb-4 bg-white border border-slate-200 shadow-sm w-fit px-3 py-1.5 rounded-lg">
                   {videoCategories.find(c => c.id === selectedVideo.category)?.label || 'Video Guide'}
                 </span>
-                
+
                 <h2 className="text-3xl md:text-4xl font-display font-black text-secondary leading-tight mb-8">
                   {selectedVideo.title}
                 </h2>
-                
+
                 <div className="w-full h-px bg-slate-200 mb-8" />
-                
+
                 <h4 className="text-sm font-black text-secondary uppercase tracking-widest mb-4">Detailed Explanation</h4>
                 <p className="text-slate-600 text-[15px] leading-relaxed font-medium mb-12">
                   {selectedVideo.description}
@@ -218,7 +217,7 @@ function LibraryContent() {
                 <div className="mt-auto bg-white border border-slate-200 rounded-2xl p-6">
                   <div className="flex items-center gap-4 text-sm font-bold text-slate-700">
                     <div className="w-12 h-12 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center">
-                        <Play className="w-5 h-5 ml-1 fill-current" />
+                      <Play className="w-5 h-5 ml-1 fill-current" />
                     </div>
                     <div>
                       <div className="text-slate-400 text-[10px] uppercase tracking-widest mb-1">Duration</div>

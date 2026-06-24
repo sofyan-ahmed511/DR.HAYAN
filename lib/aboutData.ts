@@ -2,7 +2,7 @@ import {
   Smile,
   Award,
   Stethoscope,
-  User,
+  Users,
   CheckCircle2,
   BookOpen,
   Sparkles,
@@ -11,99 +11,143 @@ import {
   HeartHandshake,
   ShieldCheck,
   Target,
-  Users
 } from 'lucide-react';
 
 // ==========================================
-// ABOUT PAGE DATA
+// ABOUT PAGE DATA - Dr. Hayan Musab
 // ==========================================
-// This file contains all the textual and visual data used on the About Page.
-// Including the doctor's timeline, skills, certifications, and core values.
 
 // ------------------------------------------
-// 1. DOCTOR'S TIMELINE
-// Academic and professional achievements over the years.
+// 1. DOCTOR'S TIMELINE - WORK EXPERIENCE (4 items only)
 // ------------------------------------------
 export const timeline = [
   {
-    year: "2010",
-    title: "Bachelor of Oral and Dental Surgery",
-    institution: "Cairo University",
-    description: "Graduated with first class honors."
+    year: "2025 – 2026",
+    title: "Orthodontist At Riva Dental Clinic",
+    institution: "Riva Dental Clinic, Al Minya",
+    description: "Advanced orthodontic treatments and management of multidisciplinary cases."
   },
   {
-    year: "2012",
-    title: "Clinical Residency",
-    institution: "Kasr Al-Ainy Hospital",
-    description: "Intensive training in general dental procedures and emergencies."
+    year: "2022 – 2026",
+    title: "Orthodontist At Nasef Dental Studio",
+    institution: "Nasef Dental Studio, Al Minya",
+    description: "Specialized orthodontic practice focusing on fixed appliances and clear aligners."
   },
   {
-    year: "2015",
-    title: "Master's in Orthodontics",
-    institution: "Cairo University",
-    description: "Specialization in Orthodontics and Dentofacial Orthopedics."
+    year: "2020 – 2023",
+    title: "General Dentist At Lotus Dental Center",
+    institution: "Lotus Dental Center, Al Minya",
+    description: "Provided comprehensive dental care and gained extensive clinical experience."
   },
   {
-    year: "2017",
-    title: "Invisalign Certification",
-    institution: "Align Technology",
-    description: "Certified provider for clear aligner therapy."
-  },
-  {
-    year: "2018",
-    title: "British Fellowship in Orthodontics",
-    institution: "Royal College of Surgeons - Edinburgh",
-    description: "Member of the Royal College of Surgeons in Orthodontics."
-  },
-  {
-    year: "2020 - Present",
-    title: "Orthodontic Specialty",
-    institution: "Smile Care Clinics",
-    description: "Head of Orthodontics Department and supervision of complex cases."
+    year: "2020 – 2021",
+    title: "General Dentist At White Dental Clinic",
+    institution: "White Dental Clinic, Al Minya",
+    description: "Provided comprehensive general dental care."
   }
 ];
 
 // ------------------------------------------
-// 2. DOCTOR'S SKILLS
-// Core competencies and specialties.
+// 2. CLINICAL SKILLS
 // ------------------------------------------
 export const skills = [
-  { name: "Invisalign", icon: Smile, description: "Advanced clear aligner system for a discreet and comfortable orthodontic experience." },
-  { name: "Metal & Ceramic Braces", icon: Award, description: "High-precision traditional and aesthetic braces for effective correction of all dental issues." },
-  { name: "Surgical Orthodontics", icon: Stethoscope, description: "Specialized care for complex cases requiring surgical jaw correction and alignment." },
-  { name: "Pediatric Orthodontics", icon: User, description: "Early intervention and growth guidance to ensure healthy dental development in children." },
-  { name: "Impacted Canines", icon: CheckCircle2, description: "Expert surgical and orthodontic management of impacted teeth to bring them into position." },
-  { name: "Jaw Growth Modification", icon: BookOpen, description: "Orthopedic treatments to guide jaw growth and correct skeletal imbalances during development." },
-  { name: "Digital Smile Design", icon: Sparkles, description: "3D simulation and planning to design your perfect smile before treatment even begins." },
-  { name: "TMJ Management", icon: Activity, description: "Comprehensive diagnosis and treatment for jaw joint pain and functional disorders." },
-  { name: "Lingual Orthodontics", icon: Shield, description: "Completely invisible braces placed behind the teeth for maximum aesthetic discretion." },
+  { 
+    name: "Advanced Orthodontic Diagnosis", 
+    icon: Stethoscope, 
+    description: "Cephalometric analysis, radiographic interpretation, and comprehensive treatment planning." 
+  },
+  { 
+    name: "Fixed Appliance Therapy", 
+    icon: Award, 
+    description: "Precise bracket positioning, wire sequencing, bending, and treatment adjustments." 
+  },
+  { 
+    name: "Clear Aligner Therapy", 
+    icon: Smile, 
+    description: "Planning, monitoring, and refinements for modern clear aligner systems." 
+  },
+  { 
+    name: "Temporary Anchorage Devices (TADs)", 
+    icon: Target, 
+    description: "Placement and utilization of mini screws for efficient tooth movement." 
+  },
+  { 
+    name: "Orthodontic Biomechanics", 
+    icon: Activity, 
+    description: "Application of biomechanical principles in treatment execution." 
+  },
+  { 
+    name: "Digital Photography & Documentation", 
+    icon: Sparkles, 
+    description: "Clinical photography and digital record keeping for accurate treatment tracking." 
+  },
+  { 
+    name: "Patient Education & Communication", 
+    icon: Users, 
+    description: "Enhancing patient understanding and case acceptance through clear communication." 
+  },
 ];
 
 // ------------------------------------------
-// 3. DOCTOR'S CERTIFICATIONS
-// Official certificates and achievements with images.
+// 3. COURSES (سيتم استخدامها في سكشن الكورسات الجديد)
 // ------------------------------------------
-export const certifications = [
-  { id: 1, title: "Master's in Orthodontics", institution: "Cairo University", image: "https://picsum.photos/seed/cert1/600/450" },
-  { id: 2, title: "British Fellowship", institution: "Royal College of Surgeons", image: "https://picsum.photos/seed/cert2/600/450" },
-  { id: 3, title: "Invisalign Platinum Provider", institution: "Align Technology", image: "https://picsum.photos/seed/cert3/600/450" },
-  { id: 4, title: "Digital Dentistry Expert", institution: "Global Dental Academy", image: "https://picsum.photos/seed/cert4/600/450" },
-  { id: 5, title: "Advanced Surgical Ortho", institution: "European Ortho Society", image: "https://picsum.photos/seed/cert5/600/450" },
-  { id: 6, title: "Pediatric Care Excellence", institution: "International Dental Assoc", image: "https://picsum.photos/seed/cert6/600/450" },
+export const courses = [
+  {
+    year: "18 Jan 2025",
+    title: "Advanced Orthodontic Mini Screws Course",
+    institution: "Egyptian Orthodontic Society",
+    description: "Specialized training in mini screws techniques."
+  },
+  {
+    year: "15 Jan 2025",
+    title: "Clear Aligner Therapy Course",
+    institution: "Prof. Giorgio Iodice",
+    description: "Advanced clear aligner treatment planning and execution."
+  },
+  {
+    year: "6 Nov 2022",
+    title: "Clear Aligner Therapy Course",
+    institution: "Prof. Ravindra Nanda",
+    description: "Advanced training with world-renowned orthodontist."
+  },
+  {
+    year: "5 Nov 2022",
+    title: "Advanced Orthodontic Diagnosis & Treatment Planning",
+    institution: "OneTrack Academy",
+    description: "Comprehensive diagnosis and planning methodologies."
+  },
+  {
+    year: "4 Nov 2022",
+    title: "Orthodontic Wire Bending Course",
+    institution: "OneTrack Academy",
+    description: "Hands-on training in wire sequencing and bending."
+  },
+  {
+    year: "4 Nov 2022",
+    title: "Orthodontic Mini Screws Course",
+    institution: "OneTrack Academy",
+    description: "Hands-on training in wire sequencing and bending."
+  }
 ];
 
 // ------------------------------------------
-// 4. CLINIC VALUES
-// Core values that guide patient care.
+// 4. ACHIEVEMENTS
+// ------------------------------------------
+export const achievements = [
+  "Member of the Egyptian Orthodontic Society",
+  "Attended multiple specialized orthodontic courses and professional workshops",
+  "Active Content Creator focused on patient education through social media",
+  "Recognized for consistency, discipline, and effective teamwork"
+];
+
+// ------------------------------------------
+// 5. CLINIC VALUES
 // ------------------------------------------
 export const values = [
-  { title: "Patient First", description: "Your comfort and goals are our top priority in every treatment plan.", icon: HeartHandshake },
-  { title: "Innovation", description: "We constantly invest in the latest digital technologies for better results.", icon: Sparkles },
-  { title: "Integrity", description: "Honest communication and transparent pricing for all our patients.", icon: ShieldCheck },
-  { title: "Excellence", description: "Striving for the highest international standards in orthodontic care.", icon: Award },
-  { title: "Education", description: "Empowering patients with knowledge for long-term dental health.", icon: BookOpen },
-  { title: "Compassion", description: "A gentle touch and empathetic care for patients of all ages.", icon: Smile },
-  { title: "Safety", description: "Strict adherence to global sterilization and safety protocols.", icon: Shield },
-  { title: "Precision", description: "Meticulous attention to detail in every adjustment and procedure.", icon: Target },
-  { title: "Teamwork", description: "A collaborative approach between our staff and patients.", icon: Users },
+  { title: "Patient First", description: "Your comfort, goals, and confidence are our top priority.", icon: HeartHandshake },
+  { title: "Precision & Excellence", description: "Meticulous attention to detail in every case.", icon: Award },
+  { title: "Continuous Development", description: "Staying updated with the latest orthodontic techniques and advancements.", icon: Sparkles },
+  { title: "Integrity", description: "Honest communication and transparent treatment plans.", icon: ShieldCheck },
+  { title: "Education", description: "Empowering patients through knowledge and digital content.", icon: BookOpen },
+  { title: "Compassion", description: "Gentle, caring approach for patients of all ages.", icon: Smile },
 ];

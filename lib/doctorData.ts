@@ -2,32 +2,43 @@
 // DOCTOR & CLINIC INFORMATION (GLOBAL)
 // ==========================================
 // This file contains global data used across multiple pages (e.g., Home, About, Footer).
-// Update the doctor's general details, contact info, and social links here.
 
 export const doctorInfo = {
-  name: "Dr. Hayan",
-  title: "Orthodontic Specialty",
-  shortBio: "Transforming smiles with precision and beauty. Over 15 years of experience in providing the latest orthodontic treatments using advanced digital technologies to ensure patient comfort and the best results.",
-  fullBio: "Dr. Hayan specializes in Orthodontic Specialty with extensive experience in treating complex cases and smile aesthetics. He believes that every smile is unique and requires a personalized treatment plan. He is always keen on using the latest global technologies such as clear aligners and digital orthodontics to ensure a comfortable experience and ideal results in the shortest possible time.",
-  philosophy: "Our philosophy is based on extreme precision, patient comfort, and commitment to the highest international quality standards in orthodontics.",
+  name: "Dr. Hayan Musab",
+  title: "Orthodontist - MSc Candidate",
+  shortBio: "Orthodontist with a strong passion for transforming smiles and enhancing patient confidence through precise, detail-oriented care.",
+  
+  fullBio: "Orthodontist with a strong passion for transforming smiles and enhancing patient confidence through precise, detail-oriented care. Committed to delivering optimal functional and aesthetic outcomes while maintaining a high standard of clinical responsibility. Actively engaged in continuous professional development to stay aligned with the latest advancements in orthodontics. Recognized for consistency, discipline, and effective teamwork. Aspires to further advance in the field and contribute to orthodontic education as a future international speaker.",
+  
+  philosophy: "Committed to delivering optimal functional and aesthetic outcomes while maintaining the highest standard of clinical responsibility and patient-centered care.",
+  
   stats: [
-    { label: "Years of Experience", value: "+15", description: "In providing exceptional orthodontic care" },
-    { label: "Successful Cases", value: "+5000", description: "Smiles successfully transformed" },
-    { label: "Satisfaction Rate", value: "99%", description: "Of our patients recommend us to their families" },
-    { label: "Modern Tech", value: "100%", description: "Full reliance on digital dentistry" },
+    { label: "Years of Clinical Experience", value: "6+", description: "Since 2020 in general dentistry and orthodontics" },
+    { label: "Specialized Courses", value: "8+", description: "Advanced training with international experts" },
+    { label: "Happy Patients", value: "500+", description: "Smiles transformed with precision and care" },
+    { label: "Nationality", value: "Syrian", description: "Based in Al Minya, Egypt" },
   ],
-  image: "https://picsum.photos/seed/dr-hayan-profile/800/800",
+  
+  image: "https://i.postimg.cc/qMhzt4KT/Gemini-Generated-Image-pd93supd93supd93.png", // غيرها بصورة شخصية حقيقية لاحقاً
+  
   contact: {
-    phone: "+20 10 03457115",
+    phone: "+20 100 345 7115",
     whatsapp: "201003457115",
-    email: "info@drhayanortho.com",
-    address: "Cairo, Egypt - 5th Settlement, North 90th St, Medical Clinics Building",
+    email: "Hayan.m.a2022@gmail.com",
+    address: "Al Minya, Egypt",
   },
+  
   social: {
-    instagram: "https://instagram.com",
-    facebook: "https://facebook.com",
-    tiktok: "https://tiktok.com",
+    instagram: "https://instagram.com/dr.hayan.abooun", 
+    facebook: "https://facebook.com/Dr.Hayan",
+    tiktok: "https://tiktok.com/@dr.hayanmusababooun",
     youtube: "https://youtube.com",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://linkedin.com/in/hayan-musab",
+  },
+  
+  personalInfo: {
+    dob: "12/11/1996",
+    maritalStatus: "Engaged",
+    nationality: "Syrian",
   }
 };

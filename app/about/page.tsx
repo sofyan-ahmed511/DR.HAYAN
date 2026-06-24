@@ -2,26 +2,13 @@
 
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
-import { skills, timeline, certifications, values } from '@/lib/aboutData';
+import { skills, timeline } from '@/lib/aboutData';
 import { doctorInfo } from '@/lib/doctorData';
-import { ArrowRight, X, ChevronLeft, ChevronRight, HeartHandshake } from 'lucide-react';
+import { ArrowRight, X, Award, Users } from 'lucide-react';
 import { useState, useCallback } from 'react';
-import useEmblaCarousel from 'embla-carousel-react';
-import Autoplay from 'embla-carousel-autoplay';
 
 export default function AboutPage() {
-  const [selectedCert, setSelectedCert] = useState<string | null>(null);
-
-  // Embla Carousel setup
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' }, [Autoplay({ delay: 5000, stopOnInteraction: true })]);
-
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
+  const [selectedCert, setSelectedCert] = useState<string | null>(null); // محتفظ بيه لو احتجته بعدين
 
   return (
     <main className="bg-[#FAF9F6] min-h-screen text-slate-900 font-sans selection:bg-slate-900 selection:text-white pb-24 overflow-x-hidden w-full">
@@ -35,15 +22,14 @@ export default function AboutPage() {
             transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <div className="inline-block px-4 py-1.5 rounded-full bg-slate-200/50 text-slate-600 text-sm font-bold tracking-wider uppercase mb-8">
-              / About Us
+              / About Dr. Hayan Musab
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif tracking-tighter leading-[0.95] mb-6 text-slate-900">
-              Empowering <br />
-              <span className="italic text-slate-500 font-light">Visionary</span> <br />
-              Smiles.
+              Transforming<br />
+              <span className="italic text-slate-500 font-light">Smiles</span> with Precision
             </h1>
             <div className="inline-flex items-center gap-4 bg-slate-900 text-white px-6 py-3 rounded-full mt-6 hover:bg-slate-800 transition-colors cursor-pointer group shadow-xl hover:shadow-2xl">
-              <span className="font-semibold text-sm">Start Today</span>
+              <span className="font-semibold text-sm">Book Consultation</span>
               <div className="w-8 h-8 rounded-full bg-white text-slate-900 flex items-center justify-center group-hover:rotate-45 transition-transform duration-300">
                 <ArrowRight className="w-4 h-4" />
               </div>
@@ -57,26 +43,29 @@ export default function AboutPage() {
             className="pb-4"
           >
             <div className="relative aspect-[4/3] w-full rounded-[2rem] overflow-hidden shadow-2xl">
-              <Image src="https://images.unsplash.com/photo-1720685193975-3b449a7cb905?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fERlbnRpc3RyeXxlbnwwfHwwfHx8MA%3D%3D" alt="Modern clinic" fill sizes="(max-width: 1024px) 100vw, 50vw" priority className="object-cover" />
+              <Image
+                src="https://images.unsplash.com/photo-1720685193975-3b449a7cb905?fm=jpg&q=60&w=3000&auto=format&fit=crop"
+                alt="Modern Orthodontic Clinic"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+                className="object-cover"
+              />
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* 2. FIXED BACKGROUND STATS */}
+      {/* 2. STATS SECTION */}
       <section className="my-16 md:my-32 relative overflow-hidden min-h-[80vh] py-20 flex flex-col justify-center rounded-[2rem] md:rounded-[3rem] mx-4 md:mx-12 shadow-2xl">
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1629909613638-0e4a1fad8f81?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RGVudGlzdHJ5JTIwd2FsbHBhcGVyc3xlbnwwfHwwfHx8MA%3D%3D")' }}
-
-        />
+        <div className="absolute inset-0 z-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1629909613638-0e4a1fad8f81?w=1200&auto=format&fit=crop")' }} />
         <div className="absolute inset-0 bg-slate-900/40 z-10" />
 
         <div className="relative z-20 max-w-5xl mx-auto w-full px-6 flex flex-col gap-6 md:gap-12">
           {[
-            { text: "By making your orthodontic care professional and tailored, you experience lifelong confidence.", num: "4+", sub: "Years of Service" },
-            { text: "By constantly integrating the latest digital 3D systems and treatment methodologies.", num: "7+", sub: "Advanced Courses" },
-            { text: "By maintaining meticulous clinical quality and offering genuine patient-first compassion.", num: "1K+", sub: "Happy Patients" },
+            { text: "Syrian Orthodontist dedicated to transforming smiles through precise and detail-oriented care.", num: "6+", sub: "Years of Clinical Experience" },
+            { text: "Actively pursuing continuous professional development with leading experts.", num: "8+", sub: "Advanced Courses & Workshops" },
+            { text: "Committed to delivering exceptional functional and aesthetic results.", num: "500+", sub: "Happy Patients" },
           ].map((stat, i) => (
             <motion.div
               key={i}
@@ -89,14 +78,14 @@ export default function AboutPage() {
               <p className="text-slate-700 font-medium text-sm md:text-base w-full md:max-w-md text-center md:text-left">{stat.text}</p>
               <div className="text-center md:text-right shrink-0 mt-2 md:mt-0 w-full md:w-auto min-w-0 md:min-w-[120px]">
                 <h3 className="text-4xl sm:text-5xl md:text-6xl font-light text-slate-900 tracking-tighter">{stat.num}</h3>
-                <p className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest mt-1 max-w-full break-words">{stat.sub}</p>
+                <p className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest mt-1">{stat.sub}</p>
               </div>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* 3. THE DOCTOR / EXPERTISE INTRO */}
+      {/* 3. THE DOCTOR / BIO */}
       <section className="py-24 max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-16 md:gap-24 items-center">
           <motion.div
@@ -107,9 +96,10 @@ export default function AboutPage() {
             className="bg-[#D2C5B8] rounded-[3rem] p-8 md:p-12 pb-0 relative overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500"
           >
             <div className="relative aspect-[3/4] w-full rounded-t-[2.5rem] overflow-hidden drop-shadow-2xl">
-              <Image sizes="100vw"
+              <Image
+                sizes="100vw"
                 src="https://i.postimg.cc/qMhzt4KT/Gemini-Generated-Image-pd93supd93supd93.png"
-                alt={doctorInfo.name}
+                alt="Dr. Hayan Musab"
                 fill
                 className="object-cover"
               />
@@ -122,7 +112,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
           >
-            <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">{`// The Specialist`}</p>
+            <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6">// The Orthodontist</p>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif tracking-tighter text-slate-900 leading-[1.05] mb-8">
               Experienced specialist <br /> you can trust.
             </h2>
@@ -132,27 +122,28 @@ export default function AboutPage() {
             </p>
 
             <div className="mb-8">
-              <h3 className="text-3xl font-medium text-slate-900 mb-2">{doctorInfo.name}</h3>
-              <p className="text-slate-500 font-bold uppercase tracking-wide text-sm">{doctorInfo.title}</p>
+              <h3 className="text-3xl font-medium text-slate-900 mb-2">Dr. Hayan Musab</h3>
+              <p className="text-slate-500 font-bold uppercase tracking-wide text-sm">Orthodontist • Syrian Nationality</p>
             </div>
 
-            <p className="text-slate-600 leading-relaxed font-medium">
+            <p className="text-slate-600 leading-relaxed font-medium mb-6">
               {doctorInfo.fullBio}
             </p>
+
+
           </motion.div>
         </div>
       </section>
 
-      {/* 4. PROFESSIONAL JOURNEY (TIMELINE) */}
+      {/* 4. PROFESSIONAL JOURNEY - WORK EXPERIENCE (4 items only) */}
       <section className="py-24 bg-white rounded-[3rem] mx-4 md:mx-12 shadow-sm border border-slate-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">/ Professional Journey</p>
-            <h2 className="text-4xl md:text-5xl font-serif tracking-tighter text-slate-900">A Legacy of Excellence</h2>
+            <h2 className="text-4xl md:text-5xl font-serif tracking-tighter text-slate-900">Work Experience</h2>
           </div>
 
           <div className="relative max-w-4xl mx-auto">
-            {/* Timeline Line */}
             <div className="absolute left-[27px] md:left-1/2 top-0 bottom-0 w-px bg-slate-200 md:-translate-x-1/2" />
 
             <div className="space-y-12 relative z-10">
@@ -170,11 +161,10 @@ export default function AboutPage() {
                       {item.year}
                     </div>
                     <h3 className="text-2xl font-medium text-slate-900 mb-2">{item.title}</h3>
-                    <p className="text-primary font-bold text-sm mb-3 uppercase tracking-wide">{item.institution}</p>
+                    <p className="text-slate-600 font-bold text-sm mb-3 uppercase tracking-wide">{item.institution}</p>
                     <p className="text-slate-500">{item.description}</p>
                   </div>
 
-                  {/* Center Dot */}
                   <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-14 h-14 bg-white rounded-full border-4 border-[#FAF9F6] flex items-center justify-center shadow-md">
                     <div className="w-full h-full rounded-full bg-slate-900 text-white flex items-center justify-center font-serif italic pb-1">
                       {(idx + 1).toString().padStart(2, '0')}
@@ -195,10 +185,10 @@ export default function AboutPage() {
           <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">/ Clinical Expertise</p>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
             <h2 className="text-4xl md:text-5xl font-serif tracking-tighter text-slate-900 max-w-2xl leading-[1.1]">
-              Comprehensive Orthodontic <br className="hidden md:block" /> Treatments & Skills
+              Clinical Skills
             </h2>
             <p className="text-slate-500 max-w-md">
-              Specialized in a wide range of orthodontic treatments utilizing the latest digital and clinical methodologies to guarantee your best smile.
+              Advanced techniques focused on delivering optimal functional and aesthetic orthodontic outcomes.
             </p>
           </div>
         </div>
@@ -223,76 +213,130 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 6. CERTIFICATES CAROUSEL */}
-      <section className="pt-16 pb-32">
+      {/* 6. PERSONAL SKILLS */}
+      <section className="py-24 bg-white mx-4 md:mx-12 rounded-[3rem] shadow-sm">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-[#EAE6DF] rounded-[3rem] p-8 md:p-16 shadow-lg">
-            <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-12">
-              <div>
-                <p className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-4">/ Achievements</p>
-                <h2 className="text-4xl md:text-5xl font-serif tracking-tighter text-slate-900">Certificates & Awards</h2>
-              </div>
+          <div className="text-center mb-16">
+            <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">/ Personal Approach</p>
+            <h2 className="text-4xl md:text-5xl font-serif tracking-tighter text-slate-900">Personal Skills</h2>
+          </div>
 
-              <div className="flex gap-4">
-                <button
-                  onClick={scrollPrev}
-                  className="w-12 h-12 rounded-full border border-slate-300 bg-white flex items-center justify-center hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-colors shadow-sm"
-                  aria-label="Previous slide"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={scrollNext}
-                  className="w-12 h-12 rounded-full border border-slate-300 bg-white flex items-center justify-center hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-colors shadow-sm"
-                  aria-label="Next slide"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
+          <div className="grid md:grid-cols-2 gap-8">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="bg-[#FAF9F6] rounded-[2.5rem] p-10">
+              <div className="flex items-center gap-4 mb-8">
+                <Award className="w-10 h-10 text-slate-900" />
+                <h3 className="text-2xl font-medium">Clinical Precision</h3>
               </div>
-            </div>
+              <ul className="space-y-4 text-slate-600">
+                <li>• Advanced Orthodontic Diagnosis and Treatment Planning</li>
+                <li>• Cephalometric Analysis and Radiographic Interpretation</li>
+                <li>• Fixed Appliance Management and Precise Bracket Positioning</li>
+                <li>• Wire Sequencing, Bending, and Treatment Adjustments</li>
+                <li>• Temporary Anchorage Devices (TADs)</li>
+                <li>• Clear Aligner Therapy Planning & Monitoring</li>
+              </ul>
+            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <div ref={emblaRef} className="overflow-hidden w-full">
-                <div className="flex -ml-6 pb-8">
-                  {certifications.map((cert) => (
-                    <div key={cert.id} className="min-w-0 flex-[0_0_85%] md:flex-[0_0_45%] lg:flex-[0_0_35%] pl-6">
-                      <div
-                        className="group cursor-pointer relative bg-white/50 backdrop-blur-sm p-4 rounded-[2.5rem] border border-white/50 shadow-sm hover:shadow-xl hover:bg-white transition-all duration-500"
-                        onClick={() => setSelectedCert(cert.image)}
-                      >
-                        <div className="aspect-[4/3] relative rounded-[2rem] overflow-hidden mb-6 bg-slate-100">
-                          <Image
-                            src={cert.image}
-                            alt={cert.title}
-                            fill
-                            sizes="(max-width: 768px) 85vw, (max-width: 1024px) 45vw, 35vw"
-                            className="object-cover group-hover:scale-105 transition-transform duration-700"
-                          />
-                          <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-colors duration-300 flex items-center justify-center">
-                            <div className="w-12 h-12 rounded-full bg-white/90 backdrop-blur opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center shadow-lg transform translate-y-4 group-hover:translate-y-0 text-slate-900">
-                              <span className="font-bold text-[10px] uppercase tracking-widest leading-none">+<br />View</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="px-4 pb-2 text-center">
-                          <h3 className="text-xl font-medium text-slate-900 mb-1 leading-tight">{cert.title}</h3>
-                          <p className="text-slate-500 text-sm font-medium">{cert.institution}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-[#FAF9F6] rounded-[2.5rem] p-10">
+              <div className="flex items-center gap-4 mb-8">
+                <Users className="w-10 h-10 text-slate-900" />
+                <h3 className="text-2xl font-medium">Soft Skills</h3>
               </div>
+              <ul className="space-y-4 text-slate-600">
+                <li>• Effective Patient Communication and Case Presentation</li>
+                <li>• Strong Ability to Enhance Patient Understanding and Case Acceptance</li>
+                <li>• Teamwork and Interdisciplinary Collaboration</li>
+                <li>• Attention to Detail and High Level of Clinical Precision</li>
+                <li>• Time Management and Efficient Workflow</li>
+                <li>• Patient Education through Digital & Social Media</li>
+              </ul>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* 7. HOW IT WORKS / STEPS (Moved to end) */}
+      {/* 7. COURSES SECTION (New - Replaced Certificates) */}
+      <section className="py-24 bg-white rounded-[3rem] mx-4 md:mx-12 shadow-sm border border-slate-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">/ Professional Development</p>
+            <h2 className="text-4xl md:text-5xl font-serif tracking-tighter text-slate-900">Advanced Courses & Training</h2>
+          </div>
+
+          <div className="relative max-w-4xl mx-auto">
+            <div className="absolute left-[27px] md:left-1/2 top-0 bottom-0 w-px bg-slate-200 md:-translate-x-1/2" />
+
+            <div className="space-y-12 relative z-10">
+              {[
+                {
+                  year: "18 Jan 2025",
+                  title: "Advanced Orthodontic Mini Screws Course",
+                  institution: "Egyptian Orthodontic Society",
+                  description: "Specialized training in mini screws techniques."
+                },
+                {
+                  year: "15 Jan 2025",
+                  title: "Clear Aligner Therapy Course",
+                  institution: "Prof. Giorgio Iodice",
+                  description: "Advanced clear aligner treatment planning and execution."
+                },
+                {
+                  year: "6 Nov 2022",
+                  title: "Clear Aligner Therapy Course",
+                  institution: "Prof. Ravindra Nanda",
+                  description: "Advanced training with world-renowned orthodontist."
+                },
+                {
+                  year: "5 Nov 2022",
+                  title: "Advanced Orthodontic Diagnosis & Treatment Planning",
+                  institution: "OneTrack Academy",
+                  description: "Comprehensive diagnosis and planning methodologies."
+                },
+                {
+                  year: "4 Nov 2022",
+                  title: "Orthodontic Wire Bending Course",
+                  institution: "OneTrack Academy",
+                  description: "Hands-on training in wire sequencing and bending."
+                },
+                {
+                  year: "2 Nov 2022",
+                  title: "Orthodontic Mini Screws Course",
+                  institution: "OneTrack Academy",
+                  description: "Hands-on training in wire sequencing and bending."
+                }
+              ].map((course, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                  className={`flex flex-col md:flex-row gap-6 md:gap-12 items-start md:items-center ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+                >
+                  <div className={`flex-1 w-full pl-16 md:pl-0 ${idx % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                    <div className="inline-block px-3 py-1 bg-[#FAF9F6] border border-slate-100 text-slate-600 text-xs font-bold rounded-full mb-3 shadow-sm">
+                      {course.year}
+                    </div>
+                    <h3 className="text-2xl font-medium text-slate-900 mb-2">{course.title}</h3>
+                    <p className="text-slate-600 font-bold text-sm mb-3 uppercase tracking-wide">{course.institution}</p>
+                    <p className="text-slate-500">{course.description}</p>
+                  </div>
+
+                  <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-14 h-14 bg-white rounded-full border-4 border-[#FAF9F6] flex items-center justify-center shadow-md">
+                    <div className="w-full h-full rounded-full bg-slate-900 text-white flex items-center justify-center font-serif italic pb-1">
+                      {(idx + 1).toString().padStart(2, '0')}
+                    </div>
+                  </div>
+
+                  <div className="flex-1 hidden md:block" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. HOW IT WORKS */}
       <section className="py-24 bg-white border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[1fr_1fr] gap-16 md:gap-24 items-start">
           <div className="sticky top-32">
@@ -312,7 +356,13 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="relative aspect-square w-full max-w-md rounded-[3rem] overflow-hidden shadow-2xl group"
             >
-              <Image src="https://images.unsplash.com/photo-1664529845836-433c172142ca?w=1800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fERlbnRpc3RyeXxlbnwwfHwwfHx8MA%3D%3D" alt="Steps" fill sizes="(max-width: 1024px) 100vw, 400px" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image
+                src="https://images.unsplash.com/photo-1664529845836-433c172142ca?w=1800&auto=format&fit=crop&q=60"
+                alt="Steps"
+                fill
+                sizes="(max-width: 1024px) 100vw, 400px"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
             </motion.div>
           </div>
 
@@ -320,9 +370,9 @@ export default function AboutPage() {
             <div className="absolute left-[54px] top-[180px] bottom-10 w-px bg-slate-200 -z-10 hidden md:block" />
 
             {[
-              { title: "Connect With Us", desc: "Book your consultation instantly. Experience precise digital scanning backed by cutting-edge technology. Zero messy impressions." },
-              { title: "Define the Vision", desc: "Review your 3D digital smile design. Formulate a personalized treatment plan that fits your particular lifestyle and structural needs." },
-              { title: "Watch It Grow", desc: "Start your customized journey. Track real-time progress and gain phenomenal aesthetic insights to build a thriving smile." }
+              { title: "Connect With Us", desc: "Book your consultation. Receive thorough clinical evaluation and digital records." },
+              { title: "Define the Vision", desc: "Review your personalized treatment plan with clear expectations." },
+              { title: "Watch It Grow", desc: "Start your customized journey with regular monitoring and precise adjustments." }
             ].map((step, idx) => (
               <motion.div
                 key={idx}
@@ -336,7 +386,7 @@ export default function AboutPage() {
                   0{idx + 1}
                 </div>
                 <div>
-                  <h3 className="text-2xl font-medium text-slate-900 mb-3 group-hover:text-primary transition-colors">{step.title}</h3>
+                  <h3 className="text-2xl font-medium text-slate-900 mb-3 group-hover:text-slate-800 transition-colors">{step.title}</h3>
                   <p className="text-slate-500 leading-relaxed font-medium">{step.desc}</p>
                 </div>
               </motion.div>
@@ -344,47 +394,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* MODAL / POPUP FOR CERTIFICATE */}
-      <AnimatePresence>
-        {selectedCert && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setSelectedCert(null)}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/80 backdrop-blur-sm p-4 md:p-12 pl-6 pr-6 pt-24 pb-24"
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              onClick={(e) => e.stopPropagation()}
-              className="relative max-w-4xl w-full aspect-[4/3] bg-white rounded-[2rem] overflow-hidden shadow-2xl flex flex-col"
-            >
-              <div className="absolute top-4 right-4 z-10">
-                <button
-                  onClick={() => setSelectedCert(null)}
-                  className="w-12 h-12 bg-white text-slate-900 rounded-full flex items-center justify-center shadow-lg hover:bg-slate-100 hover:scale-105 transition-all"
-                  aria-label="Close modal"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-              <div className="relative w-full h-full p-4 bg-slate-100 flex items-center justify-center">
-                <Image
-                  src={selectedCert}
-                  alt="Certificate Full View"
-                  fill
-                  sizes="100vw"
-                  className="object-contain p-4 mix-blend-multiply"
-                />
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
     </main>
   );
