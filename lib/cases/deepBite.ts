@@ -12,7 +12,7 @@ export const deepBiteCases: Record<string, any[]> = {
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",
       beforeImg: "https://i.postimg.cc/C5WCZFgC/IMG-9195.jpg",
-      afterImg: "https://i.postimg.cc/dtrN8fx9/IMG-0489.jpg",
+      afterImg: "https://i.postimg.cc/HxTTg58B/IMG-0489.jpg",
       progressImages: [
         { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/C5WCZFgC/IMG-9195.jpg" },
         { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/5yZ5HxJW/IMG-9192.jpg" },
@@ -25,7 +25,7 @@ export const deepBiteCases: Record<string, any[]> = {
         { label: "Month 8", timeframe: "Month 8", img: "https://i.postimg.cc/KcKHYj7k/IMG-0476.jpg" },
         { label: "Month 9", timeframe: "Month 9", img: "https://i.postimg.cc/05LHKvc1/IMG-0478.jpg" },
         { label: "Month 10", timeframe: "Month 10", img: "https://i.postimg.cc/L6LQzWb8/IMG-0480.jpg" },
-        { label: "Final Result", timeframe: "Month 12", img: "https://i.postimg.cc/dtrN8fx9/IMG-0489.jpg" },
+        { label: "Final Result", timeframe: "Month 12", img: "https://i.postimg.cc/HxTTg58B/IMG-0489.jpg" },
       ]
     },
     
