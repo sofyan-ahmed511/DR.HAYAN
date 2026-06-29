@@ -55,6 +55,30 @@ export const openBiteCases: Record<string, any[]> = {
         { label: "Final Result", timeframe: "Month 12", img: "https://i.postimg.cc/T2Hzp2tk/IMG-8628.jpg" },
       ]
     },
+    {
+      id: "open-bite-Overview-3",
+      patientInfo: "male patient, 15 years old",
+      duration: "13 months",
+      description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
+      notes: "Patient reported high satisfaction and comfortable progression.",
+      beforeImg: "https://i.postimg.cc/kXcBfvzv/IMG-9549.jpg",
+      afterImg: "https://i.postimg.cc/CKfMTGrg/IMG-7540.jpg",
+      progressImages: [
+        { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/kXcBfvzv/IMG-9549.jpg" },
+        { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/nhhM5Qf6/IMG-9551.jpg" },
+        { label: "Month 2", timeframe: "Month 2", img: "https://i.postimg.cc/kgYDdXnM/IMG-9561.jpg" },
+        { label: "Month 3", timeframe: "Month 3", img: "https://i.postimg.cc/vZ2DdHQ5/IMG-9558.jpg" },
+        { label: "Month 4", timeframe: "Month 4", img: "https://i.postimg.cc/TPy12Mwr/IMG-9560.jpg" },
+        { label: "Month 5", timeframe: "Month 5", img: "https://i.postimg.cc/nrxh1X1W/IMG-1153.jpg" },
+        { label: "Month 6", timeframe: "Month 6", img: "https://i.postimg.cc/SRGN1mT4/IMG-1154.jpg" },
+        { label: "Month 7", timeframe: "Month 7", img: "https://i.postimg.cc/2yx89CcZ/IMG-1155.jpg" },
+        { label: "Month 8", timeframe: "Month 8", img: "https://i.postimg.cc/Dy2zJb0P/IMG-7527.jpg" },
+        { label: "Month 9", timeframe: "Month 9", img: "https://i.postimg.cc/8PtzhPfw/IMG-7529.jpg" },
+        { label: "Month 10", timeframe: "Month 10", img: "https://i.postimg.cc/Hkns3DbR/IMG-7533.jpg" },
+        { label: "Month 11", timeframe: "Month 11", img: "https://i.postimg.cc/g27cTSDK/IMG-7543.jpg" },
+        { label: "Final Result", timeframe: "Month 12", img: "https://i.postimg.cc/CKfMTGrg/IMG-7540.jpg" },
+      ]
+    },
     
   ],
 };
