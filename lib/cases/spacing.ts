@@ -54,7 +54,7 @@ export const spacingCases: Record<string, any[]> = {
     // تمم التعديل 
     {
       id: "spacing-Overview-3",
-      patientInfo: "Male patient, 16 years old",
+      patientInfo: "Male patient, 22 years old",
       duration: "14 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",
@@ -78,6 +78,31 @@ export const spacingCases: Record<string, any[]> = {
         { label: "Month 9-10", timeframe: "Month 10", img: "https://i.postimg.cc/KjhgNvkv/IMG-3040.jpg" },
         { label: "Month 9-10", timeframe: "Month 10", img: "https://i.postimg.cc/NGRX0TSw/IMG-3037.jpg" },
         { label: "Month 9-10", timeframe: "Month 10", img: "https://i.postimg.cc/tTwzHjs2/IMG-3035.jpg" },
+      ]
+    },
+    {
+      id: "spacing-Overview-4",
+      patientInfo: "Female patient, 20 years old",
+      duration: "13 months",
+      description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
+      notes: "Patient reported high satisfaction and comfortable progression.",
+      beforeImg: "https://i.postimg.cc/Kvfkkw2r/IMG-9035.jpg",
+      afterImg: "https://i.postimg.cc/2yzjCj3M/IMG-9063.png",
+      progressImages: [
+        { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/Kvfkkw2r/IMG-9035.jpg" },
+        { label: "Month 1-2", timeframe: "Month 1-2", img: "https://i.postimg.cc/y8rDnRWz/IMG-9037.jpg" },
+        { label: "Month 1-2", timeframe: "Month 1-2", img: "https://i.postimg.cc/qvZNQKgv/IMG-9036.jpg" },
+        { label: "Month 6-7", timeframe: "Month 6", img: "https://i.postimg.cc/8C2jgVhx/IMG-9038.jpg" },
+        { label: "Month 6-7", timeframe: "Month 6", img: "https://i.postimg.cc/sX51V0m5/IMG-9039.jpg" },
+        { label: "Month 9-10", timeframe: "Month 9", img: "https://i.postimg.cc/xjyqhhcQ/IMG-9041.jpg" },
+        { label: "Month 9-10", timeframe: "Month 9", img: "https://i.postimg.cc/rFVzkjr0/IMG-9042.jpg" },
+        { label: "Month 9-10", timeframe: "Month 10", img: "https://i.postimg.cc/Vk56SNgg/IMG-9043.jpg" },
+        { label: "Month 9-10", timeframe: "Month 10", img: "https://i.postimg.cc/g2503PBR/IMG-9040.jpg" },
+        { label: "Month 9-10", timeframe: "Month 10", img: "https://i.postimg.cc/2yzjCj3M/IMG-9063.png" },
+        { label: "Month 9-10", timeframe: "Month 10", img: "https://i.postimg.cc/MTJKrmwz/IMG-9064.png" },
+        { label: "Month 9-10", timeframe: "Month 10", img: "https://i.postimg.cc/j56dVnqf/IMG-9053.jpg" },
+        { label: "Month 9-10", timeframe: "Month 10", img: "https://i.postimg.cc/9MPF3wXg/IMG-9054.jpg" },
+        { label: "Month 9-10", timeframe: "Month 10", img: "https://i.postimg.cc/2yzjCj3M/IMG-9063.png" },
       ]
     },
     // ---- IGNORE ---

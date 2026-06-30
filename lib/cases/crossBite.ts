@@ -99,114 +99,94 @@ export const crossBite = {
       notes:
         "Excellent arch balance and functional improvement achieved after treatment.",
       beforeImg:
-        "https://i.postimg.cc/Y0Vt1R6k/IMG-3462.jpg",
+        "https://i.postimg.cc/bvjGSh5f/IMG-0581.jpg",
       afterImg:
-        "https://i.postimg.cc/9FRmW3hs/IMG-3458.jpg",
+        "https://i.postimg.cc/59ZFWLmm/IMG-0254.jpg",
       progressImages: [
         {
           label: "Expansion Progress",
           timeframe: "Month 1-2",
-          img: "https://i.postimg.cc/Y0Vt1R6k/IMG-3462.jpg",
+          img: "https://i.postimg.cc/bvjGSh5f/IMG-0581.jpg",
         },
         {
           label: "Expansion Progress",
           timeframe: "Month 1-2",
-          img: "https://i.postimg.cc/tCdG29td/IMG-3463.jpg",
+          img: "https://i.postimg.cc/rmVKg9c9/IMG-0579.jpg",
         },
         {
           label: "Bite Correction",
           timeframe: "Month 1-2",
-          img: "https://i.postimg.cc/bN0f3q9j/IMG-3464.jpg",
+          img: "https://i.postimg.cc/JnptFBzH/IMG-0582.jpg",
         },
         {
           label: "Expansion Progress",
           timeframe: "Month 1-2",
-          img: "https://i.postimg.cc/t4XQc8BR/IMG-3465.jpg",
+          img: "https://i.postimg.cc/x878fDmB/IMG-0585.jpg",
         },
         {
           label: "Expansion Progresst",
           timeframe: "Month 1-2",
-          img: "https://i.postimg.cc/x1tDVgZh/IMG-3466.jpg",
+          img: "https://i.postimg.cc/02MrtjRb/IMG-0589.jpg",
         },
         {
           label: "Expansion Progress",
           timeframe: "Month 1-2",
-          img: "https://i.postimg.cc/fby4zmnT/IMG-3467.jpg",
+          img: "https://i.postimg.cc/7LVLCT7V/IMG-0594.jpg",
         },
         {
           label: "Bite Correction",
           timeframe: "Month 3-4",
-          img: "https://i.postimg.cc/Lsbcn52V/IMG-3468.jpg",
+          img: "https://i.postimg.cc/RFpVd5gf/IMG-0591.jpg",
         },
         {
           label: "Bite Correction",
           timeframe: "Month 3-4",
-          img: "https://i.postimg.cc/4yCjQ0KJ/IMG-3469.jpg",
+          img: "https://i.postimg.cc/NGVjrtyN/IMG-2979.jpg",
         },
         {
           label: "Bite Correction",
           timeframe: "Month 3-4",
-          img: "https://i.postimg.cc/gcRC2G52/IMG-3470.jpg",
+          img: "https://i.postimg.cc/vHVHrKfG/IMG-2980.jpg",
         },
         {
           label: "Final Result",
           timeframe: "Month 10-11",
-          img: "https://i.postimg.cc/F1Xm1Rby/IMG-3471.jpg",
+          img: "https://i.postimg.cc/VLCLqhnB/IMG-2981.jpg",
         },
         {
           label: "Final Result",
           timeframe: "Month 10-11",
-          img: "https://i.postimg.cc/bY72193m/IMG-3472.jpg",
+          img: "https://i.postimg.cc/T3v2CcJC/IMG-0241.jpg",
         },
         {
           label: "Final Result",
           timeframe: "Month 10-11",
-          img: "https://i.postimg.cc/13Pnj5xg/IMG-3473.jpg",
+          img: "https://i.postimg.cc/W1mNKJ59/IMG-0244.jpg",
         },
         {
           label: "Final Result",
           timeframe: "Month 10-11",
-          img: "https://i.postimg.cc/x1s748kp/IMG-3453.jpg",
+          img: "https://i.postimg.cc/6pVWSGHJ/IMG-0247.jpg",
         },
         {
           label: "Final Result",
           timeframe: "Month 10-11",
-          img: "https://i.postimg.cc/mrJnTnyP/IMG-3454.jpg",
+          img: "https://i.postimg.cc/xdt0jVDP/IMG-0258.jpg",
         },
         {
           label: "Final Result",
           timeframe: "Month 10-11",
-          img: "https://i.postimg.cc/V6tVvF7Y/IMG-3455.jpg",
+          img: "https://i.postimg.cc/26trvd5y/IMG-0256.jpg",
         },
         {
           label: "Final Result",
           timeframe: "Month 12",
-          img: "https://i.postimg.cc/Y21PwbG7/IMG-3456.jpg",
+          img: "https://i.postimg.cc/MX2w3WVx/IMG-0252.jpg",
         },
         {
           label: "Final Result",
           timeframe: "Month 12",
-          img: "https://i.postimg.cc/WbTHpg0c/IMG-3457.jpg",
-        },
-        {
-          label: "Final Result",
-          timeframe: "Month 12",
-          img: "https://i.postimg.cc/W4F9YncR/IMG-3459.jpg",
-        },
-        {
-          label: "Final Result",
-          timeframe: "Month 12",
-          img: "https://i.postimg.cc/HnHBx1cn/IMG-3460.jpg",
-        },
-        {
-          label: "Final Result",
-          timeframe: "Month 12",
-          img: "https://i.postimg.cc/brTLSVkk/IMG-3461.jpg",
-        },
-        {
-          label: "Final Result",
-          timeframe: "Month 12",
-          img: "https://i.postimg.cc/9FRmW3hs/IMG-3458.jpg",
+          img: "https://i.postimg.cc/59ZFWLmm/IMG-0254.jpg",
         },
       ],
     },

@@ -32,8 +32,8 @@ export const bimaxillaryProtrusionCases: Record<string, any[]> = {
       afterImg: "https://i.postimg.cc/Xq4wzn0j/IMG-46.jpg",
       progressImages: [
         { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/2j7dBL4S/IMG-753.png" },
-        { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/v86Tc1Qt/IMG-7754.jpg" },
-        { label: "Month 2", timeframe: "Month 2", img: "https://i.postimg.cc/G2fRbjB7/IMG-7752.jpg" },
+        { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/26WTCmg5/IMG-7754.png" },
+        { label: "Month 2", timeframe: "Month 2", img: "https://i.postimg.cc/prYZnCWP/IMG-7752.png" },
         { label: "Month 3", timeframe: "Month 3", img: "https://i.postimg.cc/nLtCJn82/IMG-7741.jpg" },
         { label: "Month 8", timeframe: "Month 8", img: "https://i.postimg.cc/qqg7LRK8/IMG-7742.jpg" },
         { label: "Month 4", timeframe: "Month 4", img: "https://i.postimg.cc/qqYvZTX0/IMG-7743.jpg" },
@@ -45,8 +45,7 @@ export const bimaxillaryProtrusionCases: Record<string, any[]> = {
         { label: "Month 11", timeframe: "Month 11", img: "https://i.postimg.cc/59PYCcz3/IMG-6003.jpg" },
         { label: "Final Result", timeframe: "Month 12", img: "https://i.postimg.cc/Kvw10nJH/IMG-6005.jpg" },
         { label: "Final Result", timeframe: "Month 12", img: "https://i.postimg.cc/bY6DtXbc/IMG-6004.jpg" },
-        { label: "Final Result", timeframe: "Month 12", img: "https://i.postimg.cc/Rh3MtY5z/IMG-7747.jpg" },
-        { label: "Final Result", timeframe: "Month 12", img: "https://i.postimg.cc/dQXQFJrC/IMG-7748.jpg" },
+        { label: "Final Result", timeframe: "Month 12", img: "https://i.postimg.cc/fTD5QGCf/IMG-7747.jpg" },
         { label: "Final Result", timeframe: "Month 12", img: "https://i.postimg.cc/Xq4wzn0j/IMG-46.jpg" },
         
       ]
