@@ -88,7 +88,7 @@ export default function Footer() {
 
           {/* Pill Links (Right Side) */}
           <div className="absolute right-0 md:right-[5%] bottom-20 md:bottom-32 flex flex-col gap-3 md:gap-5 items-end z-20">
-             <Link href="/guidance" className="bg-white/[0.08] backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium px-6 md:px-8 py-2 md:py-3 rounded-full hover:bg-white/20 hover:text-white transition-all w-fit shadow-xl hover:scale-105 mr-0">
+            <Link href="/guidance" className="bg-white/[0.08] backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium px-6 md:px-8 py-2 md:py-3 rounded-full hover:bg-white/20 hover:text-white transition-all w-fit shadow-xl hover:scale-105 mr-0">
               Guidance
             </Link>
             <Link href="/cases" className="bg-white/[0.08] backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium px-6 md:px-8 py-2 md:py-3 rounded-full hover:bg-white/20 hover:text-white transition-all w-fit shadow-xl hover:scale-105 mr-2 md:mr-6">
@@ -108,7 +108,7 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <a href={doctorInfo.social.instagram} className="text-white/70 hover:text-white text-sm font-medium transition-colors">Instagram</a>
             <a href={doctorInfo.social.facebook} className="text-white/70 hover:text-white text-sm font-medium transition-colors">Facebook</a>
-            <a href={doctorInfo.social.youtube} className="text-white/70 hover:text-white text-sm font-medium transition-colors">LinkedIn</a>
+            <a href={doctorInfo.social.linkedin} className="text-white/70 hover:text-white text-sm font-medium transition-colors">LinkedIn</a>
           </div>
 
           <div className="text-white/60 text-sm font-medium flex items-center gap-2">

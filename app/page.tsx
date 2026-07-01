@@ -92,7 +92,7 @@
                   </p>
                   <div className="flex gap-4">
                     {/* LinkedIn */}
-                    <a href="#" className="relative group w-12 h-12 rounded-[1.2rem] border border-white/60 bg-white/70 backdrop-blur-md shadow-[0_8px_16px_rgba(0,0,0,0.04)] flex items-center justify-center text-[#1A1A1A] hover:bg-[#0077b5] hover:text-white hover:border-[#0077b5] hover:rounded-[1rem] transition-all duration-300">
+                    <a href="https://www.linkedin.com/in/hayan-abooun-32a920186/" className="relative group w-12 h-12 rounded-[1.2rem] border border-white/60 bg-white/70 backdrop-blur-md shadow-[0_8px_16px_rgba(0,0,0,0.04)] flex items-center justify-center text-[#1A1A1A] hover:bg-[#0077b5] hover:text-white hover:border-[#0077b5] hover:rounded-[1rem] transition-all duration-300">
                       <div className="absolute -top-10 scale-0 group-hover:scale-100 transition-transform origin-bottom bg-[#0077b5] text-white text-xs font-bold py-1 px-2.5 rounded shadow-lg whitespace-nowrap z-50">
                         LinkedIn
                         <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#0077b5]"></div>
@@ -102,7 +102,7 @@
                       </svg>
                     </a>
                     {/* Instagram */}
-                    <a href="#" className="relative group w-12 h-12 rounded-[1.2rem] border border-white/60 bg-white/70 backdrop-blur-md shadow-[0_8px_16px_rgba(0,0,0,0.04)] flex items-center justify-center text-[#1A1A1A] hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:text-white hover:border-transparent hover:rounded-[1rem] transition-all duration-300">
+                    <a href="https://www.instagram.com/dr.hayan.abooun?igsh=MTc0b3Z5MGE5eW14Mg==" className="relative group w-12 h-12 rounded-[1.2rem] border border-white/60 bg-white/70 backdrop-blur-md shadow-[0_8px_16px_rgba(0,0,0,0.04)] flex items-center justify-center text-[#1A1A1A] hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:text-white hover:border-transparent hover:rounded-[1rem] transition-all duration-300">
                       <div className="absolute -top-10 scale-0 group-hover:scale-100 transition-transform origin-bottom bg-gradient-to-r from-[#ee2a7b] to-[#6228d7] text-white text-xs font-bold py-1 px-2.5 rounded shadow-lg whitespace-nowrap z-50">
                         Instagram
                         <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#6228d7]"></div>
