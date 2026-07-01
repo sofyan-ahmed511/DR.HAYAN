@@ -14,16 +14,17 @@ export const classIiCases: Record<string, any[]> = {
       beforeImg: "https://i.postimg.cc/9QfX4yLY/IMG-0014.jpg",
       afterImg: "https://i.postimg.cc/wM68CdPV/IMG-6316.jpg",
       progressImages: [
-        { label: "Initial Record", timeframe: "Month 1", img: "https://i.postimg.cc/9QfX4yLY/IMG-0014.jpg" },
-        { label: "Month 2", timeframe: "Month 2", img: "https://i.postimg.cc/MpGZc1sJ/IMG-0015.jpg" },
-        { label: "Month 3", timeframe: "Month 3", img: "https://i.postimg.cc/8C2Tn9NZ/IMG-9827.jpg" },
-        { label: "Month 4", timeframe: "Month 4", img: "https://i.postimg.cc/T1GfTbyC/IMG-9829.jpg" },
-        { label: "Month 5", timeframe: "Month 5", img: "https://i.postimg.cc/L6x2Mnm0/IMG-9830.jpg" },
-        { label: "Month 6", timeframe: "Month 6", img: "https://i.postimg.cc/y8WB6sd8/IMG-6308.jpg" },
-        { label: "Month 7", timeframe: "Month 7", img: "https://i.postimg.cc/mgq4tJzN/IMG-6309.jpg" },
-        { label: "Month 8", timeframe: "Month 8", img: "https://i.postimg.cc/63xNhZfM/IMG-6310.jpg" },
-        { label: "Month 9", timeframe: "Month 9", img: "https://i.postimg.cc/qRcHD7mv/IMG-6317.jpg" },
-        { label: "Final Result", timeframe: "Month 12", img: "https://i.postimg.cc/wM68CdPV/IMG-6316.jpg" },
+        { label: "Initial Record", timeframe: "Before Treatment" , img: "https://i.postimg.cc/9QfX4yLY/IMG-0014.jpg" },
+        { label: "Initial Record", timeframe: "Before Treatment" , img: "https://i.postimg.cc/MpGZc1sJ/IMG-0015.jpg" },
+        { label: "Initial Record", timeframe: "Before Treatment" , img: "https://i.postimg.cc/8C2Tn9NZ/IMG-9827.jpg" },
+        { label: "Initial Record", timeframe: "Before Treatment" , img: "https://i.postimg.cc/T1GfTbyC/IMG-9829.jpg" },
+        { label: "Initial Record", timeframe: "Before Treatment" , img: "https://i.postimg.cc/L6x2Mnm0/IMG-9830.jpg" },
+
+        {  label: "Final Result", timeframe: "Completed Treatment", img: "https://i.postimg.cc/y8WB6sd8/IMG-6308.jpg" },
+        {  label: "Final Result", timeframe: "Completed Treatment", img: "https://i.postimg.cc/mgq4tJzN/IMG-6309.jpg" },
+        {  label: "Final Result", timeframe: "Completed Treatment", img: "https://i.postimg.cc/63xNhZfM/IMG-6310.jpg" },
+        {  label: "Final Result", timeframe: "Completed Treatment", img: "https://i.postimg.cc/qRcHD7mv/IMG-6317.jpg" },
+        { label: "Final Result", timeframe: "Smile Outcome", img: "https://i.postimg.cc/wM68CdPV/IMG-6316.jpg" },
       ]
     },
     
