@@ -19,7 +19,7 @@ export const doctorInfo = {
     { label: "Nationality", value: "Syrian", description: "Based in Al Minya, Egypt" },
   ],
   
-  image: "https://i.postimg.cc/qMhzt4KT/Gemini-Generated-Image-pd93supd93supd93.png", // غيرها بصورة شخصية حقيقية لاحقاً
+  image: "https://i.postimg.cc/qMhzt4KT/Gemini-Generated-Image-pd93supd93supd93.png", 
   
   contact: {
     phone: "+20 100 345 7115",
@@ -30,10 +30,10 @@ export const doctorInfo = {
   
   social: {
     instagram: "https://instagram.com/dr.hayan.abooun", 
-    facebook: "https://facebook.com/Dr.Hayan",
+    facebook: "https://www.facebook.com/share/19gyDTSmHQ/",
     tiktok: "https://tiktok.com/@dr.hayanmusababooun",
     youtube: "https://youtube.com",
-    linkedin: "https://linkedin.com/in/hayan-musab",
+    linkedin: "https://www.linkedin.com/in/hayan-abooun-32a920186/",
   },
   
   personalInfo: {

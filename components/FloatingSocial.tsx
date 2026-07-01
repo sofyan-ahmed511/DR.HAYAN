@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MessageCircle, Instagram, Facebook, Youtube, Linkedin, X, LayoutGrid } from 'lucide-react';
+import { MessageCircle, Instagram, Facebook, Linkedin, X, LayoutGrid } from 'lucide-react';
+import { FaTiktok } from 'react-icons/fa';
 import { usePathname } from 'next/navigation';
 import { doctorInfo } from '@/lib/doctorData';
 
@@ -12,11 +13,36 @@ export default function FloatingSocial() {
   const isHomePage = pathname === '/';
 
   const socialLinks = [
-    { icon: MessageCircle, href: `https://wa.me/${doctorInfo.contact.whatsapp}`, color: 'bg-[#25D366]', label: 'WhatsApp' },
-    { icon: Instagram, href: doctorInfo.social.instagram, color: 'bg-[#E1306C]', label: 'Instagram' },
-    { icon: Facebook, href: doctorInfo.social.facebook, color: 'bg-[#1877F2]', label: 'Facebook' },
-    { icon: Linkedin, href: doctorInfo.social.linkedin, color: 'bg-[#0A66C2]', label: 'LinkedIn' },
-    { icon: Youtube, href: doctorInfo.social.youtube, color: 'bg-[#FF0000]', label: 'YouTube' },
+    {
+      icon: MessageCircle,
+      href: `https://wa.me/${doctorInfo.contact.whatsapp}`,
+      color: 'bg-[#25D366]',
+      label: 'WhatsApp',
+    },
+    {
+      icon: Instagram,
+      href: doctorInfo.social.instagram,
+      color: 'bg-[#E1306C]',
+      label: 'Instagram',
+    },
+    {
+      icon: Facebook,
+      href: doctorInfo.social.facebook,
+      color: 'bg-[#1877F2]',
+      label: 'Facebook',
+    },
+    {
+      icon: Linkedin,
+      href: doctorInfo.social.linkedin,
+      color: 'bg-[#0A66C2]',
+      label: 'LinkedIn',
+    },
+    {
+      icon: FaTiktok,
+      href: doctorInfo.social.tiktok,
+      color: 'bg-black',
+      label: 'TikTok',
+    },
   ];
 
   return (
