@@ -109,6 +109,7 @@ export default function Footer() {
             <a href={doctorInfo.social.instagram} className="text-white/70 hover:text-white text-sm font-medium transition-colors">Instagram</a>
             <a href={doctorInfo.social.facebook} className="text-white/70 hover:text-white text-sm font-medium transition-colors">Facebook</a>
             <a href={doctorInfo.social.linkedin} className="text-white/70 hover:text-white text-sm font-medium transition-colors">LinkedIn</a>
+            
           </div>
 
           <div className="text-white/60 text-sm font-medium flex items-center gap-2">
