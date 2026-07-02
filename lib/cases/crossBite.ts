@@ -2,7 +2,7 @@ export const crossBite = {
   Overview: [
     {
       id: "crossbite-1",
-      patientInfo: "Female patient, 17 years old",
+      patientInfo: "Female patient, 16 years old",
       duration: "15 months",
       description:
         "Cross bite correction using aligners with controlled expansion and bite coordination.",
@@ -77,7 +77,7 @@ export const crossBite = {
     },
     {
       id: "crossbite-2",
-      patientInfo: "male patient, 13 years old",
+      patientInfo: "male patient, 11 years old",
       duration: "12 months",
       description:
         "Cross bite correction using aligners with controlled expansion and bite coordination.",

@@ -7,7 +7,7 @@ export const impactedTeethCases: Record<string, any[]> = {
   "Overview": [
     {
       id: "impacted-teeth-Overview-1",
-      patientInfo: "Female patient, 17 years old",
+      patientInfo: "Female patient, 15 years old",
       duration: "12 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",
@@ -38,7 +38,7 @@ export const impactedTeethCases: Record<string, any[]> = {
     },
     {
       id: "impacted-teeth-Overview-2",
-      patientInfo: "male patient, 22 years old",
+      patientInfo: "male patient, 23 years old",
       duration: "10 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",
@@ -65,7 +65,7 @@ export const impactedTeethCases: Record<string, any[]> = {
     },
     {
       id: "impacted-teeth-Overview-3",
-      patientInfo: "female patient, 15 years old",
+      patientInfo: "Female patient, 15 years old",
       duration: "12 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",

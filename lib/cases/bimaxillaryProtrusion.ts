@@ -7,7 +7,7 @@ export const bimaxillaryProtrusionCases: Record<string, any[]> = {
   "Overview": [
     {
       id: "bimaxillary-protrusion-Overview-1",
-      patientInfo: "Female patient, 20 years old",
+      patientInfo: "Female patient, 21 years old",
       duration: "12 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",
@@ -25,8 +25,8 @@ export const bimaxillaryProtrusionCases: Record<string, any[]> = {
     },
     {
       id: "bimaxillary-protrusion-Overview-2",
-      patientInfo: "Female patient, 26 years old",
-      duration: "14 months",
+      patientInfo: "Female patient, 19 years old",
+      duration: "13 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",
       beforeImg: "https://i.postimg.cc/2j7dBL4S/IMG-753.png",

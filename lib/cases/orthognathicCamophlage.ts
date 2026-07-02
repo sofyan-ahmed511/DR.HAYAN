@@ -7,7 +7,7 @@ export const orthognathicCamophlage = {
       notes:
         'This case involved detailed orthodontic mechanics to improve occlusion, smile aesthetics, and profile balance without surgical intervention.',
       patientInfo:
-        'Adult Female / Skeletal Camouflage Case',
+        'Male patient, 21 years old',
       duration:
         '20 Months',
       beforeImg:

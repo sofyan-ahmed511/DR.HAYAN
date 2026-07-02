@@ -7,7 +7,7 @@ export const fixedFunctionalCases: Record<string, any[]> = {
   "Overview": [
     {
       id: "fixed-functional-Overview-1",
-      patientInfo: "male patient, 20 years old",
+      patientInfo: "male patient, 18 years old",
       duration: "13 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",

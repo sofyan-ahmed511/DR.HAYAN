@@ -7,7 +7,7 @@ export const classIiCases: Record<string, any[]> = {
   "Overview": [
     {
       id: "class-ii-Overview-1",
-      patientInfo: "Female patient, 20 years old",
+      patientInfo: "Female patient, 18 years old",
       duration: "12 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",

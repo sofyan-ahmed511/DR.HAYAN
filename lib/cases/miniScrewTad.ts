@@ -2,7 +2,7 @@ export const miniScrewTad = {
   Overview: [
     {
       id: "tad-1",
-      patientInfo: "Male patient, 25 years old",
+      patientInfo: "Female patient, 18 years old",
       duration: "10 months",
       description:
         "Mini screw TAD assisted orthodontic treatment for advanced tooth movement control.",

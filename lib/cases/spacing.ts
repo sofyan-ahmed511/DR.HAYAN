@@ -58,7 +58,7 @@ export const spacingCases: Record<string, any[]> = {
 
     {
       id: "spacing-Overview-3",
-      patientInfo: "Male patient, 22 years old",
+      patientInfo: "Male patient, 23 years old",
       duration: "9 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",

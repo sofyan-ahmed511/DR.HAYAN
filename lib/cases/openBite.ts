@@ -7,7 +7,7 @@ export const openBiteCases: Record<string, any[]> = {
   "Overview": [
     {
       id: "open-bite-Overview-1",
-      patientInfo: "male patient, 20 years old",
+      patientInfo: "male patient, 24 years old",
       duration: "12 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",
@@ -35,7 +35,7 @@ export const openBiteCases: Record<string, any[]> = {
     },
     {
       id: "open-bite-Overview-2",
-      patientInfo: "male patient, 15 years old",
+      patientInfo: "male patient, 13 years old",
       duration: "9 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",
@@ -61,7 +61,7 @@ export const openBiteCases: Record<string, any[]> = {
     },
     {
       id: "open-bite-Overview-3",
-      patientInfo: "male patient, 15 years old",
+      patientInfo: "male patient, 17 years old",
       duration: "13 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",

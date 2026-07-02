@@ -7,7 +7,7 @@ export const cleftCases: Record<string, any[]> = {
   "Overview": [
     {
       id: "cleft-Overview-1",
-      patientInfo: "Female patient, 16 years old",
+      patientInfo: "Female patient, 15 years old",
       duration: "17 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",

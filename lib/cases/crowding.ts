@@ -7,7 +7,7 @@ export const crowdingCases: Record<string, any[]> = {
   "Overview": [
     {
       id: "crowding-Overview-1",
-      patientInfo: "Male patient, 20 years old",
+      patientInfo: "Male patient, 19 years old",
       duration: "12 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",
@@ -32,7 +32,7 @@ export const crowdingCases: Record<string, any[]> = {
     },
     {
       id: "crowding-Overview-2",
-      patientInfo: "female patient, 26 years old",
+      patientInfo: "Female patient, 20 years old",
       duration: "14 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",

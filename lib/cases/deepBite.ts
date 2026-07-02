@@ -7,7 +7,7 @@ export const deepBiteCases: Record<string, any[]> = {
   "Overview": [
     {
       id: "deep-bite-Overview-1",
-      patientInfo: "Female patient, 20 years old",
+      patientInfo: "male patient, 29 years old",
       duration: "12 months",
       description: "Detailed description for this specific case of Overview. Arch expansion and detailed bite coordination.",
       notes: "Patient reported high satisfaction and comfortable progression.",
