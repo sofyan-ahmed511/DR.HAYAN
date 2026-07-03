@@ -8,9 +8,9 @@ import { doctorInfo } from '@/lib/doctorData';
 
 export default function VisionaryStats() {
   const stats = [
-    { text: "With over a decade of specialized orthodontic experience, we deliver precision and exceptional care.", value: "15+", label: "Years of Excellence" },
-    { text: "Rely on an expert team utilizing the latest advancements in digital dentistry to shape your smile.", value: "50+", label: "Specialized Courses" },
-    { text: "Thousands of patients have entrusted us with their smiles, resulting in life-changing transformations.", value: "5K+", label: "Happy Clients" },
+    { text: "With over a decade of specialized orthodontic experience, we deliver precision and exceptional care.", value: "2+", label: "Years of Excellence" },
+    { text: "Rely on an expert team utilizing the latest advancements in digital dentistry to shape your smile.", value: "6+", label: "Specialized Courses" },
+    { text: "Thousands of patients have entrusted us with their smiles, resulting in life-changing transformations.", value: "500+", label: "Happy Clients" },
   ];
 
   const carouselImages = [
