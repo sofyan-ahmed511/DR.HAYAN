@@ -28,8 +28,8 @@ export const libraryVideos = [
     title: 'The Modified Bass Technique',
     description: 'Learn the professional 45-degree angle method for brushing. This technique ensures that plaque is removed right at the gumline where it is most dangerous, promoting long-term gum health and preventing gingivitis.',
     thumbnail: 'https://plus.unsplash.com/premium_photo-1744085660375-b7781f2bf5cd?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    duration: '04:15',
-    url: 'https://youtu.be/SJKmvunlhttps://youtu.be/lcvuKLR4eTg?si=4338Em0XvsmLl6HkWP8?si=nNhuTCBYiS-gNvLZ',
+    duration: '02:16',
+    url: 'https://youtu.be/0BMXT9UdWQc?si=LbdEJGsEiqTFNmVC',
   },
   {
     id: 'vid-2',
