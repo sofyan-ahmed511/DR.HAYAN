@@ -17,7 +17,7 @@ export const recognitionData: RecognitionItem[] = [
         organization: "European Orthodontic Society",
         description: "Deep exchange on cutting-edge biomechanics and long-term stability protocols during an exclusive masterclass that reshaped my clinical philosophy.",
         event: "Advanced Orthodontic Masterclass",
-        year: "2024",
+        year: "2025",
         image: "https://i.postimg.cc/W3mgdqfV/photo-2026-07-03-19-00-50.jpg",
     },
     {
