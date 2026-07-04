@@ -22,7 +22,7 @@ export const doctorInfo = {
   image: "https://i.postimg.cc/qMhzt4KT/Gemini-Generated-Image-pd93supd93supd93.png", 
   
   contact: {
-    phone: "+20 100 345 7115",
+    phone: "DR. Hayan Musab",
     whatsapp: "201003457115",
     email: "Hayan.m.a2022@gmail.com",
     address: "Al Minya, Egypt",

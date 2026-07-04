@@ -6,6 +6,7 @@ import { skills, timeline } from '@/lib/aboutData';
 import { doctorInfo } from '@/lib/doctorData';
 import { ArrowRight, X, Award, Users } from 'lucide-react';
 import { useState, useCallback } from 'react';
+import InternationalRecognition from '@/components/about/InternationalRecognition';
 
 export default function AboutPage() {
   const [selectedCert, setSelectedCert] = useState<string | null>(null); // محتفظ بيه لو احتجته بعدين
@@ -28,16 +29,16 @@ export default function AboutPage() {
               Transforming<br />
               <span className="italic text-slate-500 font-light">Smiles</span> with Precision
             </h1>
-            <div 
-        onClick={() => window.open('https://wa.me/201003457115', '_blank')}
-        className="inline-flex items-center gap-4 bg-slate-900 text-white px-6 py-3 rounded-full mt-6 hover:bg-slate-800 transition-colors cursor-pointer group shadow-xl hover:shadow-2xl"
-      >
-        <span className="font-semibold text-sm">Book Consultation</span>
-        <div className="w-8 h-8 rounded-full bg-white text-slate-900 flex items-center justify-center group-hover:rotate-45 transition-transform duration-300">
-          <ArrowRight className="w-4 h-4" />
-        </div>
-      </div>
-    </motion.div>
+            <div
+              onClick={() => window.open('https://wa.me/201003457115', '_blank')}
+              className="inline-flex items-center gap-4 bg-slate-900 text-white px-6 py-3 rounded-full mt-6 hover:bg-slate-800 transition-colors cursor-pointer group shadow-xl hover:shadow-2xl"
+            >
+              <span className="font-semibold text-sm">Book Consultation</span>
+              <div className="w-8 h-8 rounded-full bg-white text-slate-900 flex items-center justify-center group-hover:rotate-45 transition-transform duration-300">
+                <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 40 }}
@@ -66,8 +67,8 @@ export default function AboutPage() {
 
         <div className="relative z-20 max-w-5xl mx-auto w-full px-6 flex flex-col gap-6 md:gap-12">
           {[
-            { text: "Syrian Orthodontist dedicated to transforming smiles through precise and detail-oriented care.", num: "6+", sub: "Years of Clinical Experience" },
-            { text: "Actively pursuing continuous professional development with leading experts.", num: "8+", sub: "Advanced Courses & Workshops" },
+            { text: "Syrian Orthodontist dedicated to transforming smiles through precise and detail-oriented care.", num: "2+", sub: "Years of Clinical Experience" },
+            { text: "Actively pursuing continuous professional development with leading experts.", num: "6+", sub: "Advanced Courses & Workshops" },
             { text: "Committed to delivering exceptional functional and aesthetic results.", num: "500+", sub: "Happy Patients" },
           ].map((stat, i) => (
             <motion.div
@@ -333,7 +334,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 8. HOW IT WORKS */}
+      {/* 8. INTERNATIONAL RECOGNITION */}
+      <InternationalRecognition />
+
+      {/* 9. HOW IT WORKS */}
       <section className="py-24 bg-white border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[1fr_1fr] gap-16 md:gap-24 items-start">
           <div className="sticky top-32">
