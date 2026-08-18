@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: 'Dr. Hayan Orthodontics',
     images: [
       {
-        url: 'https://i.ibb.co/nNqJYXqD/removebg-preview.png',
+        url: 'https://i.postimg.cc/d3gxxH71/IMG-7809.png',
         width: 1200,
         height: 630,
         alt: 'Dr. Hayan Orthodontics Clinic',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Dr. Hayan | Premium Orthodontic Specialty',
     description: 'Transforming smiles with extreme precision using the latest 3D digital scanning technologies and invisible clear aligners.',
-    images: ['https://i.ibb.co/nNqJYXqD/removebg-preview.png'],
+    images: ['https://i.postimg.cc/d3gxxH71/IMG-7809.png'],
   },
   robots: {
     index: true,

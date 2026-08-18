@@ -30,7 +30,7 @@ export const doctorInfo = {
   
   social: {
     instagram: "https://instagram.com/dr.hayan.abooun", 
-    facebook: "https://www.facebook.com/share/19gyDTSmHQ/",
+    facebook: "https://www.facebook.com/share/14kwQT8roaN/?mibextid=wwXIfr",
     tiktok: "https://tiktok.com/@dr.hayanmusababooun",
     youtube: "https://youtube.com",
     linkedin: "https://www.linkedin.com/in/hayan-abooun-32a920186/",

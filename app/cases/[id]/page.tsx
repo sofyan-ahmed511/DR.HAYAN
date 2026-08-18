@@ -273,7 +273,7 @@ export default function CaseCategoryPage({ params }: { params: Promise<{ id: str
             alt={category.title}
             fill
             sizes="(max-width: 768px) 100vw, 400px"
-            className="object-cover opacity-[1] scale-105"
+            className=" object-cover opacity-[1] scale-100"
             priority
             referrerPolicy="no-referrer"
           />
@@ -281,7 +281,7 @@ export default function CaseCategoryPage({ params }: { params: Promise<{ id: str
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/20 to-[#0A0A0A]/10"></div>
         </div>
 
-        <div className="container relative z-10 w-full px-6 lg:px-12 mx-auto max-w-[1400px]">
+        {/* <div className="container relative z-10 w-full px-6 lg:px-12 mx-auto max-w-[1400px]">
           <div className="max-w-4xl text-left">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -310,7 +310,7 @@ export default function CaseCategoryPage({ params }: { params: Promise<{ id: str
               Methodical documentation of structural transformations, showcasing predictability and clinical excellence.
             </motion.p>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* 4. Display the Sections (Each section contains 2 full-screen cases) */}

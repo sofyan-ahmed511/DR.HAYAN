@@ -81,9 +81,7 @@ export default function Footer() {
             <Link href={`mailto:${doctorInfo.contact.email}`} className="bg-white/[0.08] backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium px-6 md:px-8 py-2 md:py-3 rounded-full hover:bg-white/20 hover:text-white transition-all w-fit shadow-xl hover:scale-105 ml-4 md:ml-12">
               Contact Us
             </Link>
-            <div className="bg-white/[0.08] backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium px-6 md:px-8 py-2 md:py-3 rounded-full w-fit shadow-xl ml-6 md:ml-16">
-              {doctorInfo.contact.phone}
-            </div>
+            
           </div>
 
           {/* Pill Links (Right Side) */}
@@ -97,9 +95,7 @@ export default function Footer() {
             <Link href="/about#experience" className="bg-white/[0.08] backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium px-6 md:px-8 py-2 md:py-3 rounded-full hover:bg-white/20 hover:text-white transition-all w-fit shadow-xl hover:scale-105 mr-4 md:mr-12">
               Specialists
             </Link>
-            <div className="bg-white/[0.08] backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium px-6 md:px-8 py-2 md:py-3 rounded-full w-fit shadow-xl mr-6 md:mr-16 truncate max-w-[200px] md:max-w-[300px]">
-              {doctorInfo.contact.address.split(',')[0]}
-            </div>
+            
           </div>
         </div>
 
